@@ -113,5 +113,3 @@ XTroid.addCMD({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_DES
     }
 
 }));
-
-
