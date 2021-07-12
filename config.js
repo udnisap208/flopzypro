@@ -15,7 +15,7 @@ DATABASE_URL = process.env.DATABASE_URL === undefined ? './Xproject.db' : proces
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 
 module.exports = {
-    VERSION: '4.0 Premume',
+    VERSION: '4.0 pro',
     CCRUN: "zeks",
     GG:"Error 101",
     CHANNEL: 'https://t.me/danumabots',
@@ -42,7 +42,7 @@ module.exports = {
     DEMOTEMSG: process.env.DEMOTE_MESSAGE === undefined ? 'default' : process.env.DEMOTE_MESSAGE,
     BANMSG: process.env.BAN_MESSAGE === undefined ? 'default' : process.env.BAN_MESSAGE,
     AFKMSG: process.env.AFK_MESSAGE === undefined ? 'default' : process.env.AFK_MESSAGE,
-    HANDLERS: process.env.HANDLERS === undefined ? '^[*-/.!;]' : process.env.HANDLERS,
+    HANDLERS: process.env.HANDLERS === undefined ? '^[.!;]' : process.env.HANDLERS,
     MENUTEXT: process.env.MENU === undefined ?'😎 Pro Menu ⚜' : process.env.MENU,
     GIF_WEL: process.env.GIF_WEL === undefined ?'https://netfile2link.herokuapp.com/stream/13322' : process.env.GIF_WEL,
     GIF_BYE: process.env.GIF_BYE === undefined ?'https://webfilesdanuma.herokuapp.com/stream/14' : process.env.GIF_BYE,
@@ -65,8 +65,8 @@ module.exports = {
     DEBUG: DEBUG,
     COFFEEHOUSE_API_KEY: process.env.COFFEEHOUSE_API_KEY === undefined ? false : process.env.COFFEEHOUSE_API_KEY,
     WITAI_API: "TEYMELA6DMC4XB5YM3SPTTQWUUIBKURG",
-    ON: "hunter",
-    SUPPORT: "94702102324-1616997271",
+    ON: "hunter", 
+       SUPPORT: "94702102324-1616997271",
     SUPPORT2:"94702102324-1619710622",
     SUPPORT3:"94702102324-1623132102",
     G1:"94758258917-1538284375",

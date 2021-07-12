@@ -15,7 +15,6 @@ const LW = Language.getString('whois');
 const I_PACK ="⊱⊱————-　⚜　————-⊰⊰\n        Infomation Pack\n\n┏━━━━━Cmd━━━━━━\n┃\n┣ *.sysd*\n┃⊷️「sys info」\n┃\n┣ *.info*\n┃⊷️「basic info」\n┃\n┣ *.inf*\n┃⊷️「advance info」\n┃\n┣ *.id*\n┃⊷️「user id」\n┣ *.bot*\n┃⊷️「bot info」\n┃\n┗━━━━━━━━━━━━━━"
 const I_DESC = "Get infomations with smart bot"
 const DD = " *Group Description:* "
-const NADM = "bot must have an Admin post ; මේවා භාවිත කිරීමට bot ඇඩ්මින් වියයුතුය"
 var ADMİN_USER = ''
 var USER_USER = ''
 var TR_USER = ''
@@ -27,14 +26,7 @@ var USA_USER = ''
 var OTHER = ''
 if (Config.LANG == 'EN') ADMİN_USER = '✪\n║ ➢ *Admins:* ', USER_USER = '║ ➢ *All members:* ', TR_USER = '║ ➢ *Tr Members:* ', Hİ_USER = '║ ➢ *In Members:* ', AZ_USER = '║ ➢ *Az Members:* ', SRİ_USER = '║ ➢ *SL Members:* ', RU_USER = '║ ➢ *Ru Members:* ', USA_USER = '║ ➢ *USA Members:* ', OTHER = '║ ➢ *Other members:* '
 if (Config.LANG == 'SI') ADMİN_USER = '✪\n║➢ *පරිපාලකවරුන්:* ', USER_USER = '║➢ *මුළු සාමාජීකයින්:* ', TR_USER = '║➢ *තුර්කි අංක:* ', Hİ_USER = '║➢ *ඉන්දියානු අංක:* ', AZ_USER = '║➢ *Az අංක:* ', SRİ_USER = '║➢ *ශ්‍රී ලාංකික අංක:* ', RU_USER = '║➢ *රුසියානු අංක:* ', USA_USER = '║➢ *USA අංක :* ', OTHER = '║➢ *වෙනත් අංක:* '
-async function checkImAdmin(message, user = message.client.user.jid) {
-    var grup = await message.client.groupMetadata(message.jid);
-    var sonuc = grup['participants'].map((member) => {
-        
-        if (member.jid.split("@")[0] == user.split("@")[0] && member.isAdmin) return true; else; return false;
-    });
-    return sonuc.includes(true);
-}
+
 
 if (Config.WORKTYPE == 'private') {
 
@@ -92,9 +84,7 @@ if (Config.WORKTYPE == 'private') {
 
 
 
-    XTroid.addCMD({ pattern: 'inf$', fromMe: true, desc: LW.PL_DESC, dontAddCMDList: true }, async (message, match) => {
-        var im = await checkImAdmin(message);
-        if (!im) return await message.client.sendMessage(message.jid,NADM,MessageType.text); 
+    XTroid.addCMD({ pattern: 'inf$', fromMe: true, desc: LW.PL_DESC, dontAddCMDList: true }, async (message, match) => { 
         if (message.jid.includes('-')) {
             var lasijson = await message.client.groupMetadataMinimal(message.jid) 
             var code = await message.client.groupInviteCode(message.jid)
@@ -197,7 +187,7 @@ var lasiimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: '                  *♔ 𝓧-𝓣𝓻𝓸𝓲𝓭 ♔* \n\n\n❍ 𝗛𝗼𝘀𝘁𝗲𝗱 ➤ 𝘼𝙒𝙎\n❍ 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 ➤ 𝐕'+Config.VERSION+'\n❍ 𝗕𝗿𝗮𝗻𝗰𝗵  ➤ *'+Config.BRANCH+'*\n❍ 𝗔𝗯𝗼𝘂𝘁    ➤ 𝙡𝙖𝙨𝙞𝙮𝙖.𝙢𝙡\n❍ 𝗢𝘄𝗻𝗲𝗿   ➤𝙩.𝙢𝙚/𝙡𝙖𝙨𝙞99𝙓\n❍ 𝗠𝗼𝗱𝗲𝗿𝘀 ➤┓\n                        ┣ @W4RR10R\n                        ┣ @SL_MGx03\n                        ┣ @lucy_99X\n❍ 𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽 ➤ t.me/danuma01\n\n❍ 𝐓𝐮𝐭𝐞 ➤ https://cutt.ly/hmtJU0u\n⊱ ──────    ♔    ────── ⊰\n'})
     }));
     
-  
+    
     
 }
 
@@ -291,9 +281,7 @@ else if (Config.WORKTYPE == 'public') {
     });
 
 
-    XTroid.addCMD({ pattern: 'inf$', fromMe: false, desc: LW.PL_DESC, dontAddCMDList: true }, async (message, match) => {
-        var im = await checkImAdmin(message);
-        if (!im) return await message.client.sendMessage(message.jid,NADM,MessageType.text);
+    XTroid.addCMD({ pattern: 'inf$', fromMe: false, desc: LW.PL_DESC, dontAddCMDList: true }, async (message, match) => { 
         if (message.jid.includes('-')) {
             var lasijson = await message.client.groupMetadataMinimal(message.jid) 
             var code = await message.client.groupInviteCode(message.jid)
@@ -573,7 +561,5 @@ var lasiimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: '                  *♔ 𝓧-𝓣𝓻𝓸𝓲𝓭 ♔* \n\n\n❍ 𝗛𝗼𝘀𝘁𝗲𝗱 ➤ 𝘼𝙒𝙎\n❍ 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 ➤ 𝐕'+Config.VERSION+'\n❍ 𝗕𝗿𝗮𝗻𝗰𝗵  ➤ *'+Config.BRANCH+'*\n❍ 𝗔𝗯𝗼𝘂𝘁    ➤ 𝙡𝙖𝙨𝙞𝙮𝙖.𝙢𝙡\n❍ 𝗢𝘄𝗻𝗲𝗿   ➤𝙩.𝙢𝙚/𝙡𝙖𝙨𝙞99𝙓\n❍ 𝗠𝗼𝗱𝗲𝗿𝘀 ➤┓\n                        ┣ @W4RR10R\n                        ┣ @SL_MGx03\n                        ┣ @lucy_99X\n❍ 𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽 ➤ t.me/danuma01\n\n❍ 𝐓𝐮𝐭𝐞 ➤ https://cutt.ly/hmtJU0u\n⊱ ──────    ♔    ────── ⊰\n'})
     }));
 
+
 }
-module.exports = {
-    checkImAdmin: checkImAdmin
-};

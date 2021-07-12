@@ -10,7 +10,7 @@ const axios = require('axios');
 const ME = "bot provide member profile pics,this one is only working with public mode"
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
-const ALIVEMSG = ('\n\n1:05  ───|────── 2:53\n  |◁              II             ▷|\n\n*»»Nilwan muhudu thire....mp3««*')
+const ALIVEMSG = ('\n\n1:05  ───|────── 2:53\n|◁              II             ▷|\n\n»»════ ⋆★⋆ ════««')
 let FM = Config.WORKTYPE == 'public' ? false : true
 
 
@@ -23,7 +23,7 @@ let FM = Config.WORKTYPE == 'public' ? false : true
              
              catch { pp = await message.client.getProfilePicture(); }
         await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) =>
-         { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: ALIVEMSG });
+         { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: "\n»»————　♔　———-««\n" + ALIVEMSG });
                                                                                                     
     });
     }));
