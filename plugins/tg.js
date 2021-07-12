@@ -37,10 +37,8 @@ async function checkImAdmin(message, user = message.client.user.jid) {
 }
 
 XTroid.addCMD({pattern: 'tg ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC }, (async (message, match) => {
-
-    var im = await (message);
-
-    if (!im) return await message.client.sendMessage(message.jid,Lang.ADMİN,MessageType.text);
+var im = await checkImAdmin(message);
+    if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
     if (match[1] !== '') {
 
