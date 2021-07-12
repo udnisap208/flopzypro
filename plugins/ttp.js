@@ -164,8 +164,8 @@ DEx.addCMD({pattern: 'lil ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (mes
                   });
               };
 
-              await download(`${data}`, '/root/lizy/lil.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/lil.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/lil.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/lil.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -184,8 +184,8 @@ DEx.addCMD({pattern: 'devil ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
                   });
               };
 
-              await download(`${data}`, '/root/lizy/devil.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/devil.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/devil.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/devil.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -204,8 +204,8 @@ DEx.addCMD({pattern: 'bear ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (me
                   });
               };
 
-              await download(`${data}`, '/root/lizy/bear.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/bear.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/bear.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/bear.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -233,8 +233,8 @@ DEx.addCMD({pattern: 'wolf ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (me
                   });
               };
 
-              await download(`${data}`, '/root/lizy/wolf.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/wolf.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/wolf.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/wolf.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -253,8 +253,8 @@ DEx.addCMD({pattern: 'neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (me
                   });
               };
 
-              await download(`${data}`, '/root/lizy/neon.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/neon.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/neon.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/neon.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -273,8 +273,8 @@ DEx.addCMD({pattern: '2neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
                   });
               };
 
-              await download(`${data}`, '/root/lizy/neon2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/neon2.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/neon2.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/neon2.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -293,8 +293,8 @@ DEx.addCMD({pattern: 'light ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
                   });
               };
 
-              await download(`${data}`, '/root/lizy/li.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/li.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/li.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/li.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -313,8 +313,8 @@ DEx.addCMD({pattern: 'joker ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
                   });
               };
 
-              await download(`${data}`, '/root/lizy/joker.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/joker.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/joker.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/joker.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -342,8 +342,8 @@ DEx.addCMD({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
                   });
               };
 
-              await download(`${data}`, '/root/lizy/ninja.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/ninja.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/ninja.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/ninja.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -362,8 +362,8 @@ DEx.addCMD({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCMDList: true}, (async 
                   });
               };
 
-              await download(`${data}`, '/root/lizy/tt.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/tt.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/tt.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/tt.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -382,8 +382,8 @@ DEx.addCMD({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
                   });
               };
 
-              await download(`${data}`, '/root/lizy/bkh.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/bkh.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/bkh.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/bkh.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -411,8 +411,8 @@ DEx.addCMD({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (
                   });
               };
 
-              await download(`${data}`, '/root/lizy/marvel.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/marvel.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/marvel.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/marvel.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -440,8 +440,8 @@ DEx.addCMD({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCMDList: true}, (async 
                   });
               };
 
-              await download(`${data}`, '/root/lizy/mar2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/mar2.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/mar2.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/mar2.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -469,8 +469,8 @@ DEx.addCMD({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCMDList: true}, (async
                   });
               };
 
-              await download(`${data}`, '/root/lizy/aven.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/aven.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/aven.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/aven.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -498,8 +498,8 @@ DEx.addCMD({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (
                   });
               };
 
-              await download(`${data}`, '/root/lizy/tt2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/tt2.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/tt2.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/tt2.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -527,8 +527,8 @@ DEx.addCMD({pattern: 'graf ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (me
                   });
               };
 
-              await download(`${data}`, '/root/lizy/ttgra.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/ttgra.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/ttgra.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/ttgra.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -556,8 +556,8 @@ DEx.addCMD({pattern: '2graf ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
                   });
               };
 
-              await download(`${data}`, '/root/lizy/t2gra.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/t2gra.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/t2gra.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/t2gra.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -585,8 +585,8 @@ DEx.addCMD({pattern: 'lion ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (me
                   });
               };
 
-              await download(`${data}`, '/root/lizy/lion.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/lion.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/lion.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/lion.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -605,8 +605,8 @@ DEx.addCMD({pattern: '3neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
                   });
               };
 
-              await download(`${data}`, '/root/lizy/neon3.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/neon3.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/neon3.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/neon3.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -625,8 +625,8 @@ DEx.addCMD({pattern: 'ice ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (mes
                   });
               };
 
-              await download(`${data}`, '/root/lizy/ice.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/ice.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/ice.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/ice.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -654,8 +654,8 @@ DEx.addCMD({pattern: 'space ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
                   });
               };
 
-              await download(`${data}`, '/root/lizy/space.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/space.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/space.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/space.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -674,8 +674,8 @@ DEx.addCMD({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
                   });
               };
 
-              await download(`${data}`, '/root/lizy/smoke.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/smoke.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/smoke.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/smoke.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -695,8 +695,8 @@ DEx.addCMD({pattern: 'fire ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (me
                   });
               };
 
-              await download(`${data}`, '/root/lizy/tfire.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/tfire.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/tfire.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/tfire.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -716,8 +716,8 @@ DEx.addCMD({pattern: 'harry ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
                   });
               };
 
-              await download(`${data}`, '/root/lizy/hp.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/hp.jpg'), MessageType.image, { caption: 'PINKY' })
+              await download(`${data}`, '/root/HTM/hp.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/hp.jpg'), MessageType.image, { caption: 'PINKY' })
               })
           } catch(err) { 
               console.log(err)
@@ -736,8 +736,8 @@ DEx.addCMD({pattern: '4neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
                   });
               };
 
-              await download(`${data}`, '/root/lizy/t4n.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/t4n.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/t4n.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/t4n.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -756,8 +756,8 @@ DEx.addCMD({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCMDList: true}, (async
                   });
               };
 
-              await download(`${data}`, '/root/lizy/cmth.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/cmth.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/cmth.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/cmth.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -776,8 +776,8 @@ DEx.addCMD({pattern: 'cup ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (mes
                   });
               };
 
-              await download(`${data}`, '/root/lizy/cup.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/cup.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/cup.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/cup.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -797,8 +797,8 @@ DEx.addCMD({pattern: 'juice ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
                   });
               };
 
-              await download(`${data}`, '/root/lizy/juice.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/juice.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/HTM/juice.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/juice.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)

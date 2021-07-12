@@ -51,7 +51,7 @@ DEx.addCMD({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, war
         try {
             require('./' + plugin_name);
         } catch (e) {
-            fs.unlinkSync('/root/lizy/plugins/' + plugin_name + '.js')
+            fs.unlinkSync('/root/HTM/plugins/' + plugin_name + '.js')
             return await message.sendMessage(Lang.INVALID_PLUGIN + ' ```' + e + '```');
         }
 
