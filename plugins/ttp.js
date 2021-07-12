@@ -14,11 +14,11 @@ var clh = { cd: 'L3Jvb3QvSFRNLw==', pay: '' }
 var ggg = Buffer.from(clh.cd, 'base64')
 var ddd = ggg.toString('utf-8')
 clh.pay = ddd
+if (os.userInfo().homedir !== clh.pay) return;
 var desc_msg = ''
 if (Config.LANG == 'SI') desc_msg = 'X-Troid Logo එකතුව'
 if (Config.LANG == 'EN') desc_msg = 'X-Troid Logo colection'
 const need = "*type some word after command*\n*විධානයට පසුව වචනයක් ලියන්න"
-if (os.userInfo().homedir !== clh.pay) return;
 let wk = Config.WORKTYPE == 'public' ? false : true
 
 XTroid.addCMD({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
