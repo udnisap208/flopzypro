@@ -1,7 +1,7 @@
 //this module from lasiya
 
 const {MessageType, GroupSettingChange} = require('@adiwajshing/baileys');
-const DEx = require('../events');
+const XTroid = require('../events');
 const Config = require('../config');
 const UNQ = "wrong command dont type words after command"
 const DDO = "turn on disappering mode"
@@ -19,7 +19,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
-DEx.addCMD({pattern: 'dem ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {    
+XTroid.addCMD({pattern: 'dem ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
@@ -34,7 +34,7 @@ DEx.addCMD({pattern: 'dem ?(.*)', fromMe: true,dontAddCMDList: true}, (async (me
 }));
 
 
-DEx.addCMD({pattern: 'fdem ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {    
+XTroid.addCMD({pattern: 'fdem ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 

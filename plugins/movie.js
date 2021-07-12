@@ -1,4 +1,4 @@
-const DEx = require('../events');
+const XTroid = require('../events');
 const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
 const got = require('got');
 const Config = require('../config');
@@ -7,7 +7,7 @@ const fs = require('fs')
 //
 
 if (Config.WORKTYPE == 'private') {
-DEx.addCMD({ pattern: 'movie ?(.*)', fromMe: true, desc: "Shows movie info." }, (async (message, match) => {
+XTroid.addCMD({ pattern: 'movie ?(.*)', fromMe: true, desc: "Shows movie info." }, (async (message, match) => {
 	if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
 	let url = `http://www.omdbapi.com/?apikey=742b2d09&t=${match[1]}&plot=full`
 	const response = await got(url);
@@ -40,7 +40,7 @@ DEx.addCMD({ pattern: 'movie ?(.*)', fromMe: true, desc: "Shows movie info." }, 
 
 else if (Config.WORKTYPE == 'public') {
 	
-DEx.addCMD({ pattern: 'movie ?(.*)', fromMe: false, desc: "Shows movie info." }, (async (message, match) => {
+XTroid.addCMD({ pattern: 'movie ?(.*)', fromMe: false, desc: "Shows movie info." }, (async (message, match) => {
 	if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
 	let url = `http://www.omdbapi.com/?apikey=742b2d09&t=${match[1]}&plot=full`
 	const response = await got(url);
@@ -73,7 +73,7 @@ DEx.addCMD({ pattern: 'movie ?(.*)', fromMe: false, desc: "Shows movie info." },
 
 
 
-DEx.addCMD({ pattern: 'movie ?(.*)', fromMe: true, dontAddCMDList: true }, (async (message, match) => {
+XTroid.addCMD({ pattern: 'movie ?(.*)', fromMe: true, dontAddCMDList: true }, (async (message, match) => {
 	if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
 	let url = `http://www.omdbapi.com/?apikey=742b2d09&t=${match[1]}&plot=full`
 	const response = await got(url);

@@ -8,7 +8,7 @@
 rgtthrth : rawes60457@edmondpt.com
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
 const fs = require('fs');
 const axios = require('axios');
@@ -17,7 +17,7 @@ const need = "*type some word after command*\n*විධානයට පසු�
 
 if (Config.WORKTYPE == 'private') {
 
-    DEx.addCMD({ pattern: 'anime ?(.*)', fromMe: true,dontAddCMDList: true }, (async (message, match) => {
+    XTroid.addCMD({ pattern: 'anime ?(.*)', fromMe: true,dontAddCMDList: true }, (async (message, match) => {
 
         var lasiyasimg = await axios.get(`https://bx-${Config.ON}.herokuapp.com/api/sfw/waifu?apikey=${Config.CCN}`, { responseType: 'arraybuffer' })
 
@@ -28,7 +28,7 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-    DEx.addCMD({ pattern: 'anime ?(.*)', fromMe: false,dontAddCMDList: true }, (async (message, match) => {
+    XTroid.addCMD({ pattern: 'anime ?(.*)', fromMe: false,dontAddCMDList: true }, (async (message, match) => {
 
         var lasiyasimg = await axios.get(`https://bx-${Config.ON}.herokuapp.com/api/sfw/waifu?apikey=${Config.CCN}`, { responseType: 'arraybuffer' })
 
@@ -36,7 +36,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-    DEx.addCMD({ pattern: 'anime ?(.*)', fromMe: true,dontAddCMDList: true }, (async (message, match) => {
+    XTroid.addCMD({ pattern: 'anime ?(.*)', fromMe: true,dontAddCMDList: true }, (async (message, match) => {
 
         var lasiyasimg = await axios.get(`https://bx-${Config.ON}.herokuapp.com/api/sfw/waifu?apikey=${Config.CCN}`, { responseType: 'arraybuffer' })
 

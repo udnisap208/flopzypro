@@ -6,14 +6,14 @@ you may not use this file except in compliance with the License.
 WhatsAsena - Yusuf Usta
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const sql = require('./sql/greetings');
 
 const Language = require('../language');
 const Lang = Language.getString('greetings');
 
-DEx.addCMD({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
+XTroid.addCMD({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid);
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_WELCOME,MessageType.text);
@@ -22,7 +22,7 @@ DEx.addCMD({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async 
     }
 }));
 
-DEx.addCMD({pattern: 'welcome (.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'welcome (.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') {
         return await message.client.sendMessage(message.jid,Lang.NEED_WELCOME_TEXT);
     } else {
@@ -32,7 +32,7 @@ DEx.addCMD({pattern: 'welcome (.*)', fromMe: true, dontAddCMDList: true}, (async
     }
 }));
 
-DEx.addCMD({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
+XTroid.addCMD({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid, 'goodbye');
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_GOODBYE,MessageType.text)
@@ -41,7 +41,7 @@ DEx.addCMD({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async 
     }
 }));
 
-DEx.addCMD({pattern: 'goodbye (.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'goodbye (.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') {
         return await message.client.sendMessage(message.jid,Lang.NEED_GOODBYE_TEXT,MessageType.text);
     } else {

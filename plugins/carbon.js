@@ -3,7 +3,7 @@ Telegram: t.me/phaticusthiccy
 Instagram: www.instagram.com/kyrie.baran
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
@@ -13,7 +13,7 @@ const Lang = Language.getString('carbon');
 
 if (Config.WORKTYPE == 'private') {
 
-    DEx.addCMD({pattern: 'carbon ?(.*)', fromMe: true, desc: Lang.CARBON_DESC, warn: Lang.CARBON_WARN}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'carbon ?(.*)', fromMe: true, desc: Lang.CARBON_DESC, warn: Lang.CARBON_WARN}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.CARBON_NEEDWORD, MessageType.text);
 
@@ -37,7 +37,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    DEx.addCMD({pattern: 'carbon ?(.*)', fromMe: false, desc: Lang.CARBON_DESC, warn: Lang.CARBON_WARN}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'carbon ?(.*)', fromMe: false, desc: Lang.CARBON_DESC, warn: Lang.CARBON_WARN}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.CARBON_NEEDWORD, MessageType.text);
 
@@ -58,7 +58,7 @@ else if (Config.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid,Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: dd})
 
     }));
-    DEx.addCMD({pattern: 'carbon ?(.*)', fromMe: true, desc: Lang.CARBON_DESC, warn: Lang.CARBON_WARN, dontAddCMDList: true}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'carbon ?(.*)', fromMe: true, desc: Lang.CARBON_DESC, warn: Lang.CARBON_WARN, dontAddCMDList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.CARBON_NEEDWORD, MessageType.text);
 

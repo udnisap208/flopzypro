@@ -6,7 +6,7 @@
 # Get more about devaoloper https://lasiya.ml
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const translatte = require('translatte');
 const config = require('../config');
@@ -48,7 +48,7 @@ var gis = require('g-i-s');
 
 if (config.WORKTYPE == 'private') {
 
-    DEx.addCMD({pattern: "covid ?(.*)", fromMe: true, desc: Clang.COV_DESC}, (async (message, match) => {
+    XTroid.addCMD({pattern: "covid ?(.*)", fromMe: true, desc: Clang.COV_DESC}, (async (message, match) => {
           if (match[1] === "sl" || match[1] === "srilanka" || match[1] === "Sri lanka" || match[1] === "Srilnka" || match[1] === "srelanka") {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Sri Lanka").then(async ok  => {
@@ -74,7 +74,7 @@ if (config.WORKTYPE == 'private') {
 
 else if (config.WORKTYPE == 'public') {
 
-       DEx.addCMD({pattern: "covid ?(.*)", fromMe: false, desc: Clang.COV_DESC}, (async (message, match) => {
+       XTroid.addCMD({pattern: "covid ?(.*)", fromMe: false, desc: Clang.COV_DESC}, (async (message, match) => {
           if (match[1] === "sl" || match[1] === "srilanka" || match[1] === "Sri lanka" || match[1] === "Srilnka" || match[1] === "srelanka") {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Sri Lanka").then(async ok  => {
@@ -98,7 +98,7 @@ else if (config.WORKTYPE == 'public') {
 
 //===================================================================================================================================================================================================
 
-        DEx.addCMD({pattern: "covid ?(.*)", fromMe: true, desc: Clang.COV_DESC}, (async (message, match) => {
+        XTroid.addCMD({pattern: "covid ?(.*)", fromMe: true, desc: Clang.COV_DESC}, (async (message, match) => {
             if (match[1] === "sl" || match[1] === "srilanka" || match[1] === "Sri lanka" || match[1] === "Srilnka" || match[1] === "srelanka") {
               try{
                   const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Sri Lanka").then(async ok  => {

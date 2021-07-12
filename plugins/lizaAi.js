@@ -2,7 +2,7 @@
 */
 
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const ffmpeg = require('fluent-ffmpeg');
 const fs = require('fs');
 const https = require('https');
@@ -50,7 +50,7 @@ const convertToWav = file => {
         .save('output.wav')
 }
 
-DEx.addCMD({on: 'text', fromMe: wk, dontAddCMDList: true, deleteCommand: false}, (async (message, match) => {
+XTroid.addCMD({on: 'text', fromMe: wk, dontAddCMDList: true, deleteCommand: false}, (async (message, match) => {
     if (message.message.startsWith('Liza') && conf.AILIZA !== 'true') {        
         var unique_ident = message.client.user.jid.split('@')[0]      
         var finm = message.message.replace('Liza', '').replace(' ', '')   
@@ -70,7 +70,7 @@ DEx.addCMD({on: 'text', fromMe: wk, dontAddCMDList: true, deleteCommand: false},
         })
     }
 }));
-DEx.addCMD({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+XTroid.addCMD({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
         if (conf.AILIZA == 'true' && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
             (( message.mention !== false && message.mention.length !== 0 ) || message.reply_message !== false)))) {
             if (message.jid.includes('-') && (message.mention !== false && message.mention.length !== 0)) {
@@ -155,7 +155,7 @@ if (conf.LANG == 'EN') {
     succ_off = 'Liza Set to Semi-Functional! Please wait a bit! ☑️'
 }
 
-DEx.addCMD({ pattern: 'liza ?(.*)', desc: fulleva_dsc, fromMe: true, usage: '.liza on / off' }, (async (message, match) => {
+XTroid.addCMD({ pattern: 'liza ?(.*)', desc: fulleva_dsc, fromMe: true, usage: '.liza on / off' }, (async (message, match) => {
     var eva_status = `${conf.AILIZA}`
     if (match[1] == 'on') {
         if (eva_status == 'true') {

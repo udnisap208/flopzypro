@@ -7,7 +7,7 @@ WhatsAsena - Yusuf Usta
 */
 
 const {MessageType, GroupSettingChange} = require('@adiwajshing/baileys');
-const DEx = require('../events');
+const XTroid = require('../events');
 const Config = require('../config');
 
 const Language = require('../language');
@@ -23,7 +23,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
-DEx.addCMD({pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.BAN_DESC}, (async (message, match) => {  
+XTroid.addCMD({pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.BAN_DESC}, (async (message, match) => {  
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
@@ -61,7 +61,7 @@ DEx.addCMD({pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.BAN_
     }
 }));
 
-DEx.addCMD({pattern: 'add(?: |$)(.*)', fromMe: true, onlyGroup: true, desc: Lang.ADD_DESC}, (async (message, match) => {  
+XTroid.addCMD({pattern: 'add(?: |$)(.*)', fromMe: true, onlyGroup: true, desc: Lang.ADD_DESC}, (async (message, match) => {  
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
@@ -95,7 +95,7 @@ DEx.addCMD({pattern: 'add(?: |$)(.*)', fromMe: true, onlyGroup: true, desc: Lang
     }
 }));
 
-DEx.addCMD({pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.PROMOTE_DESC}, (async (message, match) => {    
+XTroid.addCMD({pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.PROMOTE_DESC}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
@@ -153,7 +153,7 @@ DEx.addCMD({pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.
     }
 }));
 
-DEx.addCMD({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.DEMOTE_DESC}, (async (message, match) => {    
+XTroid.addCMD({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.DEMOTE_DESC}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN);
 
@@ -211,7 +211,7 @@ DEx.addCMD({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.D
     }
 }));
 
-DEx.addCMD({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.MUTE_DESC}, (async (message, match) => {    
+XTroid.addCMD({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.MUTE_DESC}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
@@ -1567,7 +1567,7 @@ DEx.addCMD({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.MUT
     }
 }));
 
-DEx.addCMD({pattern: 'unmute ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.UNMUTE_DESC}, (async (message, match) => {    
+XTroid.addCMD({pattern: 'unmute ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.UNMUTE_DESC}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
@@ -1581,7 +1581,7 @@ DEx.addCMD({pattern: 'unmute ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.U
     }
 }));
 
-DEx.addCMD({pattern: 'invite ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.INVITE_DESC}, (async (message, match) => {    
+XTroid.addCMD({pattern: 'invite ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.INVITE_DESC}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN, MessageType.text);
     var invite = await message.client.groupInviteCode(message.jid);

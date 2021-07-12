@@ -5,7 +5,7 @@ you may not use this file except in compliance with the License.
 
 WhatsAsena - Yusuf Usta
 */
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const exec = require('child_process').exec;
 const os = require("os");
@@ -22,7 +22,7 @@ const heroku = new Heroku({
 });
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
-DEx.addCMD({pattern: 'term ?(.*)', fromMe: true, desc: Lang.TERM_DESC}, (async (message, match) => {    
+XTroid.addCMD({pattern: 'term ?(.*)', fromMe: true, desc: Lang.TERM_DESC}, (async (message, match) => {    
     var user = os.userInfo().username;
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.GIVE_ME_CODE,MessageType.text);
 
@@ -61,7 +61,7 @@ var ldc = ''
 if (Config.LANG == 'TR') ldc = '*ලින්කුවක් දමා ඇත*'
 if (Config.LANG == 'EN') ldc = '*Link Detected!*'
 
-DEx.addCMD({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+XTroid.addCMD({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (antilink_var == 'true' && message.jid !== '905511384572-1616356915@g.us') {
         let regex1 = new RegExp('http://')
         let regex2 = new RegExp('https://')

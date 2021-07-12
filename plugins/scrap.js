@@ -1,5 +1,5 @@
 const lasiapi = require('textmaker-lasi');
-const DEx = require('../events');
+const XTroid = require('../events');
 const GG = "...."
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const fs = require('fs');
@@ -11,7 +11,7 @@ let FM = Config.WORKTYPE == 'public' ? false : true
     
 
 
-DEx.addCMD({pattern: 'nclub ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'nclub ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
 
     await axios.get(`https://tinyurl.com/${Config.LOCKR}`).then(async (ann) => {
         const { lasi } = ann.data.def1
@@ -42,7 +42,7 @@ DEx.addCMD({pattern: 'nclub ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (m
 
 
 
-DEx.addCMD({pattern: 'ngreen ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'ngreen ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
 
     await axios.get(`https://tinyurl.com/${Config.LOCKR}`).then(async (ann) => {
         const { lasi } = ann.data.def1
@@ -71,7 +71,7 @@ DEx.addCMD({pattern: 'ngreen ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (
 
 
 
-DEx.addCMD({pattern: 'nsteel ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'nsteel ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
 
     await axios.get(`https://tinyurl.com/${Config.LOCKR}`).then(async (ann) => {
         const { lasi } = ann.data.def1
@@ -99,7 +99,7 @@ DEx.addCMD({pattern: 'nsteel ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (
 }));
 
 
-DEx.addCMD({pattern: 'nxms ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'nxms ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
 
     await axios.get(`https://tinyurl.com/${Config.LOCKR}`).then(async (ann) => {
         const { lasi } = ann.data.def1
@@ -127,7 +127,7 @@ DEx.addCMD({pattern: 'nxms ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (me
 }));
 
 
-DEx.addCMD({pattern: 'ncloud ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'ncloud ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
 
     await axios.get(`https://tinyurl.com/${Config.LOCKR}`).then(async (ann) => {
         const { lasi } = ann.data.def1
@@ -156,7 +156,7 @@ DEx.addCMD({pattern: 'ncloud ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (
 
 
 
-DEx.addCMD({pattern: 'nblood ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'nblood ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
 
     await axios.get(`https://tinyurl.com/${Config.LOCKR}`).then(async (ann) => {
         const { lasi } = ann.data.def1
@@ -186,7 +186,7 @@ DEx.addCMD({pattern: 'nblood ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (
 
 
 
-DEx.addCMD({pattern: 'ntoxic ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'ntoxic ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
 
     await axios.get(`https://tinyurl.com/${Config.LOCKR}`).then(async (ann) => {
         const { lasi } = ann.data.def1
@@ -215,7 +215,7 @@ DEx.addCMD({pattern: 'ntoxic ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (
 
 
 
-DEx.addCMD({pattern: 'n2bld ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'n2bld ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
 
     await axios.get(`https://tinyurl.com/${Config.LOCKR}`).then(async (ann) => {
         const { lasi } = ann.data.def1
@@ -244,7 +244,7 @@ DEx.addCMD({pattern: 'n2bld ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (m
 
 
 
-DEx.addCMD({pattern: 'ncarb ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'ncarb ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
 
     await axios.get(`https://tinyurl.com/${Config.LOCKR}`).then(async (ann) => {
         const { lasi } = ann.data.def1
@@ -274,7 +274,7 @@ DEx.addCMD({pattern: 'ncarb ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (m
 
 
 
-DEx.addCMD({pattern: 'nlux ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'nlux ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
 
     await axios.get(`https://tinyurl.com/${Config.LOCKR}`).then(async (ann) => {
         const { lasi } = ann.data.def1
@@ -304,7 +304,7 @@ DEx.addCMD({pattern: 'nlux ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (me
 
 
 
-DEx.addCMD({pattern: 'ngold ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'ngold ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
 
     await axios.get(`https://tinyurl.com/${Config.LOCKR}`).then(async (ann) => {
         const { lasi } = ann.data.def1

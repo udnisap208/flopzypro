@@ -1,7 +1,7 @@
 /* 
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const axios = require('axios');
@@ -14,7 +14,7 @@ const Lang = Language.getString('webss');
 
 if (Config.WORKTYPE == 'private') {
 
-    DEx.addCMD({pattern: 'ss ?(.*)', fromMe: true, desc: Lang.SS_DESC}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'ss ?(.*)', fromMe: true, desc: Lang.SS_DESC}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.LİNK);
 
@@ -26,7 +26,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    DEx.addCMD({pattern: 'ss ?(.*)', fromMe: false, desc: Lang.SS_DESC}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'ss ?(.*)', fromMe: false, desc: Lang.SS_DESC}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.LİNK);
 
@@ -35,7 +35,7 @@ else if (Config.WORKTYPE == 'public') {
         await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
 
     }));
-    DEx.addCMD({pattern: 'ss ?(.*)', fromMe: true, desc: Lang.SS_DESC, dontAddCMDList: true}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'ss ?(.*)', fromMe: true, desc: Lang.SS_DESC, dontAddCMDList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.LİNK);
 

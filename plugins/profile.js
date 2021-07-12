@@ -6,7 +6,7 @@ you may not use this file except in compliance with the License.
 WhatsAsena - Yusuf Usta
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Config = require('../config');
 
@@ -14,7 +14,7 @@ const fs = require('fs');
 const Language = require('../language');
 const Lang = Language.getString('profile');
 
-DEx.addCMD({pattern: 'kickme', fromMe: true, desc: Lang.KICKME_DESC, onlyGroup: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'kickme', fromMe: true, desc: Lang.KICKME_DESC, onlyGroup: true}, (async (message, match) => {
     if (Config.KICKMEMSG == 'default') { 
         await message.client.sendMessage(message.jid,Lang.KICKME,MessageType.text);
         await message.client.groupLeave(message.jid);
@@ -25,7 +25,7 @@ DEx.addCMD({pattern: 'kickme', fromMe: true, desc: Lang.KICKME_DESC, onlyGroup: 
     }
 }));
 
-DEx.addCMD({pattern: 'pp', fromMe: true, desc: Lang.PP_DESC}, (async (message, match) => {    
+XTroid.addCMD({pattern: 'pp', fromMe: true, desc: Lang.PP_DESC}, (async (message, match) => {    
     if (!message.reply_message || !message.reply_message.image) return await message.client.sendMessage(message.jid,Lang.NEED_PHOTO, MessageType.text);
     
     var load = await message.client.sendMessage(message.jid,Lang.PPING,MessageType.text);
@@ -41,7 +41,7 @@ DEx.addCMD({pattern: 'pp', fromMe: true, desc: Lang.PP_DESC}, (async (message, m
     await message.client.deleteMessage(message.jid, {id: load.key.id, remoteJid: message.jid, fromMe: true})
 }));
 
-DEx.addCMD({pattern: 'block ?(.*)', fromMe: true, desc: Lang.BLOCK_DESC}, (async (message, match) => {   
+XTroid.addCMD({pattern: 'block ?(.*)', fromMe: true, desc: Lang.BLOCK_DESC}, (async (message, match) => {   
     if (Config.BLOCKMSG == 'default') {  
         if (message.reply_message !== false) {
             await message.client.sendMessage(message.jid, '@' + message.reply_message.jid.split('@')[0] + '```, ' + Lang.BLOCKED + '!```', MessageType.text, {
@@ -84,7 +84,7 @@ DEx.addCMD({pattern: 'block ?(.*)', fromMe: true, desc: Lang.BLOCK_DESC}, (async
     }
 }));
 
-DEx.addCMD({pattern: 'unblock ?(.*)', fromMe: true, desc: Lang.UNBLOCK_DESC}, (async (message, match) => { 
+XTroid.addCMD({pattern: 'unblock ?(.*)', fromMe: true, desc: Lang.UNBLOCK_DESC}, (async (message, match) => { 
     if (Config.UNBLOCKMSG == 'default') { 
    
         if (message.reply_message !== false) {

@@ -1,4 +1,4 @@
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const got = require('got');
 const Config = require('../config');
@@ -12,7 +12,7 @@ const Lang = Language.getString('weather');
 
 if (Config.WORKTYPE == 'private') {
 
-DEx.addCMD({pattern: 'joke ?(.*)', fromMe: true, desc: Lang.JOKE_DESC}, async (message, match) => {
+XTroid.addCMD({pattern: 'joke ?(.*)', fromMe: true, desc: Lang.JOKE_DESC}, async (message, match) => {
 	if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 	const url = `https://official-joke-api.appspot.com/random_joke`;
 	try {
@@ -28,7 +28,7 @@ DEx.addCMD({pattern: 'joke ?(.*)', fromMe: true, desc: Lang.JOKE_DESC}, async (m
 
 else if (Config.WORKTYPE == 'public') {
 
-	DEx.addCMD({pattern: 'joke ?(.*)', fromMe: false, desc: Lang.JOKE_DESC}, async (message, match) => {
+	XTroid.addCMD({pattern: 'joke ?(.*)', fromMe: false, desc: Lang.JOKE_DESC}, async (message, match) => {
 		if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 		const url = `https://official-joke-api.appspot.com/random_joke`;
 		try {
@@ -41,7 +41,7 @@ else if (Config.WORKTYPE == 'public') {
 		}
 	});
 
-	DEx.addCMD({pattern: 'joke ?(.*)', fromMe: true, dontAddCMDList: true }, async (message, match) => {
+	XTroid.addCMD({pattern: 'joke ?(.*)', fromMe: true, dontAddCMDList: true }, async (message, match) => {
 		if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 		const url = `https://official-joke-api.appspot.com/random_joke`;
 		try {

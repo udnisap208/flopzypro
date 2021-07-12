@@ -12,7 +12,7 @@
 
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 
 const {MessageType} = require('@adiwajshing/baileys');
 
@@ -36,7 +36,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
 
 }
 
-DEx.addCMD({pattern: 'tg ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC }, (async (message, match) => {
+XTroid.addCMD({pattern: 'tg ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC }, (async (message, match) => {
 
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);

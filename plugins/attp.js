@@ -6,7 +6,7 @@
 # Get more about devaoloper https://lasiya.ml
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
 const fs = require('fs');
 const axios = require('axios');
@@ -17,7 +17,7 @@ const ANIM = "Get random anime waifu wallpapers"
 
 if (Config.WORKTYPE == 'private') {
 
-    DEx.addCMD({ pattern: 'ttp ?(.*)', fromMe: true, desc: Lang.TTP_DESC }, (async (message, match) => {
+    XTroid.addCMD({ pattern: 'ttp ?(.*)', fromMe: true, desc: Lang.TTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
 
@@ -27,7 +27,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    DEx.addCMD({ pattern: 'attp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
+    XTroid.addCMD({ pattern: 'attp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
                 var XX = match[1]
@@ -38,7 +38,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-        DEx.addCMD({ pattern: 'a2tp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
+        XTroid.addCMD({ pattern: 'a2tp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
                 var XX = match[1]
@@ -51,7 +51,7 @@ if (Config.WORKTYPE == 'private') {
     
     
 
-        DEx.addCMD({ pattern: 'aatp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
+        XTroid.addCMD({ pattern: 'aatp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
                 var XX = match[1]
@@ -62,7 +62,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-            DEx.addCMD({ pattern: 'abtp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
+            XTroid.addCMD({ pattern: 'abtp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
                 var XX = match[1]
@@ -72,7 +72,7 @@ if (Config.WORKTYPE == 'private') {
         await message.client.sendMessage(message.jid,Buffer.from(lasiyasimg.data), MessageType.image, { mimetype: Mimetype.png })
 
     }));
-            DEx.addCMD({ pattern: 'actp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
+            XTroid.addCMD({ pattern: 'actp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
                 var XX = match[1]
@@ -82,7 +82,7 @@ if (Config.WORKTYPE == 'private') {
         await message.client.sendMessage(message.jid,Buffer.from(lasiyasimg.data), MessageType.image, { mimetype: Mimetype.png })
 
     }));
-             DEx.addCMD({ pattern: 'adtp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
+             XTroid.addCMD({ pattern: 'adtp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
                 var XX = match[1]
@@ -99,7 +99,7 @@ if (Config.WORKTYPE == 'private') {
 // ##############################################################################################################################################################################################################################################################
 else if (Config.WORKTYPE == 'public') {
 
-    DEx.addCMD({ pattern: 'ttp ?(.*)', fromMe: false, desc: Lang.TTP_DESC }, (async (message, match) => {
+    XTroid.addCMD({ pattern: 'ttp ?(.*)', fromMe: false, desc: Lang.TTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
 
@@ -110,7 +110,7 @@ else if (Config.WORKTYPE == 'public') {
     }));
 
 
-    DEx.addCMD({ pattern: 'attp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
+    XTroid.addCMD({ pattern: 'attp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
 
@@ -120,7 +120,7 @@ else if (Config.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid,Buffer.from(lasiyasimg.data), MessageType.sticker, { mimetype: Mimetype.webp })
 
     }));
-            DEx.addCMD({ pattern: 'a2tp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
+            XTroid.addCMD({ pattern: 'a2tp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
                 var XX = match[1]
@@ -131,7 +131,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
     
-            DEx.addCMD({ pattern: 'aatp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
+            XTroid.addCMD({ pattern: 'aatp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
                 var XX = match[1]
@@ -142,7 +142,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-            DEx.addCMD({ pattern: 'abtp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
+            XTroid.addCMD({ pattern: 'abtp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
                 var XX = match[1]
@@ -152,7 +152,7 @@ else if (Config.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid,Buffer.from(lasiyasimg.data), MessageType.image, { mimetype: Mimetype.png })
 
     }));
-            DEx.addCMD({ pattern: 'actp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
+            XTroid.addCMD({ pattern: 'actp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
                 var XX = match[1]
@@ -162,7 +162,7 @@ else if (Config.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid,Buffer.from(lasiyasimg.data), MessageType.image, { mimetype: Mimetype.png })
 
     }));
-            DEx.addCMD({ pattern: 'adtp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
+            XTroid.addCMD({ pattern: 'adtp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
                 var XX = match[1]
@@ -175,7 +175,7 @@ else if (Config.WORKTYPE == 'public') {
 
 // =======================================================================================================================================================================================================================
 
-    DEx.addCMD({ pattern: 'ttp ?(.*)', fromMe: true, desc: Lang.TTP_DESC }, (async (message, match) => {
+    XTroid.addCMD({ pattern: 'ttp ?(.*)', fromMe: true, desc: Lang.TTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
 
@@ -186,7 +186,7 @@ else if (Config.WORKTYPE == 'public') {
     }));
 
 
-    DEx.addCMD({ pattern: 'attp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
+    XTroid.addCMD({ pattern: 'attp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
 
@@ -196,7 +196,7 @@ else if (Config.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid,Buffer.from(lasiyasimg.data), MessageType.sticker, { mimetype: Mimetype.webp })
 
     }));
-            DEx.addCMD({ pattern: 'a2tp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
+            XTroid.addCMD({ pattern: 'a2tp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
                 var XX = match[1]
@@ -207,7 +207,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
     
-            DEx.addCMD({ pattern: 'aatp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
+            XTroid.addCMD({ pattern: 'aatp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
                 var XX = match[1]
@@ -218,7 +218,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-            DEx.addCMD({ pattern: 'abtp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
+            XTroid.addCMD({ pattern: 'abtp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
                 var XX = match[1]
@@ -228,7 +228,7 @@ else if (Config.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid,Buffer.from(lasiyasimg.data), MessageType.image, { mimetype: Mimetype.png })
 
     }));
-            DEx.addCMD({ pattern: 'actp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
+            XTroid.addCMD({ pattern: 'actp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
                 var XX = match[1]
@@ -238,7 +238,7 @@ else if (Config.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid,Buffer.from(lasiyasimg.data), MessageType.image, { mimetype: Mimetype.png })
 
     }));
-            DEx.addCMD({ pattern: 'adtp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
+            XTroid.addCMD({ pattern: 'adtp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
                 var XX = match[1]

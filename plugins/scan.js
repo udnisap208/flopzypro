@@ -3,7 +3,7 @@ Telegram: t.me/phaticusthiccy
 Instagram: www.instagram.com/kyrie.baran
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Config = require('../config');
 
@@ -11,7 +11,7 @@ const Language = require('../language');
 const Lang = Language.getString('tagall');
 
 if (Config.WORKTYPE == 'private') {
-    DEx.addCMD({ pattern: 'scan ?(.*)', fromMe: true, desc: Lang.SCAN}, (async (message, match) => { 
+    XTroid.addCMD({ pattern: 'scan ?(.*)', fromMe: true, desc: Lang.SCAN}, (async (message, match) => { 
 
         if (match[1] == '') return await message.client.sendMessage(message.jid, Lang.NO, MessageType.text);
 
@@ -25,7 +25,7 @@ if (Config.WORKTYPE == 'private') {
     }));
 }
 else if (Config.WORKTYPE == 'public') {
-    DEx.addCMD({ pattern: 'scan ?(.*)', fromMe: false, desc: Lang.SCAN}, (async (message, match) => { 
+    XTroid.addCMD({ pattern: 'scan ?(.*)', fromMe: false, desc: Lang.SCAN}, (async (message, match) => { 
 
         if (match[1] == '') return await message.client.sendMessage(message.jid, Lang.NO, MessageType.text);
 
@@ -37,7 +37,7 @@ else if (Config.WORKTYPE == 'public') {
             await message.client.sendMessage(message.jid,'```' + match[1] + '``` \n' + Lang.UNSUC, MessageType.text);
         }
     }));
-    DEx.addCMD({ pattern: 'scan ?(.*)', fromMe: true, dontAddCMDList: true, desc: Lang.SCAN}, (async (message, match) => { 
+    XTroid.addCMD({ pattern: 'scan ?(.*)', fromMe: true, dontAddCMDList: true, desc: Lang.SCAN}, (async (message, match) => { 
 
         if (match[1] == '') return await message.client.sendMessage(message.jid, Lang.NO, MessageType.text);
 

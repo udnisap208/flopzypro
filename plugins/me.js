@@ -1,7 +1,7 @@
 /*
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const {spawnSync} = require('child_process');
 const Config = require('../config');
@@ -15,7 +15,7 @@ let FM = Config.WORKTYPE == 'public' ? false : true
 
 
 
-    DEx.addCMD({pattern: 'me', fromMe: FM, desc: ME}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'me', fromMe: FM, desc: ME}, (async (message, match) => {
         let pp
         try {
              pp = await message.client.getProfilePicture(

@@ -6,7 +6,7 @@ you may not use this file except in compliance with the License.
 WhatsAsena - Yusuf Usta
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const speedTest = require('@lh2020/speedtest-net');
 const TinyURL = require('tinyurl');
@@ -30,7 +30,7 @@ function speedText(speed) {
     return `${bits.toFixed(places[unit])} ${units[unit]}bps`;
 }
 
-DEx.addCMD({pattern: 'speedtest', fromMe: true, desc: Lang.SPEEDTEST_DESC}, (async (message, match) => {
+XTroid.addCMD({pattern: 'speedtest', fromMe: true, desc: Lang.SPEEDTEST_DESC}, (async (message, match) => {
     var msg = await message.reply(Lang.SPEEDTESTING);
     var st = await speedTest({acceptLicense: true, acceptGdpr: true});
     
@@ -44,7 +44,7 @@ DEx.addCMD({pattern: 'speedtest', fromMe: true, desc: Lang.SPEEDTEST_DESC}, (asy
     await msg.delete();
 }));
 
-DEx.addCMD({pattern: 'ping', fromMe: true, deleteCommand: false, desc: Lang.PING_DESC}, (async (message, match) => {
+XTroid.addCMD({pattern: 'ping', fromMe: true, deleteCommand: false, desc: Lang.PING_DESC}, (async (message, match) => {
   var start = new Date().getTime();
   await message.sendMessage('```Ping!```');
   var end = new Date().getTime();
@@ -55,7 +55,7 @@ DEx.addCMD({pattern: 'ping', fromMe: true, deleteCommand: false, desc: Lang.PING
 
 if (Config.WORKTYPE == 'private') {
 
-    DEx.addCMD({pattern: 'short ?(.*)', fromMe: true, desc: Lang.URL}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'short ?(.*)', fromMe: true, desc: Lang.URL}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid, SLang.LİNK, MessageType.text);
 
@@ -66,7 +66,7 @@ if (Config.WORKTYPE == 'private') {
             await message.client.sendMessage(message.jid,`*Original Link:* ${match[1]}\n*Short Link:* ` + res, MessageType.text)
         });
     }));
-    DEx.addCMD({pattern: 'calc ?(.*)', fromMe: true, desc: Lang.CALC }, (async (message, match) => {
+    XTroid.addCMD({pattern: 'calc ?(.*)', fromMe: true, desc: Lang.CALC }, (async (message, match) => {
         if (match[1].length < 4) { return await message.client.sendMessage(message.jid,Lang.VALİD, MessageType.text) }
         if (match[1].includes('+')) { var split = match[1].split('+'), sonsayi = split[1], ilksayi = split[0]
             var result = -(-ilksayi - sonsayi)
@@ -96,7 +96,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    DEx.addCMD({pattern: 'short ?(.*)', fromMe: false, desc: Lang.URL}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'short ?(.*)', fromMe: false, desc: Lang.URL}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid, SLang.LİNK, MessageType.text);
 
@@ -107,7 +107,7 @@ else if (Config.WORKTYPE == 'public') {
             await message.client.sendMessage(message.jid,`*Original Link:* ${match[1]}\n*Short Link:* ` + res, MessageType.text)
         });
     }));
-    DEx.addCMD({pattern: 'short ?(.*)', fromMe: true, desc: Lang.URL, dontAddCMDList: true}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'short ?(.*)', fromMe: true, desc: Lang.URL, dontAddCMDList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid, SLang.LİNK, MessageType.text);
 
@@ -118,7 +118,7 @@ else if (Config.WORKTYPE == 'public') {
             await message.client.sendMessage(message.jid,`*Original Link:* ${match[1]}\n*Short Link:* ` + res, MessageType.text)
         });
     }));
-    DEx.addCMD({pattern: 'calc ?(.*)', fromMe: false, desc: Lang.CALC }, (async (message, match) => {
+    XTroid.addCMD({pattern: 'calc ?(.*)', fromMe: false, desc: Lang.CALC }, (async (message, match) => {
         if (match[1].length < 4) { return await message.client.sendMessage(message.jid,Lang.VALİD, MessageType.text) }
         if (match[1].includes('+')) { var split = match[1].split('+'), sonsayi = split[1], ilksayi = split[0]
             var result = -(-ilksayi - sonsayi)
@@ -145,7 +145,7 @@ else if (Config.WORKTYPE == 'public') {
             }
         }
     }));
-    DEx.addCMD({pattern: 'calc ?(.*)', fromMe: true, desc: Lang.CALC, dontAddCMDList: true }, (async (message, match) => {
+    XTroid.addCMD({pattern: 'calc ?(.*)', fromMe: true, desc: Lang.CALC, dontAddCMDList: true }, (async (message, match) => {
         if (match[1].length < 4) { return await message.client.sendMessage(message.jid,Lang.VALİD, MessageType.text) }
         if (match[1].includes('+')) { var split = match[1].split('+'), sonsayi = split[1], ilksayi = split[0]
             var result = -(-ilksayi - sonsayi)

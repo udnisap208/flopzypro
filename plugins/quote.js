@@ -1,4 +1,4 @@
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const got = require('got');
 
@@ -11,7 +11,7 @@ const NOT_FOUNDA = "```Sorry,I could not find a quote. 😖```"
 const Config = require('../config');
 
 if (Config.WORKTYPE == 'private') {
-DEx.addCMD({pattern: 'quote ?(.*)', fromMe: true, desc: QUOTE_DESC}, async (message, match) => {
+XTroid.addCMD({pattern: 'quote ?(.*)', fromMe: true, desc: QUOTE_DESC}, async (message, match) => {
 	if (match[1] === 'xx') return await message.reply(NEED_LOCATIONA);
 	const url = `https://api.quotable.io/random`;
 	try {
@@ -28,7 +28,7 @@ DEx.addCMD({pattern: 'quote ?(.*)', fromMe: true, desc: QUOTE_DESC}, async (mess
 	
 	else if (Config.WORKTYPE == 'public') {
 		
-		DEx.addCMD({pattern: 'quote ?(.*)', fromMe: false, desc: QUOTE_DESC}, async (message, match) => {
+		XTroid.addCMD({pattern: 'quote ?(.*)', fromMe: false, desc: QUOTE_DESC}, async (message, match) => {
 	if (match[1] === 'xx') return await message.reply(NEED_LOCATIONA);
 	const url = `https://api.quotable.io/random`;
 	try {

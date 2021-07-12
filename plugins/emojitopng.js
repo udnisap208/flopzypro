@@ -6,7 +6,7 @@
 # Get more about devaoloper https://lasiya.ml
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const axios = require('axios');
@@ -18,7 +18,7 @@ const iii = "Only work with emoji\n ඉමොජි පමණක් එවන්
 
 if (Config.WORKTYPE == 'private') {
 
-    DEx.addCMD({pattern: 'png ?(.*)', fromMe: true, desc: des}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'png ?(.*)', fromMe: true, desc: des}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(iii);
 
@@ -30,7 +30,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    DEx.addCMD({pattern: 'png ?(.*)', fromMe: false, desc: des}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'png ?(.*)', fromMe: false, desc: des}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(iii);
 
@@ -41,7 +41,7 @@ else if (Config.WORKTYPE == 'public') {
     }));
 
 
-    DEx.addCMD({pattern: 'png ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'png ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(iii);
 

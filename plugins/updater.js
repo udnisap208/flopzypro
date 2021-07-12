@@ -8,7 +8,7 @@ WhatsAsena - Yusuf Usta
 
 const simpleGit = require('simple-git');
 const git = simpleGit();
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Config = require('../config');
 const exec = require('child_process').exec;
@@ -20,7 +20,7 @@ const Language = require('../language');
 const Lang = Language.getString('updater');
 
 
-DEx.addCMD({pattern: 'up$', fromMe: true, desc: Lang.UPDATER_DESC}, (async (message, match) => {
+XTroid.addCMD({pattern: 'up$', fromMe: true, desc: Lang.UPDATER_DESC}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
@@ -43,7 +43,7 @@ DEx.addCMD({pattern: 'up$', fromMe: true, desc: Lang.UPDATER_DESC}, (async (mess
     }
 }));
 
-DEx.addCMD({pattern: 'up now$', fromMe: true, desc: Lang.UPDATE_NOW_DESC}, (async (message, match) => {
+XTroid.addCMD({pattern: 'up now$', fromMe: true, desc: Lang.UPDATE_NOW_DESC}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {

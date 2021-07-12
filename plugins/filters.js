@@ -6,7 +6,7 @@
 # Get more about devaoloper https://lasiya.ml
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const FilterDb = require('./sql/filters');
 const Config = require('../config')
@@ -18,7 +18,7 @@ if (Config.LANG == 'SI') f_rep = '*පෙරනය සකසන ලදී ✅*'
 if (Config.LANG == 'EN') f_rep = '*𝐹𝒾𝓁𝓉𝑒𝓇 𝒮𝒶𝓋𝑒𝒹 ✅*'
 
 
-DEx.addCMD({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC}, (async (message, match) => {
+XTroid.addCMD({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC}, (async (message, match) => {
     Mat = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
 
     if (Mat === null) {
@@ -42,7 +42,7 @@ DEx.addCMD({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC}, (asy
     }
 }));
 
-DEx.addCMD({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC}, (async (message, match) => {
+XTroid.addCMD({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
     if (match === null) {
         return await message.client.sendMessage(message.jid,Lang.NEED_REPLY + '\n*Example:* ```.stop "hello"```',MessageType.text)
@@ -58,7 +58,7 @@ DEx.addCMD({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC}, (async (
 }));
 
 
-DEx.addCMD({on: 'text', fromMe: false}, (async (message, match) => {
+XTroid.addCMD({on: 'text', fromMe: false}, (async (message, match) => {
     var filtreler = await FilterDb.getFilter(message.jid);
     if (!filtreler) return; 
     return filtreler.map(
@@ -71,7 +71,7 @@ DEx.addCMD({on: 'text', fromMe: false}, (async (message, match) => {
         }
     );
 }));
-DEx.addCMD({on: 'text', fromMe: true, deleteCommand: false, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({on: 'text', fromMe: true, deleteCommand: false, dontAddCMDList: true}, (async (message, match) => {
     var filtreler = await FilterDb.getFilter(message.jid);
     if (!filtreler) return; 
     return filtreler.map(

@@ -7,7 +7,7 @@ you may not use this file except in compliance with the License.
 WhatsAsena - Yusuf Usta
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const got = require('got');
 const Config = require('../config');
@@ -17,7 +17,7 @@ const Lang = Language.getString('nekobin');
 
 if (Config.WORKTYPE == 'private') {
 
-    DEx.addCMD({pattern: 'neko', fromMe: true, desc: Lang.NEKO_DESC}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'neko', fromMe: true, desc: Lang.NEKO_DESC}, (async (message, match) => {
 
         if (!message.reply_message) return await message.sendMessage(Lang.NEED_REPLY);
         if (!message.reply_message.text) return await message.sendMessage(Lang.MUST_TEXT);
@@ -36,7 +36,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    DEx.addCMD({pattern: 'neko', fromMe: false, desc: Lang.NEKO_DESC}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'neko', fromMe: false, desc: Lang.NEKO_DESC}, (async (message, match) => {
 
         if (!message.reply_message) return await message.sendMessage(Lang.NEED_REPLY);
         if (!message.reply_message.text) return await message.sendMessage(Lang.MUST_TEXT);
@@ -52,7 +52,7 @@ else if (Config.WORKTYPE == 'public') {
         }
        
     }));
-    DEx.addCMD({pattern: 'neko', fromMe: true, desc: Lang.NEKO_DESC, dontAddCMDList: true}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'neko', fromMe: true, desc: Lang.NEKO_DESC, dontAddCMDList: true}, (async (message, match) => {
 
         if (!message.reply_message) return await message.sendMessage(Lang.NEED_REPLY);
         if (!message.reply_message.text) return await message.sendMessage(Lang.MUST_TEXT);

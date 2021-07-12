@@ -4,7 +4,7 @@ you may not use this file except in compliance with the License.
 WhatsAsenaDuplicated
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const axios = require('axios');
@@ -17,7 +17,7 @@ const Lang = Language.getString('qrgenerator');
 
 if (Config.WORKTYPE == 'private') {
 
-DEx.addCMD({pattern: 'qr ?(.*)', fromMe: true, desc: Lang.QR_DESC}, (async (message, match) => {
+XTroid.addCMD({pattern: 'qr ?(.*)', fromMe: true, desc: Lang.QR_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.TEXT);
 
@@ -29,7 +29,7 @@ DEx.addCMD({pattern: 'qr ?(.*)', fromMe: true, desc: Lang.QR_DESC}, (async (mess
 }
 if (Config.WORKTYPE == 'public') {
 
-DEx.addCMD({pattern: 'qr ?(.*)', fromMe: false, desc: Lang.QR_DESC}, (async (message, match) => {
+XTroid.addCMD({pattern: 'qr ?(.*)', fromMe: false, desc: Lang.QR_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.TEXT);
 

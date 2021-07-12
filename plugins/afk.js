@@ -6,7 +6,7 @@
 # Get more about devaoloper https://lasiya.mlcy
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Config = require('../config');
 
@@ -32,7 +32,7 @@ function secondsToHms(d) {
     return hDisplay + mDisplay + sDisplay; 
 }
 
-DEx.addCMD({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+XTroid.addCMD({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (Config.AFKMSG == 'default') {
 
         if (AFK.isAfk && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
@@ -84,7 +84,7 @@ DEx.addCMD({on: 'text', fromMe: false, deleteCommand: false}, (async (message, m
     }
 }));
 
-DEx.addCMD({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
+XTroid.addCMD({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
     if (AFK.isAfk && !message.id.startsWith('3EB0')) {
         AFK.lastseen = 0;
         AFK.reason = false;
@@ -94,7 +94,7 @@ DEx.addCMD({on: 'text', fromMe: true, deleteCommand: false}, (async (message, ma
     }
 }));
 
-DEx.addCMD({pattern: 'afk ?(.*)', fromMe: true, deleteCommand: false, desc: Lang.AFK_DESC}, (async (message, match) => {     
+XTroid.addCMD({pattern: 'afk ?(.*)', fromMe: true, deleteCommand: false, desc: Lang.AFK_DESC}, (async (message, match) => {     
     if (!AFK.isAfk) {
         AFK.lastseen = Math.round((new Date()).getTime() / 1000);
         if (match[1] !== '') { AFK.reason = match[1]; }

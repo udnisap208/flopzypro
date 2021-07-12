@@ -1,4 +1,4 @@
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const got = require('got');
 const Config = require('../config');
@@ -9,7 +9,7 @@ const Lang = Language.getString('weather');
 
 if (Config.WORKTYPE == 'private') {
 	
-DEx.addCMD({pattern: 'hpmod ?(.*)', fromMe: true, desc: Lang.HMODD_DESC, dontAddCMDList: true }, async (message, match) => {
+XTroid.addCMD({pattern: 'hpmod ?(.*)', fromMe: true, desc: Lang.HMODD_DESC, dontAddCMDList: true }, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_APPNAME);
 	const url = `https://api.zeks.xyz/api/happymod?apikey=&q=${match[1]}&apikey=1hroZ3ju94h0PBjCNKsfhYaSuLs`;
 	try {
@@ -26,7 +26,7 @@ DEx.addCMD({pattern: 'hpmod ?(.*)', fromMe: true, desc: Lang.HMODD_DESC, dontAdd
 }
 else if (Config.WORKTYPE == 'public') {
 	
-DEx.addCMD({pattern: 'hpmod ?(.*)', fromMe: false, desc: Lang.HMODD_DESC, dontAddCMDList: true }, async (message, match) => {
+XTroid.addCMD({pattern: 'hpmod ?(.*)', fromMe: false, desc: Lang.HMODD_DESC, dontAddCMDList: true }, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_APPNAME);
 	const url = `https://api.zeks.xyz/api/happymod?apikey=&q=${match[1]}&apikey=1hroZ3ju94h0PBjCNKsfhYaSuLs`;
 	try {
@@ -41,7 +41,7 @@ DEx.addCMD({pattern: 'hpmod ?(.*)', fromMe: false, desc: Lang.HMODD_DESC, dontAd
 	}
 });
 
-DEx.addCMD({pattern: 'hpmod ?(.*)', fromMe: true, desc: Lang.HMODD_DESC, dontAddCMDList: true }, async (message, match) => {
+XTroid.addCMD({pattern: 'hpmod ?(.*)', fromMe: true, desc: Lang.HMODD_DESC, dontAddCMDList: true }, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_APPNAME);
 	const url = `https://api.zeks.xyz/api/happymod?apikey=&q=${match[1]}&apikey=1hroZ3ju94h0PBjCNKsfhYaSuLs`;
 	try {

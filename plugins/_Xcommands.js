@@ -6,7 +6,7 @@ you may not use this file except in compliance with the License.
 WhatsAsena - Yusuf Usta
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
 
@@ -15,10 +15,10 @@ const Lang = Language.getString('_xtroid');
 
 if (Config.WORKTYPE == 'private') {
 
-    DEx.addCMD({pattern: 'x ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'x ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
     var CMD_HELP = '';
     if (match[1] === '') {
-        DEx.commands.map(
+        XTroid.commands.map(
             async (command) =>  {
                 if (command.dontAddCMDList || command.pattern === undefined) return;
                 try {
@@ -47,7 +47,7 @@ if (Config.WORKTYPE == 'private') {
             );    
     } else {
         var CMD_HELP = '';
-        DEx.commands.map(
+        XTroid.commands.map(
             async (command) =>  {
                 if (command.dontAddCMDList || command.pattern === undefined) return;
                 try {
@@ -83,10 +83,10 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    DEx.addCMD({pattern: 'x ?(.*)', fromMe: false, dontAddCMDList: true}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'x ?(.*)', fromMe: false, dontAddCMDList: true}, (async (message, match) => {
     var CMD_HELP = '';
     if (match[1] === '') {
-        DEx.commands.map(
+        XTroid.commands.map(
             async (command) =>  {
                 if (command.dontAddCMDList || command.pattern === undefined) return;
                 try {
@@ -115,7 +115,7 @@ else if (Config.WORKTYPE == 'public') {
             );     
     } else {
         var CMD_HELP = '';
-        DEx.commands.map(
+        XTroid.commands.map(
             async (command) =>  {
                 if (command.dontAddCMDList || command.pattern === undefined) return;
                 try {
@@ -147,10 +147,10 @@ else if (Config.WORKTYPE == 'public') {
     }
 }));
 
-DEx.addCMD({pattern: 'x ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'x ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
     var CMD_HELP = '';
     if (match[1] === '') {
-        DEx.commands.map(
+        XTroid.commands.map(
             async (command) =>  {
                 if (command.dontAddCMDList || command.pattern === undefined) return;
                 try {
@@ -179,7 +179,7 @@ DEx.addCMD({pattern: 'x ?(.*)', fromMe: true, dontAddCMDList: true}, (async (mes
             );     
     } else {
         var CMD_HELP = '';
-        DEx.commands.map(
+        XTroid.commands.map(
             async (command) =>  {
                 if (command.dontAddCMDList || command.pattern === undefined) return;
                 try {

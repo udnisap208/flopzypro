@@ -1,5 +1,5 @@
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const Axios = require('axios');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
@@ -39,14 +39,14 @@ async function checkImAdmin(message, user = message.client.user.jid) {
 if (Config.WORKTYPE == 'private') {
 
 
-    DEx.addCMD({pattern: 'ipack', fromMe: true, deleteCommand: false, desc: I_DESC}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'ipack', fromMe: true, deleteCommand: false, desc: I_DESC}, (async (message, match) => {
        
         await message.sendMessage(I_PACK);
       }));
 
 
 
-    DEx.addCMD({pattern: 'sysd', fromMe: true, desc: Lang.SYSD_DESC,dontAddCMDList: true}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'sysd', fromMe: true, desc: Lang.SYSD_DESC,dontAddCMDList: true}, (async (message, match) => {
 
         const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
         await message.sendMessage(
@@ -55,7 +55,7 @@ if (Config.WORKTYPE == 'private') {
     }));
 
 
-    DEx.addCMD({ pattern: 'info', fromMe: true,deleteCommand: false,deleteCommand: false,desc: LW.PL_DESC,dontAddCMDList: true }, async (message, match) => { 
+    XTroid.addCMD({ pattern: 'info', fromMe: true,deleteCommand: false,deleteCommand: false,desc: LW.PL_DESC,dontAddCMDList: true }, async (message, match) => { 
 
         if (message.jid.includes('-')) {
             var lasijson = await message.client.groupMetadataMinimal(message.jid) 
@@ -92,7 +92,7 @@ if (Config.WORKTYPE == 'private') {
 
 
 
-    DEx.addCMD({ pattern: 'inf$', fromMe: true, desc: LW.PL_DESC, dontAddCMDList: true }, async (message, match) => {
+    XTroid.addCMD({ pattern: 'inf$', fromMe: true, desc: LW.PL_DESC, dontAddCMDList: true }, async (message, match) => {
         var im = await checkImAdmin(message);
         if (!im) return await message.client.sendMessage(message.jid,NADM,MessageType.text); 
         if (message.jid.includes('-')) {
@@ -160,7 +160,7 @@ if (Config.WORKTYPE == 'private') {
         }
     });
 
-    DEx.addCMD({pattern: 'id ?(.*)', fromMe: true, desc: LP.JID_DESC, dontAddCMDList: true}, (async (message, match) => {    
+    XTroid.addCMD({pattern: 'id ?(.*)', fromMe: true, desc: LP.JID_DESC, dontAddCMDList: true}, (async (message, match) => {    
         if (message.reply_message !== false) {
             await message.client.sendMessage(message.jid, LP.JID.format(message.reply_message.jid.split('@')[0], message.reply_message.jid), MessageType.text, {
                 quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
@@ -176,7 +176,7 @@ if (Config.WORKTYPE == 'private') {
         }
     }));
 
-    DEx.addCMD({pattern: 'bot', fromMe: true, deleteCommand: false,}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'bot', fromMe: true, deleteCommand: false,}, (async (message, match) => {
 
 	        var r_text = new Array ();
 
@@ -206,12 +206,12 @@ await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), Messa
 else if (Config.WORKTYPE == 'public') {
 
 
-    DEx.addCMD({pattern: 'ipack', fromMe: true, deleteCommand: false, desc: I_DESC}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'ipack', fromMe: true, deleteCommand: false, desc: I_DESC}, (async (message, match) => {
        
         await message.sendMessage(I_PACK);
       }));
 
-    DEx.addCMD({pattern: 'sysd', fromMe: false, desc: Lang.SYSD_DESC, dontAddCMDList: true}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'sysd', fromMe: false, desc: Lang.SYSD_DESC, dontAddCMDList: true}, (async (message, match) => {
 
         const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
         await message.sendMessage(
@@ -221,7 +221,7 @@ else if (Config.WORKTYPE == 'public') {
 
 
 
-    DEx.addCMD({ pattern: 'info', fromMe: false,deleteCommand: false, desc: LW.PL_DESC , dontAddCMDList: true}, async (message, match) => { 
+    XTroid.addCMD({ pattern: 'info', fromMe: false,deleteCommand: false, desc: LW.PL_DESC , dontAddCMDList: true}, async (message, match) => { 
 
         if (message.jid.includes('-')) {
             var lasijson = await message.client.groupMetadataMinimal(message.jid) 
@@ -255,7 +255,7 @@ else if (Config.WORKTYPE == 'public') {
             );
         }
     });
-    DEx.addCMD({ pattern: 'info', fromMe: true, desc: LW.PL_DESC, dontAddCMDList: true }, async (message, match) => { 
+    XTroid.addCMD({ pattern: 'info', fromMe: true, desc: LW.PL_DESC, dontAddCMDList: true }, async (message, match) => { 
 
         if (message.jid.includes('-')) {
             var lasijson = await message.client.groupMetadataMinimal(message.jid) 
@@ -291,7 +291,7 @@ else if (Config.WORKTYPE == 'public') {
     });
 
 
-    DEx.addCMD({ pattern: 'inf$', fromMe: false, desc: LW.PL_DESC, dontAddCMDList: true }, async (message, match) => {
+    XTroid.addCMD({ pattern: 'inf$', fromMe: false, desc: LW.PL_DESC, dontAddCMDList: true }, async (message, match) => {
         var im = await checkImAdmin(message);
         if (!im) return await message.client.sendMessage(message.jid,NADM,MessageType.text);
         if (message.jid.includes('-')) {
@@ -359,7 +359,7 @@ else if (Config.WORKTYPE == 'public') {
         }
     });
 
-    DEx.addCMD({pattern: 'id ?(.*)', fromMe: false, desc: Lang.JID_DESC, dontAddCMDList: true}, (async (message, match) => {    
+    XTroid.addCMD({pattern: 'id ?(.*)', fromMe: false, desc: Lang.JID_DESC, dontAddCMDList: true}, (async (message, match) => {    
         if (message.reply_message !== false) {
             await message.client.sendMessage(message.jid, Lang.JID.format(message.reply_message.jid.split('@')[0], message.reply_message.jid), MessageType.text, {
                 quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
@@ -374,7 +374,7 @@ else if (Config.WORKTYPE == 'public') {
             await message.client.sendMessage(message.jid, Lang.JID_CHAT.format(message.jid), MessageType.text);
         }
     }));
-    DEx.addCMD({pattern: 'id ?(.*)', fromMe: true, desc: LP.JID_DESC , dontAddCMDList: true}, (async (message, match) => {    
+    XTroid.addCMD({pattern: 'id ?(.*)', fromMe: true, desc: LP.JID_DESC , dontAddCMDList: true}, (async (message, match) => {    
         if (message.reply_message !== false) {
             await message.client.sendMessage(message.jid, LP.JID.format(message.reply_message.jid.split('@')[0], message.reply_message.jid), MessageType.text, {
                 quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
@@ -390,7 +390,7 @@ else if (Config.WORKTYPE == 'public') {
         }
     }));
     
-    DEx.addCMD({pattern: 'bot', fromMe: false, deleteCommand: false,}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'bot', fromMe: false, deleteCommand: false,}, (async (message, match) => {
 
 	        var r_text = new Array ();
 
@@ -417,14 +417,14 @@ await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), Messa
     //==============================================================================================================================================================================================================
 
 
-    DEx.addCMD({pattern: 'ipack', fromMe: true, deleteCommand: false, desc: I_DESC}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'ipack', fromMe: true, deleteCommand: false, desc: I_DESC}, (async (message, match) => {
        
         await message.sendMessage(I_PACK);
       }));
 
 
 
-    DEx.addCMD({pattern: 'sysd', fromMe: true, desc: Lang.SYSD_DESC,dontAddCMDList: true}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'sysd', fromMe: true, desc: Lang.SYSD_DESC,dontAddCMDList: true}, (async (message, match) => {
 
         const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
         await message.sendMessage(
@@ -433,7 +433,7 @@ await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), Messa
     }));
 
 
-    DEx.addCMD({ pattern: 'info', fromMe: true,deleteCommand: false,deleteCommand: false,desc: LW.PL_DESC,dontAddCMDList: true }, async (message, match) => { 
+    XTroid.addCMD({ pattern: 'info', fromMe: true,deleteCommand: false,deleteCommand: false,desc: LW.PL_DESC,dontAddCMDList: true }, async (message, match) => { 
 
         if (message.jid.includes('-')) {
             var lasijson = await message.client.groupMetadataMinimal(message.jid) 
@@ -470,7 +470,7 @@ await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), Messa
 
 
 
-    DEx.addCMD({ pattern: 'inf$', fromMe: true, desc: LW.PL_DESC, dontAddCMDList: true }, async (message, match) => { 
+    XTroid.addCMD({ pattern: 'inf$', fromMe: true, desc: LW.PL_DESC, dontAddCMDList: true }, async (message, match) => { 
         if (message.jid.includes('-')) {
             var lasijson = await message.client.groupMetadataMinimal(message.jid) 
             var code = await message.client.groupInviteCode(message.jid)
@@ -536,7 +536,7 @@ await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), Messa
         }
     });
 
-    DEx.addCMD({pattern: 'id ?(.*)', fromMe: true, desc: LP.JID_DESC, dontAddCMDList: true}, (async (message, match) => {    
+    XTroid.addCMD({pattern: 'id ?(.*)', fromMe: true, desc: LP.JID_DESC, dontAddCMDList: true}, (async (message, match) => {    
         if (message.reply_message !== false) {
             await message.client.sendMessage(message.jid, LP.JID.format(message.reply_message.jid.split('@')[0], message.reply_message.jid), MessageType.text, {
                 quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
@@ -552,7 +552,7 @@ await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), Messa
         }
     }));
 
-    DEx.addCMD({pattern: 'bot', fromMe: true, deleteCommand: false,}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'bot', fromMe: true, deleteCommand: false,}, (async (message, match) => {
 
 	        var r_text = new Array ();
 

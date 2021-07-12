@@ -1,4 +1,4 @@
-const DEx = require('../events');
+const XTroid = require('../events');
 const Heroku = require('heroku-client');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
@@ -22,7 +22,7 @@ let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 
 
-DEx.addCMD({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, warn: Lang.WARN}, (async (message, match) => {
+XTroid.addCMD({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, warn: Lang.WARN}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(Lang.NEED_URL + '.install ')
     try {
         var url = new URL(match[1]);
@@ -65,7 +65,7 @@ DEx.addCMD({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, war
 }));
 
 
-DEx.addCMD({pattern: 'plugin', fromMe: true, desc: Lang.PLUGIN_DESC }, (async (message, match) => {
+XTroid.addCMD({pattern: 'plugin', fromMe: true, desc: Lang.PLUGIN_DESC }, (async (message, match) => {
     var mesaj = Lang.INSTALLED_FROM_REMOTE;
     var plugins = await Db.PluginDB.findAll();
     if (plugins.length < 1) {
@@ -81,7 +81,7 @@ DEx.addCMD({pattern: 'plugin', fromMe: true, desc: Lang.PLUGIN_DESC }, (async (m
     }
 }));
 
-DEx.addCMD({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
+XTroid.addCMD({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(Lang.NEED_PLUGIN);
     if (!match[1].startsWith('__')) match[1] = '__' + match[1];
     var plugin = await Db.PluginDB.findAll({ where: {name: match[1]} });

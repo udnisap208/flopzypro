@@ -3,7 +3,7 @@ Telegram: t.me/phaticusthiccy
 Instagram: www.instagram.com/kyrie.baran
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
@@ -16,7 +16,7 @@ const Lang = Language.getString('conventer');
 
 if (Config.WORKTYPE == 'private') {
 
-    DEx.addCMD({pattern: 'tblend ?(.*)', fromMe: true, desc: Lang.T_DESC}, (async (message, match) => {    
+    XTroid.addCMD({pattern: 'tblend ?(.*)', fromMe: true, desc: Lang.T_DESC}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
 
@@ -270,7 +270,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    DEx.addCMD({pattern: 'tblend ?(.*)', fromMe: false, desc: Lang.T_DESC}, (async (message, match) => {    
+    XTroid.addCMD({pattern: 'tblend ?(.*)', fromMe: false, desc: Lang.T_DESC}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
 
@@ -521,7 +521,7 @@ else if (Config.WORKTYPE == 'public') {
             return await message.client.sendMessage(message.jid,Lang.T_FALSE, MessageType.text);
         }
     }));
-    DEx.addCMD({pattern: 'tblend ?(.*)', fromMe: true, desc: Lang.T_DESC, dontAddCMDList: true}, (async (message, match) => {    
+    XTroid.addCMD({pattern: 'tblend ?(.*)', fromMe: true, desc: Lang.T_DESC, dontAddCMDList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
 

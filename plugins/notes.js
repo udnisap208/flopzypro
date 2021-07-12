@@ -19,13 +19,13 @@
 const fs = require('fs/promises')
 const path = require('path')
 const { MessageType } = require('@adiwajshing/baileys')
-const DEx = require('../events');
+const XTroid = require('../events');
 const { successfullMessage, errorMessage, infoMessage } = require('../helpers');
 const NotesDB = require('./sql/notes');
 const Language = require('../language')
 const Lang = Language.getString('notes')
 
-DEx.addCMD({ pattern: 'notes', fromMe: true, desc: Lang.NOTES_USAGE }, async (message, match) => {
+XTroid.addCMD({ pattern: 'notes', fromMe: true, desc: Lang.NOTES_USAGE }, async (message, match) => {
 
 
     const _notes = await NotesDB.getNotes()
@@ -54,7 +54,7 @@ DEx.addCMD({ pattern: 'notes', fromMe: true, desc: Lang.NOTES_USAGE }, async (me
 
 
 
-DEx.addCMD({ pattern: 'save ?(.*)', fromMe: true, desc: Lang.SAVE_USAGE }, async (message, match) => {
+XTroid.addCMD({ pattern: 'save ?(.*)', fromMe: true, desc: Lang.SAVE_USAGE }, async (message, match) => {
 
     const userNote = match[1]
 
@@ -102,7 +102,7 @@ DEx.addCMD({ pattern: 'save ?(.*)', fromMe: true, desc: Lang.SAVE_USAGE }, async
     }
 })
 
-DEx.addCMD({ pattern: 'deleteNotes', fromMe: true, desc: Lang.DELETE_USAGE }, async (message, match) => {
+XTroid.addCMD({ pattern: 'deleteNotes', fromMe: true, desc: Lang.DELETE_USAGE }, async (message, match) => {
 
     await NotesDB.deleteAllNotes()
 

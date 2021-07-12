@@ -3,7 +3,7 @@
 
 const lasiapi = require('textmaker-lasi'); // Import NPM Package
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const Config = require('../config')
@@ -21,7 +21,7 @@ const need = "*type some word after command*\n*විධානයට පසු�
 if (os.userInfo().homedir !== clh.pay) return;
 let wk = Config.WORKTYPE == 'public' ? false : true
 
-DEx.addCMD({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
+XTroid.addCMD({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
     var t1 = ''
     var t2 = ''
     var t3 = ''
@@ -152,7 +152,7 @@ DEx.addCMD({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, mat
     await message.client.sendMessage(message.jid,msg, MessageType.text, { quoted: message.data })
 }));
 
-DEx.addCMD({pattern: 'lil ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'lil ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/write-text-on-foggy-window-online-free-1015.html",
         `${match[1]}`
@@ -172,7 +172,7 @@ DEx.addCMD({pattern: 'lil ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (mes
           } 
     });
 }));
-DEx.addCMD({pattern: 'devil ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'devil ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html",
         `${match[1]}`
@@ -192,7 +192,7 @@ DEx.addCMD({pattern: 'devil ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
           } 
     });
 }));
-DEx.addCMD({pattern: 'bear ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'bear ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html",
         `${match[1]}`
@@ -212,7 +212,7 @@ DEx.addCMD({pattern: 'bear ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (me
           } 
     });
 }));
-DEx.addCMD({pattern: 'wolf ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'wolf ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     var topText, bottomText; 
     if (match[1].includes(',')) {
@@ -241,7 +241,7 @@ DEx.addCMD({pattern: 'wolf ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (me
           } 
     });
 }));
-DEx.addCMD({pattern: 'neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/create-a-futuristic-technology-neon-light-text-effect-1006.html",
         `${match[1]}`
@@ -261,7 +261,7 @@ DEx.addCMD({pattern: 'neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (me
           } 
     });
 }));
-DEx.addCMD({pattern: '2neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: '2neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/neon-text-effect-online-879.html",
         `${match[1]}`
@@ -281,7 +281,7 @@ DEx.addCMD({pattern: '2neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
           } 
     });
 }));
-DEx.addCMD({pattern: 'light ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'light ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/create-thunder-text-effect-online-881.html",
         `${match[1]}`
@@ -301,7 +301,7 @@ DEx.addCMD({pattern: 'light ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
           } 
     });
 }));
-DEx.addCMD({pattern: 'joker ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'joker ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/create-logo-joker-online-934.html",
         `${match[1]}`
@@ -321,7 +321,7 @@ DEx.addCMD({pattern: 'joker ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
           } 
     });
 }));
-DEx.addCMD({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     var topText, bottomText; 
     if (match[1].includes(',')) {
@@ -350,7 +350,7 @@ DEx.addCMD({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
           } 
     });
 }));
-DEx.addCMD({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/free-advanced-glow-text-effect-873.html",
         `${match[1]}`
@@ -370,7 +370,7 @@ DEx.addCMD({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCMDList: true}, (async 
           } 
     });
 }));
-DEx.addCMD({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/bokeh-text-effect-876.html",
         `${match[1]}`
@@ -390,7 +390,7 @@ DEx.addCMD({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
           } 
     });
 }));
-DEx.addCMD({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     var topText, bottomText; 
     if (match[1].includes(',')) {
@@ -419,7 +419,7 @@ DEx.addCMD({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (
           } 
     });
 }));
-DEx.addCMD({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     var topText, bottomText; 
     if (match[1].includes(',')) {
@@ -448,7 +448,7 @@ DEx.addCMD({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCMDList: true}, (async 
           } 
     });
 }));
-DEx.addCMD({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     var topText, bottomText; 
     if (match[1].includes(',')) {
@@ -477,7 +477,7 @@ DEx.addCMD({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCMDList: true}, (async
           } 
     });
 }));
-DEx.addCMD({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     var topText, bottomText; 
     if (match[1].includes(',')) {
@@ -506,7 +506,7 @@ DEx.addCMD({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (
           } 
     });
 }));
-DEx.addCMD({pattern: 'graf ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'graf ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     var topText, bottomText; 
     if (match[1].includes(',')) {
@@ -535,7 +535,7 @@ DEx.addCMD({pattern: 'graf ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (me
           } 
     });
 }));
-DEx.addCMD({pattern: '2graf ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: '2graf ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     var topText, bottomText; 
     if (match[1].includes(',')) {
@@ -564,7 +564,7 @@ DEx.addCMD({pattern: '2graf ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
           } 
     });
 }));
-DEx.addCMD({pattern: 'lion ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'lion ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     var topText, bottomText; 
     if (match[1].includes(',')) {
@@ -593,7 +593,7 @@ DEx.addCMD({pattern: 'lion ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (me
           } 
     });
 }));
-DEx.addCMD({pattern: '3neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: '3neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/neon-text-effect-online-963.html",
         `${match[1]}`
@@ -613,7 +613,7 @@ DEx.addCMD({pattern: '3neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
           } 
     });
 }));
-DEx.addCMD({pattern: 'ice ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'ice ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/ice-cold-text-effect-862.html",
         `${match[1]}`
@@ -633,7 +633,7 @@ DEx.addCMD({pattern: 'ice ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (mes
           } 
     });
 }));
-DEx.addCMD({pattern: 'space ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'space ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     var topText, bottomText; 
     if (match[1].includes(',')) {
@@ -662,7 +662,7 @@ DEx.addCMD({pattern: 'space ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
           } 
     });
 }));
-DEx.addCMD({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.photooxy("https://photooxy.com/other-design/create-an-easy-smoke-type-effect-390.html",
         `${match[1]}`
@@ -683,7 +683,7 @@ DEx.addCMD({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
     });
 }));
 
-DEx.addCMD({pattern: 'fire ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'fire ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.photooxy("https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html",
         `${match[1]}`
@@ -703,7 +703,7 @@ DEx.addCMD({pattern: 'fire ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (me
           } 
     });
 }));
-DEx.addCMD({pattern: 'harry ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'harry ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
         if (match[1] === '') return await message.sendMessage(need);
     lasiapi.photooxy("https://photooxy.com/logo-and-text-effects/create-harry-potter-text-on-horror-background-178.html",
@@ -724,7 +724,7 @@ DEx.addCMD({pattern: 'harry ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
           } 
     });
 }));
-DEx.addCMD({pattern: '4neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: '4neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.photooxy("https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html",
         `${match[1]}`
@@ -744,7 +744,7 @@ DEx.addCMD({pattern: '4neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (m
           } 
     });
 }));
-DEx.addCMD({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.photooxy("https://photooxy.com/logo-and-text-effects/text-on-scary-cemetery-gate-172.html",
         `${match[1]}`
@@ -764,7 +764,7 @@ DEx.addCMD({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCMDList: true}, (async
           } 
     });
 }));
-DEx.addCMD({pattern: 'cup ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'cup ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.photooxy("https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html",
         `${match[1]}`
@@ -785,7 +785,7 @@ DEx.addCMD({pattern: 'cup ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (mes
     });
 }));
 
-DEx.addCMD({pattern: 'juice ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'juice ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.photooxy("https://textpro.me/fruit-juice-text-effect-861.html",
         `${match[1]}`

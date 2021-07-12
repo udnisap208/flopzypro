@@ -3,7 +3,7 @@ Telegram: https://t.me/phaticusthiccy
 Instagram: https://instagram.com/kyrie.baran
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
@@ -65,7 +65,7 @@ function webp2mp4File(path) {
 
 if (Config.WORKTYPE == 'private') {
 
-    DEx.addCMD({pattern: 'mp3$', fromMe: true, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
+    XTroid.addCMD({pattern: 'mp3$', fromMe: true, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
         const mid = message.jid
         if (message.reply_message === false) return await message.client.sendMessage(mid, Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(mid,Lang.MP4TOAUDİO,MessageType.text);
@@ -85,7 +85,7 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    DEx.addCMD({pattern: 'photo$', fromMe: true, desc: Lang.STİCKER_DESC}, (async (message, match) => {   
+    XTroid.addCMD({pattern: 'photo$', fromMe: true, desc: Lang.STİCKER_DESC}, (async (message, match) => {   
         const mid = message.jid
         if (message.reply_message === false) return await message.client.sendMessage(mid, Lang.STİCKER_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(mid,Lang.STİCKER,MessageType.text);
@@ -105,7 +105,7 @@ if (Config.WORKTYPE == 'private') {
             });
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
-    DEx.addCMD({pattern: 'vsticker$', desc: Lang.ANİM_STİCK, fromMe: true}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'vsticker$', desc: Lang.ANİM_STİCK, fromMe: true}, (async (message, match) => {
         const mid = message.jid
         if (message.reply_message === false) return await message.sendMessage(Lang.STİCKER_NEEDREPLY);
         await message.client.sendMessage(mid, Lang.ANİMATE, MessageType.text)
@@ -130,7 +130,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    DEx.addCMD({pattern: 'mp3$', fromMe: false, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
+    XTroid.addCMD({pattern: 'mp3$', fromMe: false, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
         const mid = message.jid
         if (message.reply_message === false) return await message.client.sendMessage(mid, Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(mid,Lang.MP4TOAUDİO,MessageType.text);
@@ -150,7 +150,7 @@ else if (Config.WORKTYPE == 'public') {
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    DEx.addCMD({pattern: 'photo$', fromMe: false, desc: Lang.STİCKER_DESC}, (async (message, match) => {    
+    XTroid.addCMD({pattern: 'photo$', fromMe: false, desc: Lang.STİCKER_DESC}, (async (message, match) => {    
         const mid = message.jid
         if (message.reply_message === false) return await message.client.sendMessage(mid, Lang.STİCKER_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(mid,Lang.STİCKER,MessageType.text);
@@ -170,7 +170,7 @@ else if (Config.WORKTYPE == 'public') {
             });
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
-    DEx.addCMD({pattern: 'vsticker$', desc: Lang.ANİM_STİCK, fromMe: false}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'vsticker$', desc: Lang.ANİM_STİCK, fromMe: false}, (async (message, match) => {
         const mid = message.jid
         if (message.reply_message === false) return await message.sendMessage(Lang.STİCKER_NEEDREPLY);
         await message.client.sendMessage(mid, Lang.ANİMATE, MessageType.text)
@@ -195,7 +195,7 @@ else if (Config.WORKTYPE == 'public') {
 
     //===========================================================================================================================================================================================================================================
 
-    DEx.addCMD({pattern: 'mp3$', fromMe: true,}, (async (message, match) => {    
+    XTroid.addCMD({pattern: 'mp3$', fromMe: true,}, (async (message, match) => {    
         const mid = message.jid
         if (message.reply_message === false) return await message.client.sendMessage(mid, Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(mid,Lang.MP4TOAUDİO,MessageType.text);
@@ -215,7 +215,7 @@ else if (Config.WORKTYPE == 'public') {
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    DEx.addCMD({pattern: 'photo$', fromMe: true,}, (async (message, match) => {    
+    XTroid.addCMD({pattern: 'photo$', fromMe: true,}, (async (message, match) => {    
         const mid = message.jid
         if (message.reply_message === false) return await message.client.sendMessage(mid, Lang.STİCKER_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(mid,Lang.STİCKER,MessageType.text);
@@ -235,7 +235,7 @@ else if (Config.WORKTYPE == 'public') {
             });
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
-    DEx.addCMD({pattern: 'vsticker$',  fromMe: true}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'vsticker$',  fromMe: true}, (async (message, match) => {
         const mid = message.jid
         if (message.reply_message === false) return await message.sendMessage(Lang.STİCKER_NEEDREPLY);
         await message.client.sendMessage(mid, Lang.ANİMATE, MessageType.text)

@@ -1,5 +1,5 @@
 /*
-const DEx = require('../events');
+const XTroid = require('../events');
 const { MessageType } = require('@adiwajshing/baileys');
 const { similarity } = require('../similarity')
 const Language = require('../language');
@@ -7,7 +7,7 @@ const Lang = Language.getString('aiscanner');
 const pb = require('../config');
 
 if (pb.WORKTYPE == 'private') {
-    DEx.addCMD({ pattern: '.', fromMe: true, dontAddCMDList: true }, (async (message, match) => {
+    XTroid.addCMD({ pattern: '.', fromMe: true, dontAddCMDList: true }, (async (message, match) => {
         if(message.fromMe) return
         let command = [ 
         'xmedia',
@@ -181,7 +181,7 @@ if (pb.WORKTYPE == 'private') {
     }));
 }
 else if (pb.WORKTYPE == 'public') {
-    DEx.addCMD({ pattern: '.', fromMe: false, dontAddCMDList: true }, (async (message, match) => {
+    XTroid.addCMD({ pattern: '.', fromMe: false, dontAddCMDList: true }, (async (message, match) => {
         if(message.fromMe) return
         let command = [ 
         'xmedia',
@@ -353,7 +353,7 @@ else if (pb.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid, msg + sml, MessageType.text)
 
     }));
-    DEx.addCMD({ pattern: '.', fromMe: true, dontAddCMDList: true }, (async (message, match) => {
+    XTroid.addCMD({ pattern: '.', fromMe: true, dontAddCMDList: true }, (async (message, match) => {
         if(message.fromMe) return
         let command = [ 
         'xmedia',

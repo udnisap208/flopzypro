@@ -4,7 +4,7 @@ you may not use this file except in compliance with the License.
 WhatsAsenaDuplicated
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const got = require('got');
 const Config = require('../config');
@@ -13,7 +13,7 @@ const Lang = Language.getString('weather');
 
 
 if (Config.WORKTYPE == 'private') {
-DEx.addCMD({pattern: 'news ?(.*)', fromMe: true, desc: Lang.NEWS_DESC}, async (message, match) => {
+XTroid.addCMD({pattern: 'news ?(.*)', fromMe: true, desc: Lang.NEWS_DESC}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_CATEGORY);
 	const url = `https://inshortsapi.vercel.app/news?category=${match[1]}`;
 	try {
@@ -62,7 +62,7 @@ DEx.addCMD({pattern: 'news ?(.*)', fromMe: true, desc: Lang.NEWS_DESC}, async (m
 
 else if (Config.WORKTYPE == 'public') {
 	
-	DEx.addCMD({pattern: 'news ?(.*)', fromMe: false, desc: Lang.NEWS_DESC}, async (message, match) => {
+	XTroid.addCMD({pattern: 'news ?(.*)', fromMe: false, desc: Lang.NEWS_DESC}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_CATEGORY);
 	const url = `https://inshortsapi.vercel.app/news?category=${match[1]}`;
 	try {

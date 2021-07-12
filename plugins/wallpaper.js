@@ -6,7 +6,7 @@ Special Thanks:
 @Unique_hunter for Helps
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
@@ -16,7 +16,7 @@ const Lang = Language.getString('wallpaper');
 
 if (Config.WORKTYPE == 'private') {
 
-    DEx.addCMD({pattern: 'wallpaper', fromMe: true, desc: Lang.WP}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'wallpaper', fromMe: true, desc: Lang.WP}, (async (message, match) => {
 
         var r_text = new Array ();
 
@@ -651,7 +651,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    DEx.addCMD({pattern: 'wallpaper', fromMe: false, desc: Lang.WP}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'wallpaper', fromMe: false, desc: Lang.WP}, (async (message, match) => {
 
         var r_text = new Array ();
 
@@ -1283,7 +1283,7 @@ else if (Config.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid, Buffer(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.CAPTION_KEY})
 
     }));
-    DEx.addCMD({pattern: 'wallpaper', fromMe: true, desc: Lang.WP, dontAddCMDList: true}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'wallpaper', fromMe: true, desc: Lang.WP, dontAddCMDList: true}, (async (message, match) => {
 
         var r_text = new Array ();
 

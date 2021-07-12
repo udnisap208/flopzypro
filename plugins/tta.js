@@ -3,7 +3,7 @@ Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
@@ -16,7 +16,7 @@ const UA_DESC = "Converts sound recording to an audio File."
 const UA_NEEDREPLY = "*Must Reply to a sound recording*"
 const UA_PROC = "```Converting Sound recording To an Audio File```"
 
-    DEx.addCMD({pattern: 'unaudio', fromMe: true, desc: UA_DESC}, (async (message, match) => {    
+    XTroid.addCMD({pattern: 'unaudio', fromMe: true, desc: UA_DESC}, (async (message, match) => {    
 
         if (message.jid === '905524317852-1612300121@g.us') {
 

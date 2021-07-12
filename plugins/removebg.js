@@ -4,7 +4,7 @@ you may not use this file except in compliance with the License.
 WhatsAsena - Yusuf Usta
 */
 
-const DEx = require('../events');
+const XTroid = require('../events');
 const {MessageType, Mimetype} = require('@adiwajshing/baileys');
 const Config = require('../config');
 const fs = require('fs');
@@ -20,7 +20,7 @@ const Lang = Language.getString('removebg');
 
 if (Config.WORKTYPE == 'private') {
 
-    DEx.addCMD({pattern: 'removebg ?(.*)', fromMe: true, desc: Lang.REMOVEBG_DESC}, (async (message, match) => {    
+    XTroid.addCMD({pattern: 'removebg ?(.*)', fromMe: true, desc: Lang.REMOVEBG_DESC}, (async (message, match) => {    
 
         if (message.jid === '905524317852-1612300121@g.us') {
 
@@ -61,7 +61,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    DEx.addCMD({pattern: 'removebg ?(.*)', fromMe: false, desc: Lang.REMOVEBG_DESC}, (async (message, match) => {    
+    XTroid.addCMD({pattern: 'removebg ?(.*)', fromMe: false, desc: Lang.REMOVEBG_DESC}, (async (message, match) => {    
 
         if (message.jid === '905524317852-1612300121@g.us') {
 
