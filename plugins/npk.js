@@ -10,9 +10,9 @@ var desc_msg = ''
 if (Config.LANG == 'SI') desc_msg = 'X-Troid Logo එකතුව'
 if (Config.LANG == 'EN') desc_msg = 'X-Troid Logo colection'
 const need = "*type some word after command*\n*විධානයට පසුව වචනයක් ලියන්න"
-let wk = Config.WORKTYPE == 'public' ? false : true
 
-XTroid.addCMD({pattern: 'npack', fromMe: wk, desc: desc_msg}, (async (message, match) => {
+
+XTroid.addCMD({pattern: 'npack', fromMe: true, desc: desc_msg}, (async (message, match) => {
     var t1 = ''
     var t2 = ''
     var t3 = ''
@@ -24,7 +24,7 @@ XTroid.addCMD({pattern: 'npack', fromMe: wk, desc: desc_msg}, (async (message, m
     var t9 = ''
     var t10 = ''
     var t11 = ''
-    var t12 = ''
+
 
     if (Config.LANG == 'SI') {
         t1 = 'Club light Logo.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
@@ -81,5 +81,5 @@ XTroid.addCMD({pattern: 'npack', fromMe: wk, desc: desc_msg}, (async (message, m
         
 
 
-    await message.client.sendMessage(message.jid,msg, MessageType.text, { quoted: message.data })
+    await message.client.sendMessage(message.jid,msg, MessageType.text)
 }));
