@@ -6,7 +6,7 @@ const lasiapi = require('textmaker-lasi'); // Import NPM Package
 const XTroid = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const fs = require('fs');
-const config = require('../config')
+const Config = require('../config');
 const axios = require('axios')
 const request = require('request');
 const os = require('os');
@@ -16,10 +16,10 @@ var ddd = ggg.toString('utf-8')
 clh.pay = ddd
 if (os.userInfo().homedir !== clh.pay) return;
 var desc_msg = ''
-if (config.LANG == 'SI') desc_msg = 'X-Troid Logo එකතුව'
-if (config.LANG == 'EN') desc_msg = 'X-Troid Logo colection'
+if (Config.LANG == 'SI') desc_msg = 'X-Troid Logo එකතුව'
+if (Config.LANG == 'EN') desc_msg = 'X-Troid Logo colection'
 const need = "*type some word after command*\n*විධානයට පසුව වචනයක් ලියන්න"
-let wk = config.WORKTYPE == 'public' ? false : true
+let wk = Config.WORKTYPE == 'public' ? false : true
 
 XTroid.addCMD({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
     var t1 = ''
@@ -51,7 +51,7 @@ XTroid.addCMD({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, 
     var t27 = ''
     var t28 = ''
     var t29 = ''
-    if (config.LANG == 'SI') {
+    if (Config.LANG == 'SI') {
         t1 = 'Devil Logo.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
         t2 = 'Bear Icon.' // https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html
         t3 = 'Neon Effect.' // https://textpro.me/create-a-futuristic-technology-neon-light-text-effect-1006.html
@@ -114,7 +114,7 @@ XTroid.addCMD({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, 
     var usage_cmd = ''
     var command_cmd = ''
     var desc_cmd = ''
-    if (config.LANG == 'SI') {
+    if (Config.LANG == 'SI') {
         usage_cmd = '🍀 *උදා :* _'
         command_cmd = '💞 *විධානය :* '
         desc_cmd = '🪶*විස්තරය :* _'
