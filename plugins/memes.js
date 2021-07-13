@@ -25,7 +25,7 @@ if (Config.WORKTYPE == 'private') {
   
   }));
 
-    XTroid.addCMD({pattern: 'meme ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {   
+    XTroid.addCMD({pattern: 'mme ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {   
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,PRN, MessageType.text);
         var topText, bottomText;
@@ -135,8 +135,17 @@ if (Config.WORKTYPE == 'private') {
 
 
 else if (Config.WORKTYPE == 'public') {
+	
+	
+	XTroid.addCMD({pattern: 'mpack', fromMe: false, desc: Ln,}, (async (message, match) => {
 
-    XTroid.addCMD({pattern: 'meme', fromMe: false, desc: Ln,}, (async (message, match) => {
+   		 await message.client.sendMessage(
+  
+    			  message.jid,code, MessageType.text);
+  
+  }));
+
+    XTroid.addCMD({pattern: 'mme', fromMe: false, desc: Ln,}, (async (message, match) => {
 
         await message.client.sendMessage(
       
@@ -213,7 +222,7 @@ else if (Config.WORKTYPE == 'public') {
 
 }));
 
-XTroid.addCMD({pattern: 'meme ?(.*)', fromMe: false, dontAddCMDList: true}, (async (message, match) => {    
+XTroid.addCMD({pattern: 'mme ?(.*)', fromMe: false, dontAddCMDList: true}, (async (message, match) => {    
 
     if (message.reply_message === false) return await message.client.sendMessage(message.jid,PRN, MessageType.text);
     var topText, bottomText;
