@@ -717,7 +717,7 @@ XTroid.addCMD({pattern: 'harry ?(.*)', fromMe: wk, dontAddCMDList: true}, (async
               };
 
               await download(`${data}`, '/root/HTM/hp.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/hp.jpg'), MessageType.image, { caption: 'PINKY' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/hp.jpg'), MessageType.image, { caption: Config.CAPTION_KEY })
               })
           } catch(err) { 
               console.log(err)
