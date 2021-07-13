@@ -510,16 +510,18 @@ ${chalk.blue.italic('🚀 Connecting to your xtroid... Please Wait.')}`);
         if (msg.messageStubType === 32 || msg.messageStubType === 28) {
             // Görüşürüz Mesajı
             var gb = await getMessage(msg.key.remoteJid, 'goodbye');
+            var blogo = await axios.get(config.GIF_BYE, { responseType: 'arraybuffer' })
             if (gb !== false) {
-                await conn.sendMessage(msg.key.remoteJid, gb.message, MessageType.text);
+                await conn.sendMessage(msg.key.remoteJid, Buffer.from(blogo.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message});
             }
             return;
         } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
             // Hoşgeldin Mesajı
             var gb = await getMessage(msg.key.remoteJid);
+            var wlogo = await axios.get(config.GIF_WEL, { responseType: 'arraybuffer' })
             if (gb !== false) {
-                var ttinullimage = await axios.get(`https://netfile2link.herokuapp.com/9738`, { responseType: 'arraybuffer' })
-                await conn.sendMessage(msg.key.remoteJid, Buffer.from(ttinullimage.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message});
+                
+                await conn.sendMessage(msg.key.remoteJid, Buffer.from(wlogo.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message});
             }
             return;
         }
