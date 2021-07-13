@@ -507,23 +507,22 @@ ${chalk.blue.italic('🚀 Connecting to your xtroid... Please Wait.')}`);
         }
         // ==================== Greetings ====================
         
-if (msg.messageStubType === 32 || msg.messageStubType === 28) {
-    // Görüşürüz Mesajı
-    var gb = await getMessage(msg.key.remoteJid, 'goodbye');
-    if (gb !== false) {
-        var lasiyasimg = await axios.get(Config.GIF_BYE, { responseType: 'arraybuffer' })
-        await conn.sendMessage(msg.key.remoteJid, Buffer.from(lasiyasimg.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message +'\n\n                 ᴾᵒʷᵉʳᵈ ᵇʸ ˣ⁻ᵀʳᵒᶦᵈ'});
-    }
-    return;
-} else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
-    // Hoşgeldin Mesajı
-    var gb = await getMessage(msg.key.remoteJid);
-    if (gb !== false) {
-var lasiyasimg = await axios.get(Config.GIF_WEL, { responseType: 'arraybuffer' })
-await conn.sendMessage(msg.key.remoteJid, Buffer.from(lasiyasimg.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message +'\n\n                 ᴾᵒʷᵉʳᵈ ᵇʸ ˣ⁻ᵀʳᵒᶦᵈ'});
-    }
-    return;
-}
+        if (msg.messageStubType === 32 || msg.messageStubType === 28) {
+            // Görüşürüz Mesajı
+            var gb = await getMessage(msg.key.remoteJid, 'goodbye');
+            if (gb !== false) {
+                await conn.sendMessage(msg.key.remoteJid, gb.message, MessageType.text);
+            }
+            return;
+        } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
+            // Hoşgeldin Mesajı
+            var gb = await getMessage(msg.key.remoteJid);
+            if (gb !== false) {
+                var ttinullimage = await axios.get(`https://netfile2link.herokuapp.com/9738`, { responseType: 'arraybuffer' })
+                await conn.sendMessage(msg.key.remoteJid, Buffer.from(ttinullimage.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message});
+            }
+            return;
+        }
         // ==================== End Greetings ====================
 
         // ==================== Blocked Chats ====================
