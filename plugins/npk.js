@@ -1,14 +1,8 @@
-const lasiapi = require('textmaker-lasi'); // Import NPM Package
+
 const XTroid = require('../events');
-const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
-const fs = require('fs');
+const {MessageType, MessageOptions} = require('@adiwajshing/baileys');
 const Config = require('../config')
-const axios = require('axios')
-const request = require('request');
-const os = require('os');
-var desc_msg = ''
-if (Config.LANG == 'SI') desc_msg = 'X-Troid Logo එකතුව'
-if (Config.LANG == 'EN') desc_msg = 'X-Troid Logo colection'
+const desc_msg = "X-Troid Logo colection"
 const need = "*type some word after command*\n*විධානයට පසුව වචනයක් ලියන්න"
 
 if (config.WORKTYPE == 'private') {
