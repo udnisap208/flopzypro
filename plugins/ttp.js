@@ -76,10 +76,8 @@ XTroid.addCMD({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, 
         t22 = 'Naruto Themed Logo.' // https://photooxy.com/manga-and-anime/make-naruto-banner-online-free-378.html
         t23 = 'Glow Themed Logo.' // https://photooxy.com/logo-and-text-effects/make-smoky-neon-glow-effect-343.html        
         t25 = 'Flame Themed Logo.' // https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html
-        t26 = 'Harry Potter Themed Logo.' // https://photooxy.com/logo-and-text-effects/create-harry-potter-text-on-horror-background-178.html
         t27 = 'Fourth Neon-Themed Logo.' // https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html
-        t28 = 'Cemetery Themed Logo.' // https://photooxy.com/logo-and-text-effects/text-on-scary-cemetery-gate-172.html
-        t29 = 'Cup Themed Logo.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+
     }
     else {
         t1 = 'Devil Themed Logo.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
@@ -106,10 +104,9 @@ XTroid.addCMD({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, 
         t22 = 'Naruto Themed Logo.' // https://photooxy.com/manga-and-anime/make-naruto-banner-online-free-378.html
         t23 = 'Glow Themed Logo.' // https://photooxy.com/logo-and-text-effects/make-smoky-neon-glow-effect-343.html        
         t25 = 'Flame Themed Logo.' // https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html
-        t26 = 'Harry Potter Themed Logo.' // https://photooxy.com/logo-and-text-effects/create-harry-potter-text-on-horror-background-178.html
         t27 = 'Fourth Neon-Themed Logo.' // https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html
-        t28 = 'Cemetery Themed Logo.' // https://photooxy.com/logo-and-text-effects/text-on-scary-cemetery-gate-172.html
-        t29 = 'Cup Themed Logo.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+
+
     }
     var usage_cmd = ''
     var command_cmd = ''
@@ -129,7 +126,6 @@ XTroid.addCMD({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, 
         command_cmd + '```.neon```\n' + desc_cmd + t3 + '_\n' + usage_cmd + '*.neon Xtroid*\n\n' +
         command_cmd + '```.2neon``` \n' + desc_cmd + t4 + '_\n' + usage_cmd + '*.2neon Xtroid*\n\n' +
         command_cmd + '```.3neon``` \n' + desc_cmd + t18 + '_\n' + usage_cmd + '*.3neon Xtroid*\n\n' +
-        command_cmd + '```.4neon``` \n' + desc_cmd + t27 + '_\n' + usage_cmd + '*.4neon Xtroid*\n\n' +
         command_cmd + '```.light``` \n' + desc_cmd + t5 + '_\n' + usage_cmd + '*.light Xtroid*\n\n' +
         command_cmd + '```.joker``` \n' + desc_cmd + t6 + '_\n' + usage_cmd + '*.joker Xtroid*\n\n' +
         command_cmd + '```.ninja``` \n' + desc_cmd + t7 + '_\n' + usage_cmd + '*.ninja Xtroid,Lasiya*\n\n' +
@@ -143,11 +139,6 @@ XTroid.addCMD({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, 
         command_cmd + '```.lion``` \n' + desc_cmd + t17 + '_\n' + usage_cmd + '*.lion lasiya,Xtroid*\n\n' +
         command_cmd + '```.ice``` \n' + desc_cmd + t19 + '_\n' + usage_cmd + '*.ice Xtroid*\n\n' +
         command_cmd + '```.space``` \n' + desc_cmd + t20 + '_\n' + usage_cmd + '*.space Xtroid,Lasiya*\n\n' +
-        command_cmd + '```.smoke``` \n' + desc_cmd + t21 + '_\n' + usage_cmd + '*.smoke Xtroid*\n\n' + // Thanks for @Unique_hunter for base.
-        command_cmd + '```.fire``` \n' + desc_cmd + t25 + '_\n' + usage_cmd + '*.fire Xtroid*\n\n' +
-        command_cmd + '```.harry``` \n' + desc_cmd + t26 + '_\n' + usage_cmd + '*.harry Xtroid*\n\n' +
-        command_cmd + '```.cup``` \n' + desc_cmd + t29 + '_\n' + usage_cmd + '*.cup Xtroid*\n\n' +
-        command_cmd + '```.cemetery``` \n' + desc_cmd + t28 + '_\n' + usage_cmd + '*.cemetery Xtroid*\n\n' +
         command_cmd + '```.glitch``` \n' + desc_cmd + t14 + '_\n' + usage_cmd + '*.glitch Xtroid,Lasiya*\n\n'
     await message.client.sendMessage(message.jid,msg, MessageType.text, { quoted: message.data })
 }));
@@ -662,146 +653,4 @@ XTroid.addCMD({pattern: 'space ?(.*)', fromMe: wk, dontAddCMDList: true}, (async
           } 
     });
 }));
-XTroid.addCMD({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
-    if (match[1] === '') return await message.sendMessage(need);
-    lasiapi.photooxy("https://photooxy.com/other-design/create-an-easy-smoke-type-effect-390.html",
-        `${match[1]}`
-        ).then(async (data) => { 
-          try { 
-              var download = async(uri, filename, callback) => {
-                  await request.head(uri, async(err, res, body) => {    
-                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-                  });
-              };
 
-              await download(`${data}`, '/root/HTM/smoke.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/smoke.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
-              })
-          } catch(err) { 
-              console.log(err)
-          } 
-    });
-}));
-
-XTroid.addCMD({pattern: 'fire ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
-    if (match[1] === '') return await message.sendMessage(need);
-    lasiapi.photooxy("https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html",
-        `${match[1]}`
-        ).then(async (data) => { 
-          try { 
-              var download = async(uri, filename, callback) => {
-                  await request.head(uri, async(err, res, body) => {    
-                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-                  });
-              };
-
-              await download(`${data}`, '/root/HTM/tfire.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/tfire.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
-              })
-          } catch(err) { 
-              console.log(err)
-          } 
-    });
-}));
-XTroid.addCMD({pattern: 'harry ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
-    if (match[1] === '') return await message.sendMessage(need);
-        if (match[1] === '') return await message.sendMessage(need);
-    lasiapi.photooxy("https://photooxy.com/logo-and-text-effects/create-harry-potter-text-on-horror-background-178.html",
-        `${match[1]}`
-        ).then(async (data) => { 
-          try { 
-              var download = async(uri, filename, callback) => {
-                  await request.head(uri, async(err, res, body) => {    
-                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-                  });
-              };
-
-              await download(`${data}`, '/root/HTM/hp.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/hp.jpg'), MessageType.image, { caption: Config.CAPTION_KEY })
-              })
-          } catch(err) { 
-              console.log(err)
-          } 
-    });
-}));
-XTroid.addCMD({pattern: '4neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
-    if (match[1] === '') return await message.sendMessage(need);
-    lasiapi.photooxy("https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html",
-        `${match[1]}`
-        ).then(async (data) => { 
-          try { 
-              var download = async(uri, filename, callback) => {
-                  await request.head(uri, async(err, res, body) => {    
-                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-                  });
-              };
-
-              await download(`${data}`, '/root/HTM/t4n.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/t4n.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
-              })
-          } catch(err) { 
-              console.log(err)
-          } 
-    });
-}));
-XTroid.addCMD({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
-    if (match[1] === '') return await message.sendMessage(need);
-    lasiapi.photooxy("https://photooxy.com/logo-and-text-effects/text-on-scary-cemetery-gate-172.html",
-        `${match[1]}`
-        ).then(async (data) => { 
-          try { 
-              var download = async(uri, filename, callback) => {
-                  await request.head(uri, async(err, res, body) => {    
-                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-                  });
-              };
-
-              await download(`${data}`, '/root/HTM/cmth.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/cmth.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
-              })
-          } catch(err) { 
-              console.log(err)
-          } 
-    });
-}));
-XTroid.addCMD({pattern: 'cup ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
-    if (match[1] === '') return await message.sendMessage(need);
-    lasiapi.photooxy("https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html",
-        `${match[1]}`
-        ).then(async (data) => { 
-          try { 
-              var download = async(uri, filename, callback) => {
-                  await request.head(uri, async(err, res, body) => {    
-                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-                  });
-              };
-
-              await download(`${data}`, '/root/HTM/cup.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/cup.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
-              })
-          } catch(err) { 
-              console.log(err)
-          } 
-    });
-}));
-
-XTroid.addCMD({pattern: 'juice ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
-    if (match[1] === '') return await message.sendMessage(need);
-    lasiapi.photooxy("https://textpro.me/fruit-juice-text-effect-861.html",
-        `${match[1]}`
-        ).then(async (data) => { 
-          try { 
-              var download = async(uri, filename, callback) => {
-                  await request.head(uri, async(err, res, body) => {    
-                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-                  });
-              };
-
-              await download(`${data}`, '/root/HTM/juice.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/juice.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
-              })
-          } catch(err) { 
-              console.log(err)
-          } 
-    });
-}));
