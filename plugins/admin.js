@@ -3,7 +3,7 @@
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 
-X-Troid - Yusuf Usta
+WhatsAsena - Yusuf Usta
 */
 
 const {MessageType, GroupSettingChange} = require('@adiwajshing/baileys');
