@@ -1,7 +1,7 @@
 
 const XTroid = require('../events');
 const {MessageType, MessageOptions} = require('@adiwajshing/baileys');
-const Config = require('../config')
+const config = require('../config')
 const desc_msg = "X-Troid Logo colection"
 const need = "*type some word after command*\n*විධානයට පසුව වචනයක් ලියන්න"
 
