@@ -65,7 +65,6 @@ XTroid.addCMD({on: 'text', fromMe: false, deleteCommand: false}, (async (message
     if (antilink_var == 'true' && message.jid !== '905511384572-1616356915@g.us') {
         let regex1 = new RegExp('http://')
         let regex2 = new RegExp('https://')
-        let regex3 = new RegExp('ponnaya')
         
         if (regex1.test(message.message)) {
             var us = await checkUsAdmin(message)
@@ -76,14 +75,6 @@ XTroid.addCMD({on: 'text', fromMe: false, deleteCommand: false}, (async (message
             await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
         } 
         else if (regex2.test(message.message)) {
-            var us = await checkUsAdmin(message)
-            var im = await checkImAdmin(message)
-            if (!im) return;
-            if (us) return;
-            await message.client.groupRemove(message.jid, [message.data.participant]);         
-            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
-        }
-            else if (regex3(message.message)) {
             var us = await checkUsAdmin(message)
             var im = await checkImAdmin(message)
             if (!im) return;
