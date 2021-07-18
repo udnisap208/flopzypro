@@ -21,7 +21,7 @@ const ALIMGON = "already on : කලින්ම ලබාදී ඇත"
 const ALIMGOF = "already off : කලින්ම වසාදමා ඇත"
 const SUON = "Successfully .img on command: සාර්ථකව අවසර ලබාදෙන ලදී "
 const SUOF = "Successfully .img off command: සාර්ථකව අවහිර කරන ලදී "
-const IMDC = "you tuerned off .img command plz tuern on *.cimg on*"
+const IMDC = "command plz tuern on"
 let baseURI = '/apps/' + config.HEROKU.APP_NAME;
 //============================== LYRICS =============================================
 const axios = require('axios');
