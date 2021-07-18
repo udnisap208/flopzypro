@@ -893,6 +893,7 @@ else if (config.WORKTYPE == 'public') {
     }));
 
     XTroid.addCMD({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
+        if (config.IMG !== true) return await message.sendMessage(IMDC);
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
         gis(match[1], async (error, result) => {
