@@ -98,15 +98,17 @@ XTroid.addCMD({pattern: 'cimg ?(.*)', fromMe: true, desc: IMdsc, usage: '.cimg o
         }
     }
     else if (match[1] == 'off') {
-            await heroku.patch(baseURI + '/config-vars', { 
+
+ await heroku.patch(baseURI + '/config-vars', { 
                 body: { 
                     ['IMG']: 'false'
                 } 
             });
             await message.client.sendMessage(message.jid, '*' + SUOF + '*', MessageType.text)
-        }
+        
     }
 }));
+
 
 if (config.WORKTYPE == 'private') {
 
