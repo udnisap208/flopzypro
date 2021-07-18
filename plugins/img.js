@@ -28,10 +28,10 @@ const wiki = require('wikijs').default;
 var gis = require('g-i-s');
 const { on } = require('events');
 
-
+if (config.IMG == 'on') {
 if (config.WORKTYPE == 'private') {
 XTroid.addCMD({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
-    if (config.IMG !== ON) return await message.sendMessage('Option turned off');
+    
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
     gis(match[1], async (error, result) => {
@@ -53,7 +53,6 @@ XTroid.addCMD({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async 
 
 else if (config.WORKTYPE == 'public') {
 XTroid.addCMD({pattern: 'img ?(.*)', fromMe: false,desc: Lang.IMG_DESC }, (async (message, match) => { 
-    if (config.IMG !== ON) return await message.sendMessage('Option turned off');
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
     gis(match[1], async (error, result) => {
@@ -71,35 +70,5 @@ XTroid.addCMD({pattern: 'img ?(.*)', fromMe: false,desc: Lang.IMG_DESC }, (async
 }));
 
 }
+}
 
-
-
-XTroid.addCMD({ pattern: 'keyimg ?(.*)',  fromMe: true, usage: '.keyimg on / off' }, (async (message, match) => {
-    var IMG = `${conf.IMG}`
-    if (match[1] == 'on') {
-        if (IMG == 'ON') {
-            return await message.client.sendMessage(message.jid, '*ON*', MessageType.text)
-        }
-        else {
-            await heroku.patch(baseURI + '/config-vars', { 
-                body: { 
-                    ['IMG']: 'ON'
-                } 
-            });
-            await message.client.sendMessage(message.jid, '*Image opened*', MessageType.text)
-        }
-    }
-    else if (match[1] == 'off') {
-        if (IMG !== 'ON') {
-            return await message.client.sendMessage(message.jid, '*OFF*', MessageType.text)
-        }
-        else {
-            await heroku.patch(baseURI + '/config-vars', { 
-                body: { 
-                    ['IMG']: 'OFF'
-                } 
-            });
-            await message.client.sendMessage(message.jid, '*Image Off*', MessageType.text)
-        }
-    }
-}));
