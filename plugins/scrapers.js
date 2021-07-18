@@ -98,7 +98,7 @@ XTroid.addCMD({pattern: 'cimg ?(.*)', fromMe: true, desc: IMdsc, usage: '.cimg o
         }
     }
     else if (match[1] == 'off') {
-        if (imgsw !== 'true') {
+        if (imgsw !== 'false') {
             return await message.client.sendMessage(message.jid, '*' + ALIMGOF + '*', MessageType.text)
         }
         else {
@@ -426,7 +426,7 @@ if (config.WORKTYPE == 'private') {
     }));
 
     XTroid.addCMD({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
-        if (config.IMG !== false) return await message.sendMessage(IMDC);
+        if (config.IMG !== true) return await message.sendMessage(IMDC);
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
         gis(match[1], async (error, result) => {
