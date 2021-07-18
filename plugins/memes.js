@@ -56,7 +56,7 @@ if (Config.WORKTYPE == 'private') {
             bottomText: bottomText,
         }, async function(err) {
             if(err) throw new Error(err)
-            await message.client.sendMessage(message.jid, fs.readFileSync('asena-meme.png'), MessageType.image, {filename: 'asena-meme.png', mimetype: Mimetype.png, caption: Config.CAPTION_KEY});
+            await message.client.sendMessage(message.jid, fs.readFileSync('x-meme.png'), MessageType.image, {filename: 'x-meme.png', mimetype: Mimetype.png, caption: Config.CAPTION_KEY});
             await info.delete();    
         });
     }));
@@ -145,7 +145,7 @@ else if (Config.WORKTYPE == 'public') {
   
   }));
 
-    XTroid.addCMD({pattern: 'mme', fromMe: false, desc: Ln,}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'mpack', fromMe: false, desc: Ln,}, (async (message, match) => {
 
         await message.client.sendMessage(
       
@@ -253,7 +253,7 @@ XTroid.addCMD({pattern: 'mme ?(.*)', fromMe: false, dontAddCMDList: true}, (asyn
         bottomText: bottomText,
     }, async function(err) {
         if(err) throw new Error(err)
-        await message.client.sendMessage(message.jid, fs.readFileSync('asena-meme.png'), MessageType.image, {filename: 'asena-meme.png', mimetype: Mimetype.png, caption: Config.CAPTION_KEY});
+        await message.client.sendMessage(message.jid, fs.readFileSync('X-meme.png'), MessageType.image, {filename: 'X-meme.png', mimetype: Mimetype.png, caption: Config.CAPTION_KEY});
         await info.delete();    
     });
 }));
@@ -304,7 +304,7 @@ memeMaker({
     bottomText: bottomText,
 }, async function(err) {
     if(err) throw new Error(err)
-    await message.client.sendMessage(message.jid, fs.readFileSync('asena-meme.png'), MessageType.image, {filename: 'asena-meme.png', mimetype: Mimetype.png, caption: Config.CAPTION_KEY});
+    await message.client.sendMessage(message.jid, fs.readFileSync('X-meme.png'), MessageType.image, {filename: 'X-meme.png', mimetype: Mimetype.png, caption: Config.CAPTION_KEY});
     await info.delete();    
 });
 }));
