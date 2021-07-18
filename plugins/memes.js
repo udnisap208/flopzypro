@@ -29,8 +29,8 @@ if (Config.WORKTYPE == 'private') {
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,PRN, MessageType.text);
         var topText, bottomText;
-        if (match[1].includes(';')) {
-            var split = match[1].split(';');
+        if (match[1].includes(',')) {
+            var split = match[1].split(',');
             topText = split[1];
             bottomText = split[0];
         }
@@ -51,7 +51,7 @@ if (Config.WORKTYPE == 'private') {
     
 	    memeMaker({
             image: location,         
-            outfile: 'asena-meme.png',
+            outfile: 'x-meme.png',
             topText: topText,
             bottomText: bottomText,
         }, async function(err) {
@@ -226,7 +226,7 @@ XTroid.addCMD({pattern: 'mme ?(.*)', fromMe: false, dontAddCMDList: true}, (asyn
 
     if (message.reply_message === false) return await message.client.sendMessage(message.jid,PRN, MessageType.text);
     var topText, bottomText;
-    if (match[1].includes(';')) {
+    if (match[1].includes(',')) {
         var split = match[1].split(',');
         topText = split[0];
         bottomText = split[1];
@@ -248,7 +248,7 @@ XTroid.addCMD({pattern: 'mme ?(.*)', fromMe: false, dontAddCMDList: true}, (asyn
 
     memeMaker({
         image: location,         
-        outfile: 'asena-meme.png',
+        outfile: 'X-meme.png',
         topText: topText,
         bottomText: bottomText,
     }, async function(err) {
@@ -273,12 +273,12 @@ XTroid.addCMD({pattern: 'mpack', fromMe: true, dontAddCMDList: true }, (async (m
 
 }));
 
-XTroid.addCMD({pattern: 'meme ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {   
+XTroid.addCMD({pattern: 'mme ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {   
 
 if (message.reply_message === false) return await message.client.sendMessage(message.jid,PRN, MessageType.text);
 var topText, bottomText;
-if (match[1].includes(';')) {
-    var split = match[1].split(';');
+if (match[1].includes(',')) {
+    var split = match[1].split(',');
     topText = split[1];
     bottomText = split[0];
 }
@@ -299,7 +299,7 @@ var location = await message.client.downloadAndSaveMediaMessage({
 
 memeMaker({
     image: location,         
-    outfile: 'asena-meme.png',
+    outfile: 'X-meme.png',
     topText: topText,
     bottomText: bottomText,
 }, async function(err) {
