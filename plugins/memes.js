@@ -12,7 +12,7 @@ const Lang = Language.getString('memes');
 const ll ="*Need some Word*"
 const Ln = "Make memes your own\nඔබගේම මිම් සාදාගැනීමට "
 const PRN =  "Please replyto photo\nකරුණාකර පින්තුරයකට් රිප්ලයි කරන්න\nEg: ```.meme text1,text2```"
-const code = "╔════════════════════╗\n║   😹 *Meme World* 😹\n║\n║\n╠═══ *🎭commands🎭*\n║\n╠══ *.bocca* text\n╠══ *.mymeme* text\n╠══ *.santha* text\n╠══ *.chaina* text\n╠══ *.bomu* text\n╠══ *.saduni* text\n╠══ *.tharindu* text\n╠══ *.meme* text1,text2\n║\n╚════════════════════╝"
+const code = "╔════════════════════╗\n║   😹 *Meme World* 😹\n║\n║\n╠═══ *🎭commands🎭*\n║\n╠══ *.bocca* text\n╠══ *.mymeme* text\n╠══ *.santha* text\n╠══ *.chaina* text\n╠══ *.bomu* text\n╠══ *.saduni* text\n╠══ *.tharindu* text\n╠══ *.mme* text1,text2\n║\n╚════════════════════╝"
 
 if (Config.WORKTYPE == 'private') {
 	
