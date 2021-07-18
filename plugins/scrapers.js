@@ -82,32 +82,7 @@ if (config.LANG == 'EN') {
 }
 
 
-XTroid.addCMD({pattern: 'cimg ?(.*)', fromMe: true, desc: IMdsc, usage: '.cimg on / off' }, (async (message, match) => {
-    const imgsw = `${config.IMG}`
-    if (match[1] == 'on') {
-        if (imgsw == 'true') {
-            return await message.client.sendMessage(message.jid, '*' + ALIMGON + '*', MessageType.text)
-        }
-        else {
-            await heroku.patch(baseURI + '/config-vars', { 
-                body: { 
-                    ['IMG']: 'true'
-                } 
-            });
-            await message.client.sendMessage(message.jid, '*' + SUON + '*', MessageType.text)
-        }
-    }
-    else if (match[1] == 'off') {
 
- await heroku.patch(baseURI + '/config-vars', { 
-                body: { 
-                    ['IMG']: 'false'
-                } 
-            });
-            await message.client.sendMessage(message.jid, '*' + SUOF + '*', MessageType.text)
-        
-    }
-}));
 
 
 if (config.WORKTYPE == 'private') {
@@ -423,23 +398,7 @@ if (config.WORKTYPE == 'private') {
         await reply.delete();
     }));
 
-    XTroid.addCMD({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
-        if (config.IMG !== true) return await message.sendMessage(IMDC);
 
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
-        gis(match[1], async (error, result) => {
-            for (var i = 0; i < (result.length < 5 ? result.length : 5); i++) {
-                var get = got(result[i].url, {https: {rejectUnauthorized: false}});
-                var stream = get.buffer();
-                
-                stream.then(async (image) => {
-                    await message.client.sendMessage(message.jid,image, MessageType.image);
-                });
-            }
-
-            message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
-        });
-    }));
 
     XTroid.addCMD({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC }, async (message, match) => {
 
@@ -890,23 +849,6 @@ else if (config.WORKTYPE == 'public') {
         await reply.delete();
     }));
 
-    XTroid.addCMD({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
-        if (config.IMG !== true) return await message.sendMessage(IMDC);
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
-        gis(match[1], async (error, result) => {
-            for (var i = 0; i < (result.length < 5 ? result.length : 5); i++) {
-                var get = got(result[i].url, {https: {rejectUnauthorized: false}});
-                var stream = get.buffer();
-                
-                stream.then(async (image) => {
-                    await message.client.sendMessage(message.jid,image, MessageType.image);
-                });
-            }
-
-            message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
-        });
-    }));
 
     XTroid.addCMD({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC }, async (message, match) => {
 
