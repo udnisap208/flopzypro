@@ -1,9 +1,13 @@
+
+const {MessageType, GroupSettingChange, ChatModification, WAConnectionTest} = require('@adiwajshing/baileys');
 const XTroid = require('../events');
-const {MessageType} = require('@adiwajshing/baileys');
-const DEL_DESC = "Deletes The Replied Message Send By The Bot [ ✅️ Official External Plugin ]"
+const DEL = "Delet all messages from you"
 
-XTroid.addCMD({pattern: 'del', fromMe: false, desc: DEL_DESC}, (async (message, match) => {
 
-  await message.reply_message.delete();
 
+ XTroid.addCMD({pattern: 'del', fromMe: true, desc: DEL}, (async (message, match) => {
+
+    await message.sendMessage('```Deleting all...```');
+    await message.client.modifyChat (message.jid, ChatModification.delete);
+    await message.sendMessage('```🗑All deleted....```');
 }));
