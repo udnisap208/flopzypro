@@ -20,7 +20,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
 }
 
 XTroid.addCMD({pattern: 'dem ?(.*)', fromMe: true,dontAddCMDList: true }, (async (message, match) => {    
-eType.text);
+
 
         if (match[1] == '') {
             await message.client.toggleDisappearingMessages(message.jid, 604800);
