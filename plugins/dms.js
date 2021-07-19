@@ -20,8 +20,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
 }
 
 XTroid.addCMD({pattern: 'dem ?(.*)', fromMe: true,dontAddCMDList: true }, (async (message, match) => {    
-    var im = await checkImAdmin(message);
-    if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
+eType.text);
 
         if (match[1] == '') {
             await message.client.toggleDisappearingMessages(message.jid, 604800);
@@ -35,8 +34,7 @@ XTroid.addCMD({pattern: 'dem ?(.*)', fromMe: true,dontAddCMDList: true }, (async
 
 
 XTroid.addCMD({pattern: 'fdem ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {    
-    var im = await checkImAdmin(message);
-    if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
+
 
         if (match[1] == '') {
             await message.client.toggleDisappearingMessages(message.jid, 0);
