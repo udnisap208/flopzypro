@@ -43,7 +43,7 @@ XTroid.addCMD({pattern: 'cup ?(.*)', fromMe: wk, dontAddCommandList: true}, (asy
     });
 }));
 
-XTroid.addCMD({pattern: 'cmt ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'cmt ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
     LASIapi.photooxy("https://photooxy.com/logo-and-text-effects/text-on-scary-cemetery-gate-172.html",
         `${match[1]}`
