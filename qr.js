@@ -9,7 +9,7 @@ const fs = require('fs');
 async function LasiXtroid () {
     const conn = new WAConnection();
     const Session = new StringSession();  
-    conn.version = [2,2121,7];
+    conn.version = [2,2121,8];
     conn.logger.level = 'warn';
     conn.regenerateQRIntervalMs = 50000;
     
