@@ -168,22 +168,8 @@ if (Config.WORKTYPE == 'private') {
 
     XTroid.addCMD({pattern: 'bot', fromMe: true, deleteCommand: false,}, (async (message, match) => {
 
-	        var r_text = new Array ();
 
-        r_text[1] = "https://telegra.ph/file/2bb85d7b80b9ad96bcb96.jpg";
-        r_text[2] ="https://telegra.ph/file/b86ce85acea2d357ccdb6.jpg";
-        r_text[3] ="https://telegra.ph/file/49d7fe9161adfbbd54eca.jpg";
-        r_text[4] ="https://telegra.ph/file/46a5a8c17e3cc7973d826.jpg";
-        r_text[5] ="https://telegra.ph/file/cdf86aa4f05711fd31ec6.jpg";
-        r_text[6] ="https://telegra.ph/file/2bb85d7b80b9ad96bcb96.jpg";
-        r_text[7] ="https://telegra.ph/file/2c8ee6004b1c1bff815e9.jpg";
-        r_text[8] ="https://telegra.ph/file/5d59a99b9a3a8fc5c0dda.jpg";
-        r_text[9] ="https://telegra.ph/file/c53359cc0100ba1241dd3.jpg";
-        r_text[10] ="https://telegra.ph/file/a143b34753c8434058e87.jpg";
-      
-
-var i = Math.floor(11*Math.random())
-var lasiimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
+var lasiimage = await axios.get(`https://telegra.ph/file/145ee2d4fb11363f72582.jpg`, { responseType: 'arraybuffer' })
 await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: '                  *♔ 𝓧-𝓣𝓻𝓸𝓲𝓭 ♔* \n\n\n❍ 𝗛𝗼𝘀𝘁𝗲𝗱 ➤ 𝘼𝙒𝙎\n❍ 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 ➤ 𝐕'+Config.VERSION+'\n❍ 𝗕𝗿𝗮𝗻𝗰𝗵  ➤ *'+Config.BRANCH+'*\n❍ 𝗔𝗯𝗼𝘂𝘁    ➤ 𝙡𝙖𝙨𝙞𝙮𝙖.𝙢𝙡\n❍ 𝗢𝘄𝗻𝗲𝗿   ➤𝙩.𝙢𝙚/𝙡𝙖𝙨𝙞99𝙓\n❍ 𝗠𝗼𝗱𝗲𝗿𝘀 ➤┓\n                        ┣ @W4RR10R\n                        ┣ @SL_MGx03\n                        ┣ @lucy_99X\n❍ 𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽 ➤ t.me/danuma01\n\n❍ 𝐓𝐮𝐭𝐞 ➤ https://cutt.ly/hmtJU0u\n⊱ ──────    ♔    ────── ⊰\n'})
     }));
     
@@ -380,21 +366,7 @@ else if (Config.WORKTYPE == 'public') {
     
     XTroid.addCMD({pattern: 'bot', fromMe: false, deleteCommand: false,}, (async (message, match) => {
 
-	        var r_text = new Array ();
-
-        r_text[1] = "https://telegra.ph/file/2bb85d7b80b9ad96bcb96.jpg";
-        r_text[2] ="https://telegra.ph/file/b86ce85acea2d357ccdb6.jpg";
-        r_text[3] ="https://telegra.ph/file/49d7fe9161adfbbd54eca.jpg";
-        r_text[4] ="https://telegra.ph/file/46a5a8c17e3cc7973d826.jpg";
-        r_text[5] ="https://telegra.ph/file/cdf86aa4f05711fd31ec6.jpg";
-        r_text[6] ="https://telegra.ph/file/2bb85d7b80b9ad96bcb96.jpg";
-        r_text[7] ="https://telegra.ph/file/2c8ee6004b1c1bff815e9.jpg";
-        r_text[8] ="https://telegra.ph/file/5d59a99b9a3a8fc5c0dda.jpg";
-        r_text[9] ="https://telegra.ph/file/c53359cc0100ba1241dd3.jpg";
-        r_text[10] ="https://telegra.ph/file/a143b34753c8434058e87.jpg";
-
-var i = Math.floor(11*Math.random())
-var lasiimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
+var lasiimage = await axios.get(`https://telegra.ph/file/145ee2d4fb11363f72582.jpg`, { responseType: 'arraybuffer' })
 await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: '                  *♔ 𝓧-𝓣𝓻𝓸𝓲𝓭 ♔* \n\n\n❍ 𝗛𝗼𝘀𝘁𝗲𝗱 ➤ 𝘼𝙒𝙎\n❍ 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 ➤ 𝐕'+Config.VERSION+'\n❍ 𝗕𝗿𝗮𝗻𝗰𝗵  ➤ *'+Config.BRANCH+'*\n❍ 𝗔𝗯𝗼𝘂𝘁    ➤ 𝙡𝙖𝙨𝙞𝙮𝙖.𝙢𝙡\n❍ 𝗢𝘄𝗻𝗲𝗿   ➤𝙩.𝙢𝙚/𝙡𝙖𝙨𝙞99𝙓\n❍ 𝗠𝗼𝗱𝗲𝗿𝘀 ➤┓\n                        ┣ @W4RR10R\n                        ┣ @SL_MGx03\n                        ┣ @lucy_99X\n❍ 𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽 ➤ t.me/danuma01\n\n❍ 𝐓𝐮𝐭𝐞 ➤ https://cutt.ly/hmtJU0u\n⊱ ──────    ♔    ────── ⊰\n'})
     }));
 
@@ -542,22 +514,8 @@ await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), Messa
 
     XTroid.addCMD({pattern: 'bot', fromMe: true, deleteCommand: false,}, (async (message, match) => {
 
-	        var r_text = new Array ();
 
-        r_text[1] = "https://telegra.ph/file/2bb85d7b80b9ad96bcb96.jpg";
-        r_text[2] ="https://telegra.ph/file/b86ce85acea2d357ccdb6.jpg";
-        r_text[3] ="https://telegra.ph/file/49d7fe9161adfbbd54eca.jpg";
-        r_text[4] ="https://telegra.ph/file/46a5a8c17e3cc7973d826.jpg";
-        r_text[5] ="https://telegra.ph/file/cdf86aa4f05711fd31ec6.jpg";
-        r_text[6] ="https://telegra.ph/file/2bb85d7b80b9ad96bcb96.jpg";
-        r_text[7] ="https://telegra.ph/file/2c8ee6004b1c1bff815e9.jpg";
-        r_text[8] ="https://telegra.ph/file/5d59a99b9a3a8fc5c0dda.jpg";
-        r_text[9] ="https://telegra.ph/file/c53359cc0100ba1241dd3.jpg";
-        r_text[10] ="https://telegra.ph/file/a143b34753c8434058e87.jpg";
-      
-
-var i = Math.floor(11*Math.random())
-var lasiimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
+var lasiimage = await axios.get(`https://telegra.ph/file/145ee2d4fb11363f72582.jpg`, { responseType: 'arraybuffer' })
 await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: '                  *♔ 𝓧-𝓣𝓻𝓸𝓲𝓭 ♔* \n\n\n❍ 𝗛𝗼𝘀𝘁𝗲𝗱 ➤ 𝘼𝙒𝙎\n❍ 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 ➤ 𝐕'+Config.VERSION+'\n❍ 𝗕𝗿𝗮𝗻𝗰𝗵  ➤ *'+Config.BRANCH+'*\n❍ 𝗔𝗯𝗼𝘂𝘁    ➤ 𝙡𝙖𝙨𝙞𝙮𝙖.𝙢𝙡\n❍ 𝗢𝘄𝗻𝗲𝗿   ➤𝙩.𝙢𝙚/𝙡𝙖𝙨𝙞99𝙓\n❍ 𝗠𝗼𝗱𝗲𝗿𝘀 ➤┓\n                        ┣ @W4RR10R\n                        ┣ @SL_MGx03\n                        ┣ @lucy_99X\n❍ 𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽 ➤ t.me/danuma01\n\n❍ 𝐓𝐮𝐭𝐞 ➤ https://cutt.ly/hmtJU0u\n⊱ ──────    ♔    ────── ⊰\n'})
     }));
 
