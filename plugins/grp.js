@@ -4,30 +4,136 @@ const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const Language = require('../language');
 const Lang = Language.getString('_xtroid');
 const axios = require('axios');
+const Menu1 = `
+「 *🍁Link pannel🍁* 」
+
+
+❍ *YouTube*
+     y2u.be/mDnJ7q3S3eY
+
+❍ *Blog* 
+     tinyurl.com/Bloglink12
+
+❍ *Book Web*
+     cutt.ly/9Qot6w2
+
+❍ *Telegaram*
+    ╚⦁⦁⦁ Main Group     ╗
+       t.me/danuma01
+
+    ╚⦁⦁⦁ A/L Channel    ╗
+       t.me/alxams
+  
+    ╚⦁⦁⦁ O/L Channel    ╗
+       t.me/olxams
+
+    ╚⦁⦁⦁ Bot Channel    ╗
+       t.me/danumabots
+
+    ╚⦁⦁⦁ Mod Apps        ╗
+       t.me/danuma
+
+    ╚⦁⦁⦁ Film Channel   ╗
+       t.me/films_SL_x
+
+    ╚⦁⦁⦁ Play Games     ╗
+       t.me/SLPlaygames
+
+    ╚⦁⦁⦁ NXT binners    ╗
+       t.me/nxtbinners
+
+    ╚⦁⦁⦁ Cartoon World ╗
+       t.me/SL_Toons
+`
+
+const Menu2 = `
+「 *🍁X-Troid Menu🍁* 」
+
+
+➤ *N.G 01*🚀
+chat.whatsapp.com/EotXTpTHhcG4atdTbyZg3T
+
+➤ *N.G 02*🚀
+chat.whatsapp.com/LUbUB7edSU3H0uRgLuvAll
+
+➤ *N.G 03*🚀
+chat.whatsapp.com/DQ5DropDeSX1nTkZCjZ9SE
+
+➤ *N.G 04*🚀
+chat.whatsapp.com/LsifeICKyrTKQFizJF6GWi
+
+➤ *N.G 05*🚀
+chat.whatsapp.com/JigWG8oj1hj1YXLgJaqxta
+
+➤ *N.G 06*🚀
+chat.whatsapp.com/IP9QW1ODZ7g0QvNTCSzAdy
+
+_Please join only one group_
+`
+const Menu3 =`
+「 *🪀WhatsApp Menu🪀* 」
+
+
+•━━━»» *W.G 01*««━━━•
+chat.whatsapp.com/JVEdzU42Qmw3KsOkBApTOM
+
+•━━━»» *W.G 02*««━━━•
+chat.whatsapp.com/K5niEonkgRiGqnkAxmdlVZ
+
+•━━━»» *W.G 03*««━━━•
+chat.whatsapp.com/DjG7hi3kL7mCzP9UwRe38m
+
+•━━━»» *W.G 04*««━━━•
+chat.whatsapp.com/DJzGuFUOXZOFRlG6APWR6a
+
+•━━━»» *W.G 05*««━━━•
+chat.whatsapp.com/FaPZBiAK37Y2my4RenHm5K
+
+•━━━»» *W.G 06*««━━━•
+chat.whatsapp.com/GsqFiZpJhC61zOIwmyrTD0
+
+•━━━»» *W.G 07*««━━━•
+chat.whatsapp.com/DMhkJIM1NCm8Nsh5iBeNaF
+
+•━━━»» *W.G 08*««━━━•
+chat.whatsapp.com/Brn9KwB4vf29PFvvV2LV4x
+
+•━━━»» *W.G 09*««━━━•
+chat.whatsapp.com/Gd4zEu4zXuUG1IgKIbBLRI
+
+•━━━»» *W.G 010*««━━━•
+chat.whatsapp.com/LSvMNWDgtcmJTzKRJ7gzkh
+
+`
+const lasiimg = await axios.get(`https://netfiletolink.herokuapp.com/30084`, { responseType: 'arraybuffer' })
+const lasiimg2 = await axios.get(`https://telegra.ph/file/145ee2d4fb11363f72582.jpg`, { responseType: 'arraybuffer' })
+const lasiimg3 = await axios.get(`https://telegra.ph/file/427f410697252103d826d.jpg`, { responseType: 'arraybuffer' })
+
 
 if (Config.WORKTYPE == 'private') {
 
         XTroid.addCMD({pattern: 'grp', fromMe: true, deleteCommand: false,}, (async (message, match) => {
 
-        var lasiimg = await axios.get(`https://telegra.ph/file/3073bc9bf04f00fead6a4.jpg`, { responseType: 'arraybuffer' })
 
-        await message.client.sendMessage(message.jid, Buffer.from(lasiimg.data), MessageType.image, {mimetype: Mimetype.png, caption: '   _Welcome to the new universe_ \n\n\n              🥇YouTube🔔\n      ```http://y2u.be/mDnJ7q3S3eY```\n*දැනුම Telegram*\n```https://t.me/danuma01```\n\n*උසස් පෙල සවිය* \n ```http://t.me/alxams```\n\n*සාමාන්‍ය පෙල සවිය* \n ```http://t.me/olxams``` \n\n*Mod Apps* \n ```http://t.me/danuma``` \n\n*Film Store*\n```http://t.me/films_SL_x``` \n\n*Bot Project* \n ```http://t.me/danumabots``` \n\n*දැනුම blog* \n```https://danumagroup.blogspot.com/?m=1``` \n\n*දැනුම පොත් Web Site එක*\n ```https://danuma.danuma.workers.dev/``` \n\n\n       💡දැනුම Whatsapp 📚සමූහ  \n\n*Group 10* \n```https://chat.whatsapp.com/LSvMNWDgtcmJTzKRJ7gzkh``` \n\n*Group 9* \n```https://chat.whatsapp.com/Gd4zEu4zXuUG1IgKIbBLRI``` \n\n*Group 8*  \n```https://chat.whatsapp.com/Brn9KwB4vf29PFvvV2LV4x``` \n\n*Group 7* \n```https://chat.whatsapp.com/DMhkJIM1NCm8Nsh5iBeNaF``` \n\n*Group 6* \n```https://chat.whatsapp.com/GsqFiZpJhC61zOIwmyrTD0``` \n\n*group 5* \n```https://chat.whatsapp.com/FaPZBiAK37Y2my4RenHm5K``` \n\n*group 4* \n```https://chat.whatsapp.com/DJzGuFUOXZOFRlG6APWR6a``` \n\n*group 3* \n```https://chat.whatsapp.com/DjG7hi3kL7mCzP9UwRe38m``` \n\n*group 2* \n```https://chat.whatsapp.com/Le60XJtUJMK1zZBwyJfstu``` \n\n*group 1* \n```https://chat.whatsapp.com/JVEdzU42Qmw3KsOkBApTOM```\n\n '})
-    }));
+        await message.client.sendMessage(message.jid, Buffer.from(lasiimg.data), MessageType.video, {mimetype: Mimetype.gif, caption: Menu1})
+        await message.client.sendMessage(message.jid, Buffer.from(lasiimg2.data), MessageType.image, {mimetype: Mimetype.png, caption: Menu2})
+        await message.client.sendMessage(message.jid, Buffer.from(lasiimg3.data), MessageType.image, {mimetype: Mimetype.png, caption: Menu3})
+    
+      }));
 }
 
 if (Config.WORKTYPE == 'public') {
-  
-        XTroid.addCMD({pattern: 'grp', fromMe: false, deleteCommand: false,}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'grp', fromMe: false, deleteCommand: false,}, (async (message, match) => {
 
-        var lasiimg = await axios.get(`https://telegra.ph/file/3073bc9bf04f00fead6a4.jpg`, { responseType: 'arraybuffer' })
-
-        await message.client.sendMessage(message.jid, Buffer.from(lasiimg.data), MessageType.image, {mimetype: Mimetype.png, caption: '   _Welcome to the new universe_ \n\n\n              🥇YouTube🔔\n      ```http://y2u.be/mDnJ7q3S3eY```\n*දැනුම Telegram*\n```https://t.me/danuma01```\n\n*උසස් පෙල සවිය* \n ```http://t.me/alxams```\n\n*සාමාන්‍ය පෙල සවිය* \n ```http://t.me/olxams``` \n\n*Mod Apps* \n ```http://t.me/danuma``` \n\n*Film Store*\n```http://t.me/films_SL_x``` \n\n*Bot Project* \n ```http://t.me/danumabots``` \n\n*දැනුම blog* \n```https://danumagroup.blogspot.com/?m=1``` \n\n*දැනුම පොත් Web Site එක*\n ```https://danuma.danuma.workers.dev/``` \n\n\n       💡දැනුම Whatsapp 📚සමූහ  \n\n*Group 10* \n```https://chat.whatsapp.com/LSvMNWDgtcmJTzKRJ7gzkh``` \n\n*Group 9* \n```https://chat.whatsapp.com/Gd4zEu4zXuUG1IgKIbBLRI``` \n\n*Group 8*  \n```https://chat.whatsapp.com/Brn9KwB4vf29PFvvV2LV4x``` \n\n*Group 7* \n```https://chat.whatsapp.com/DMhkJIM1NCm8Nsh5iBeNaF``` \n\n*Group 6* \n```https://chat.whatsapp.com/GsqFiZpJhC61zOIwmyrTD0``` \n\n*group 5* \n```https://chat.whatsapp.com/FaPZBiAK37Y2my4RenHm5K``` \n\n*group 4* \n```https://chat.whatsapp.com/DJzGuFUOXZOFRlG6APWR6a``` \n\n*group 3* \n```https://chat.whatsapp.com/DjG7hi3kL7mCzP9UwRe38m``` \n\n*group 2* \n```https://chat.whatsapp.com/Le60XJtUJMK1zZBwyJfstu``` \n\n*group 1* \n```https://chat.whatsapp.com/JVEdzU42Qmw3KsOkBApTOM```\n\n '})
+        await message.client.sendMessage(message.jid, Buffer.from(lasiimg.data), MessageType.video, {mimetype: Mimetype.gif, caption: Menu1})
+        await message.client.sendMessage(message.jid, Buffer.from(lasiimg2.data), MessageType.image, {mimetype: Mimetype.png, caption: Menu2})
+        await message.client.sendMessage(message.jid, Buffer.from(lasiimg3.data), MessageType.image, {mimetype: Mimetype.png, caption: Menu3})
     }));
         
-        XTroid.addCMD({pattern: 'grp', fromMe: true, deleteCommand: false,}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'grp', fromMe: true, deleteCommand: false,}, (async (message, match) => {
 
-        var lasiimg = await axios.get(`https://telegra.ph/file/3073bc9bf04f00fead6a4.jpg`, { responseType: 'arraybuffer' })
-
-        await message.client.sendMessage(message.jid, Buffer.from(lasiimg.data), MessageType.image, {mimetype: Mimetype.png, caption: '   _Welcome to the new universe_ \n\n\n              🥇YouTube🔔\n      ```http://y2u.be/mDnJ7q3S3eY```\n*දැනුම Telegram*\n```https://t.me/danuma01```\n\n*උසස් පෙල සවිය* \n ```http://t.me/alxams```\n\n*සාමාන්‍ය පෙල සවිය* \n ```http://t.me/olxams``` \n\n*Mod Apps* \n ```http://t.me/danuma``` \n\n*Film Store*\n```http://t.me/films_SL_x``` \n\n*Bot Project* \n ```http://t.me/danumabots``` \n\n*දැනුම blog* \n```https://danumagroup.blogspot.com/?m=1``` \n\n*දැනුම පොත් Web Site එක*\n ```https://danuma.danuma.workers.dev/``` \n\n\n       💡දැනුම Whatsapp 📚සමූහ  \n\n*Group 10* \n```https://chat.whatsapp.com/LSvMNWDgtcmJTzKRJ7gzkh``` \n\n*Group 9* \n```https://chat.whatsapp.com/Gd4zEu4zXuUG1IgKIbBLRI``` \n\n*Group 8*  \n```https://chat.whatsapp.com/Brn9KwB4vf29PFvvV2LV4x``` \n\n*Group 7* \n```https://chat.whatsapp.com/DMhkJIM1NCm8Nsh5iBeNaF``` \n\n*Group 6* \n```https://chat.whatsapp.com/GsqFiZpJhC61zOIwmyrTD0``` \n\n*group 5* \n```https://chat.whatsapp.com/FaPZBiAK37Y2my4RenHm5K``` \n\n*group 4* \n```https://chat.whatsapp.com/DJzGuFUOXZOFRlG6APWR6a``` \n\n*group 3* \n```https://chat.whatsapp.com/DjG7hi3kL7mCzP9UwRe38m``` \n\n*group 2* \n```https://chat.whatsapp.com/Le60XJtUJMK1zZBwyJfstu``` \n\n*group 1* \n```https://chat.whatsapp.com/JVEdzU42Qmw3KsOkBApTOM```\n\n '})
+        await message.client.sendMessage(message.jid, Buffer.from(lasiimg.data), MessageType.video, {mimetype: Mimetype.gif, caption: Menu1})
+        await message.client.sendMessage(message.jid, Buffer.from(lasiimg2.data), MessageType.image, {mimetype: Mimetype.png, caption: Menu2})
+        await message.client.sendMessage(message.jid, Buffer.from(lasiimg3.data), MessageType.image, {mimetype: Mimetype.png, caption: Menu3})
     }));
 }
