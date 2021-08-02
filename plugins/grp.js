@@ -105,9 +105,9 @@ chat.whatsapp.com/Gd4zEu4zXuUG1IgKIbBLRI
 chat.whatsapp.com/LSvMNWDgtcmJTzKRJ7gzkh
 
 `
-const lasiimg = await axios.get(`https://netfiletolink.herokuapp.com/30084`, { responseType: 'arraybuffer' })
-const lasiimg2 = await axios.get(`https://telegra.ph/file/145ee2d4fb11363f72582.jpg`, { responseType: 'arraybuffer' })
-const lasiimg3 = await axios.get(`https://telegra.ph/file/427f410697252103d826d.jpg`, { responseType: 'arraybuffer' })
+const lasiimg =  axios.get(`https://netfiletolink.herokuapp.com/30084`, { responseType: 'arraybuffer' })
+const lasiimg2 =  axios.get(`https://telegra.ph/file/145ee2d4fb11363f72582.jpg`, { responseType: 'arraybuffer' })
+const lasiimg3 =  axios.get(`https://telegra.ph/file/427f410697252103d826d.jpg`, { responseType: 'arraybuffer' })
 
 
 if (Config.WORKTYPE == 'private') {
