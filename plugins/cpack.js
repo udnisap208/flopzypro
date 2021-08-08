@@ -239,3 +239,174 @@ XTroid.addCMD({pattern: 'ctrn ?(.*)', fromMe: wk, dontAddCMDList: true}, (async 
          } 
    });
 }));
+
+
+
+
+XTroid.addCMD({pattern: 'cdem ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+   if (match[1] === '') return await message.sendMessage(need);
+   LASIapi.textpro("https://textpro.me/create-green-horror-style-text-effect-online-1036.html",
+       `${match[1]}`
+       ).then(async (data) => { 
+         try { 
+             var download = async(uri, filename, callback) => {
+                 await request.head(uri, async(err, res, body) => {    
+                     await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                 });
+             };
+             await download(`${data}`, '/root/HTM/cdem.jpg', async() => {                          
+                 await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/cdem.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+             })
+         } catch(err) { 
+             console.log(err)
+         } 
+   });
+}));
+
+
+
+XTroid.addCMD({pattern: 'crob ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+   if (match[1] === '') return await message.sendMessage(need);
+   LASIapi.textpro("https://textpro.me/robot-r2-d2-text-effect-903.html",
+       `${match[1]}`
+       ).then(async (data) => { 
+         try { 
+             var download = async(uri, filename, callback) => {
+                 await request.head(uri, async(err, res, body) => {    
+                     await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                 });
+             };
+             await download(`${data}`, '/root/HTM/crob.jpg', async() => {                          
+                 await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/crob.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+             })
+         } catch(err) { 
+             console.log(err)
+         } 
+   });
+}));
+
+
+XTroid.addCMD({pattern: 'cpink ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+   if (match[1] === '') return await message.sendMessage(need);
+   LASIapi.textpro("https://textpro.me/online-3d-gradient-text-effect-generator-1020.html",
+       `${match[1]}`
+       ).then(async (data) => { 
+         try { 
+             var download = async(uri, filename, callback) => {
+                 await request.head(uri, async(err, res, body) => {    
+                     await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                 });
+             };
+             await download(`${data}`, '/root/HTM/cpink.jpg', async() => {                          
+                 await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/cpink.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+             })
+         } catch(err) { 
+             console.log(err)
+         } 
+   });
+}));
+
+
+XTroid.addCMD({pattern: 'csl ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+   if (match[1] === '') return await message.sendMessage(need);
+   LASIapi.textpro("https://textpro.me/metal-dark-gold-text-effect-984.html",
+       `${match[1]}`
+       ).then(async (data) => { 
+         try { 
+             var download = async(uri, filename, callback) => {
+                 await request.head(uri, async(err, res, body) => {    
+                     await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                 });
+             };
+             await download(`${data}`, '/root/HTM/csl.jpg', async() => {                          
+                 await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/csl.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+             })
+         } catch(err) { 
+             console.log(err)
+         } 
+   });
+}));
+
+
+XTroid.addCMD({pattern: 'csand ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+   if (match[1] === '') return await message.sendMessage(need);
+   LASIapi.textpro("https://textpro.me/write-in-sand-summer-beach-free-online-991.html",
+       `${match[1]}`
+       ).then(async (data) => { 
+         try { 
+             var download = async(uri, filename, callback) => {
+                 await request.head(uri, async(err, res, body) => {    
+                     await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                 });
+             };
+             await download(`${data}`, '/root/HTM/csand.jpg', async() => {                          
+                 await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/csand.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+             })
+         } catch(err) { 
+             console.log(err)
+         } 
+   });
+}));
+
+
+
+XTroid.addCMD({pattern: 'csun ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+   if (match[1] === '') return await message.sendMessage(need);
+   LASIapi.textpro("https://textpro.me/1917-style-text-effect-online-980.html",
+       `${match[1]}`
+       ).then(async (data) => { 
+         try { 
+             var download = async(uri, filename, callback) => {
+                 await request.head(uri, async(err, res, body) => {    
+                     await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                 });
+             };
+             await download(`${data}`, '/root/HTM/csun.jpg', async() => {                          
+                 await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/csun.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+             })
+         } catch(err) { 
+             console.log(err)
+         } 
+   });
+}));
+
+
+XTroid.addCMD({pattern: 'cgrass ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+   if (match[1] === '') return await message.sendMessage(need);
+   LASIapi.textpro("https://textpro.me/natural-leaves-text-effect-931.html",
+       `${match[1]}`
+       ).then(async (data) => { 
+         try { 
+             var download = async(uri, filename, callback) => {
+                 await request.head(uri, async(err, res, body) => {    
+                     await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                 });
+             };
+             await download(`${data}`, '/root/HTM/cgrass.jpg', async() => {                          
+                 await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/cgrass.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+             })
+         } catch(err) { 
+             console.log(err)
+         } 
+   });
+}));
+
+XTroid.addCMD({pattern: 'cchoco ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+   if (match[1] === '') return await message.sendMessage(need);
+   LASIapi.textpro("https://textpro.me/chocolate-cake-text-effect-890.html",
+       `${match[1]}`
+       ).then(async (data) => { 
+         try { 
+             var download = async(uri, filename, callback) => {
+                 await request.head(uri, async(err, res, body) => {    
+                     await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                 });
+             };
+             await download(`${data}`, '/root/HTM/cchoco.jpg', async() => {                          
+                 await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/cchoco.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+             })
+         } catch(err) { 
+             console.log(err)
+         } 
+   });
+}));
