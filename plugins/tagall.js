@@ -30,7 +30,7 @@ XTroid.addCMD({pattern: 'tagall ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC }, 
         mesaj = '';
         grup['participants'].map(
             async (uye) => {
-                mesaj += '@' + uye.id.split('@')[0] + ' ';
+                mesaj += '🔮@' + uye.id.split('@')[0] + '\n';
                 jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
             }
         );
@@ -42,7 +42,7 @@ XTroid.addCMD({pattern: 'tagall ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC }, 
         mesaj = '';
         grup['participants'].map(
             async (uye) => {
-                mesaj += '@' + uye.id.split('@')[0] + ' ';
+                mesaj += '🔮@' + uye.id.split('@')[0] + '\n';
                 jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
             }
         );
@@ -54,7 +54,7 @@ XTroid.addCMD({pattern: 'tagall ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC }, 
         mesaj = '';
         grup['participants'].map(
             async (uye) => {
-                mesaj += '@' + uye.id.split('@')[0] + ' ';
+                mesaj += '🔮@' + uye.id.split('@')[0] + '\n';
                 jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
             }
         );
