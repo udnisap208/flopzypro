@@ -22,7 +22,7 @@ let wk = Config.WORKTYPE == 'public' ? false : true
 
 
 
-XTroid.addCMD({pattern: 'cup ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'cup ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
 
     LASIapi.photooxy("https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html",
         `${match[1]}`
@@ -43,7 +43,7 @@ XTroid.addCMD({pattern: 'cup ?(.*)', fromMe: wk, dontAddCommandList: true}, (asy
     });
 }));
 
-XTroid.addCMD({pattern: 'cmt ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'cmt ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
 
     LASIapi.photooxy("https://photooxy.com/logo-and-text-effects/text-on-scary-cemetery-gate-172.html",
         `${match[1]}`
@@ -64,7 +64,7 @@ XTroid.addCMD({pattern: 'cmt ?(.*)', fromMe: wk, dontAddCommandList: true}, (asy
     });
 }));
 
-XTroid.addCMD({pattern: 'cfl ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'cfl ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     LASIapi.photooxy("https://photooxy.com/art-effects/flower-typography-text-effect-164.html",
         `${match[1]}`
         ).then(async (data) => { 

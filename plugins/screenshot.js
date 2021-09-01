@@ -18,7 +18,7 @@ if (Config.WORKTYPE == 'private') {
 
         if (match[1] === '') return await message.sendMessage(Lang.LİNK);
 
-        var webimage = await axios.get(`https://screenshotapi.net/api/v1/screenshot?url=${match[1]}&output=image&full_page=true&delay=400`, { responseType: 'arraybuffer' })
+        var webimage = await axios.get(`https://shot.screenshotapi.net/screenshot?&url=${match[1]}&full_page=true&output=image&file_type=png&wait_for_event=load`, { responseType: 'arraybuffer' })
 
         await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: Config.CAPTION_KEY})
 
@@ -30,7 +30,7 @@ else if (Config.WORKTYPE == 'public') {
 
         if (match[1] === '') return await message.sendMessage(Lang.LİNK);
 
-        var webimage = await axios.get(`https://screenshotapi.net/api/v1/screenshot?url=${match[1]}&output=image&full_page=true&delay=400`, { responseType: 'arraybuffer' })
+        var webimage = await axios.get(`https://shot.screenshotapi.net/screenshot?&url=${match[1]}&full_page=true&output=image&file_type=png&wait_for_event=load`, { responseType: 'arraybuffer' })
 
         await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: Config.CAPTION_KEY})
 

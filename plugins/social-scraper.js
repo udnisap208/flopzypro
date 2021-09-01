@@ -3,42 +3,40 @@ Telegram: t.me/phaticusthiccy
 Instagram: www.instagram.com/kyrie.baran
 */
 
-const XTroid = require('../events')
-const { MessageType } = require('@adiwajshing/baileys')
-const axios = require('axios')
-const cn = require('../config');
+const XTroid = require('../events');
+const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
+const got = require('got');
+const Config = require('../config');
+const axios = require('axios');
+const fs = require('fs')
 
 const Language = require('../language')
 const { errorMessage, infoMessage } = require('../helpers')
 const Lang = Language.getString('instagram')
 const Tlang = Language.getString('tiktok')
 
-if (cn.WORKTYPE == 'private') {
+if (Config.WORKTYPE == 'private') {
 
     XTroid.addCMD({ pattern: 'insta ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
-        if (match[0].includes('install')) return;
-        if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
-        if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
+        if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
+	let url = `https://bx-hunter.herokuapp.com/api/igstalk?text=${match[1]}&apikey=Ikyy69`
+	const response = await got(url);
+	const lasijson = JSON.parse(response.body);
 	
-        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=ab9942f95c09ca89`
-        let response
-        try { response = await got(urls) } catch { return await message.client.sendMessage(message.jid, Lang.FİX, MessageType.text, { quoted: message.data });
-        }
-        const lasijson = JSON.parse(response.body);
+	let msg = '';
+	msg += '*Username:*\n' + '```' + lasijson.username + '```' + '\n\n';
+	msg += '*Full Name:*\n' + '```' + lasijson.fullname + '```' + '\n\n';
+	msg += '*Bio:*\n' + '```' + lasijson.biography + '```' + '\n\n';
+	msg += '*Followers:*\n' + '```' + lasijson.follower_count + '```' + '\n\n';
+	msg += '*Following:*\n' + '```' + lasijson.following_count + '```' + '\n\n';
+	msg += '*Post Count:*\n' + '```' + lasijson.post_count + '```' + '\n\n';
+	
 
-        if (lasijson.status === false) return await message.client.sendMessage(message.jid, Lang.NOT_FOUND, MessageType.text, { quoted: message.data });
-        if (lasijson.code === 403) return await message.client.sendMessage(message.jid, '```API Error!```', MessageType.text, { quoted: message.data });
+	var lasiimage = await axios.get(lasijson.Urlprofile, { responseType: 'arraybuffer' })
+	
+	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
+}));
 
-        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text, { quoted: message.data });
-
-        let url = lasijson.result.data[0].data;
-        let name = lasijson.result.data[0].type;
-        await axios({ method: "get", url, headers: { 'DNT': 1, 'Upgrade-Insecure-Request': 1 }, responseType: 'arraybuffer'}).then(async (res) => {
-            if (name === 'video') { return await message.sendMessage(Buffer(res.data), MessageType.video, { caption: '*' + Tlang.USERNAME + '* ' + lasijson.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + lasijson.result.username + '\n*' + Tlang.CAPTİON + '* ' + lasijson.result.caption }) } else { return await message.sendMessage(Buffer(res.data), MessageType.image, { caption: '*' + Tlang.USERNAME + '* ' + lasijson.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + lasijson.result.username + '\n*' + Tlang.CAPTİON + '* ' + lasijson.result.caption });
-            }
-        });
-
-    }));
 
     /*
     XTroid.addCMD({ pattern: 'tiktok ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
@@ -71,56 +69,28 @@ if (cn.WORKTYPE == 'private') {
     )
     */
 }
-else if (cn.WORKTYPE == 'public') {
+else if (Config.WORKTYPE == 'public') {
 
+   
     XTroid.addCMD({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.DESC }, (async (message, match) => {
-        if (match[0].includes('install')) return;
-        if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
-        if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
+        if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
+	let url = `https://bx-hunter.herokuapp.com/api/igstalk?text=${match[1]}&apikey=Ikyy69`
+	const response = await got(url);
+	const lasijson = JSON.parse(response.body);
 	
-        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=ab9942f95c09ca89`
-        let response
-        try { response = await got(urls) } catch { return await message.client.sendMessage(message.jid, Lang.FİX, MessageType.text, { quoted: message.data });
-        }
-        const lasijson = JSON.parse(response.body);
+	let msg = '';
+	msg += '*Username:*\n' + '```' + lasijson.username + '```' + '\n\n';
+	msg += '*Full Name:*\n' + '```' + lasijson.fullname + '```' + '\n\n';
+	msg += '*Bio:*\n' + '```' + lasijson.biography + '```' + '\n\n';
+	msg += '*Followers:*\n' + '```' + lasijson.follower_count + '```' + '\n\n';
+	msg += '*Following*:\n' + '```' + lasijson.following_count + '```' + '\n\n';
+	msg += '*Post Count:*\n' + '```' + lasijson.post_count + '```' + '\n\n';
 
-        if (lasijson.status === false) return await message.client.sendMessage(message.jid, Lang.NOT_FOUND, MessageType.text, { quoted: message.data });
-        if (lasijson.code === 403) return await message.client.sendMessage(message.jid, '```API Error!```', MessageType.text, { quoted: message.data });
-
-        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text, { quoted: message.data });
-
-        let url = lasijson.result.data[0].data;
-        let name = lasijson.result.data[0].type;
-        await axios({ method: "get", url, headers: { 'DNT': 1, 'Upgrade-Insecure-Request': 1 }, responseType: 'arraybuffer'}).then(async (res) => {
-            if (name === 'video') { return await message.sendMessage(Buffer(res.data), MessageType.video, { caption: '*' + Tlang.USERNAME + '* ' + lasijson.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + lasijson.result.username + '\n*' + Tlang.CAPTİON + '* ' + lasijson.result.caption }) } else { return await message.sendMessage(Buffer(res.data), MessageType.image, { caption: '*' + Tlang.USERNAME + '* ' + lasijson.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + lasijson.result.username + '\n*' + Tlang.CAPTİON + '* ' + lasijson.result.caption });
-            }
-        });
-
-    }));
-    XTroid.addCMD({ pattern: 'insta ?(.*)', fromMe: true, desc: Lang.DESC, dontAddCMDList: true }, (async (message, match) => {
-        if (match[0].includes('install')) return;
-        if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
-        if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
+	var lasiimage = await axios.get(lasijson.Urlprofile, { responseType: 'arraybuffer' })
 	
-        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=ab9942f95c09ca89`
-        let response
-        try { response = await got(urls) } catch { return await message.client.sendMessage(message.jid, Lang.FİX, MessageType.text, { quoted: message.data });
-        }
-        const lasijson = JSON.parse(response.body);
+	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
+}));
 
-        if (lasijson.status === false) return await message.client.sendMessage(message.jid, Lang.NOT_FOUND, MessageType.text, { quoted: message.data });
-        if (lasijson.code === 403) return await message.client.sendMessage(message.jid, '```API Error!```', MessageType.text, { quoted: message.data });
-
-        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text, { quoted: message.data });
-
-        let url = lasijson.result.data[0].data;
-        let name = lasijson.result.data[0].type;
-        await axios({ method: "get", url, headers: { 'DNT': 1, 'Upgrade-Insecure-Request': 1 }, responseType: 'arraybuffer'}).then(async (res) => {
-            if (name === 'video') { return await message.sendMessage(Buffer(res.data), MessageType.video, { caption: '*' + Tlang.USERNAME + '* ' + lasijson.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + lasijson.result.username + '\n*' + Tlang.CAPTİON + '* ' + lasijson.result.caption }) } else { return await message.sendMessage(Buffer(res.data), MessageType.image, { caption: '*' + Tlang.USERNAME + '* ' + lasijson.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + lasijson.result.username + '\n*' + Tlang.CAPTİON + '* ' + lasijson.result.caption });
-            }
-        });
-
-    }));
     /*
     XTroid.addCMD({ pattern: 'tiktok ?(.*)', fromMe: false, desc: Tlang.TİKTOK }, async (message, match) => {
 

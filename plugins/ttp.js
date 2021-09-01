@@ -17,8 +17,8 @@ clh.pay = ddd
 if (os.userInfo().homedir !== clh.pay) return;
 var desc_msg = ''
 if (Config.LANG == 'SI') desc_msg = 'X-Troid Logo එකතුව'
-if (Config.LANG == 'EN') desc_msg = 'X-Troid Logo colection'
-const need = "*type some word after command*\n*විධානයට පසුව වචනයක් ලියන්න"
+if (Config.LANG == 'EN') desc_msg = 'Logo colection 1'
+const need = "*type some word after command*"
 let wk = Config.WORKTYPE == 'public' ? false : true
 
 XTroid.addCMD({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
@@ -51,6 +51,7 @@ XTroid.addCMD({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, 
     var t27 = ''
     var t28 = ''
     var t29 = ''
+    var t30 = ''
     if (Config.LANG == 'SI') {
         t1 = 'Devil Logo.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
         t2 = 'Bear Icon.' // https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html
@@ -73,11 +74,13 @@ XTroid.addCMD({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, 
         t19 = 'Ice Themed Logo.' // https://textpro.me/ice-cold-text-effect-862.html
         t20 = 'Space Themed Logo.' // https://textpro.me/create-space-3d-text-effect-online-985.html
         t21 = 'Logo With Smoke Effect.' // https://photooxy.com/other-design/create-an-easy-smoke-type-effect-390.html
-        t22 = 'Naruto Themed Logo.' // https://photooxy.com/manga-and-anime/make-naruto-banner-online-free-378.html
+        t22 = 'Harry Potter Themed Logo.' // https://textpro.me/create-harry-potter-text-effect-online-1025.html
         t23 = 'Glow Themed Logo.' // https://photooxy.com/logo-and-text-effects/make-smoky-neon-glow-effect-343.html        
         t25 = 'Flame Themed Logo.' // https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html
         t27 = 'Fourth Neon-Themed Logo.' // https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html
-
+        t28 = 'Second Logo With Glitch Effect.'  //https://textpro.me/create-impressive-glitch-text-effects-online-1027.html
+        t29 = 'Third Logo With Glitch Effect.'  //https://textpro.me/create-a-glitch-text-effect-online-free-1026.html
+        t30 = 'Vintage Bulb Themed Logo.'  //https://textpro.me/create-realistic-vintage-style-light-bulb-1000.html
     }
     else {
         t1 = 'Devil Themed Logo.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
@@ -101,10 +104,13 @@ XTroid.addCMD({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, 
         t19 = 'Ice Themed Logo.' // https://textpro.me/ice-cold-text-effect-862.html
         t20 = 'Space Themed Logo.' // https://textpro.me/create-space-3d-text-effect-online-985.html
         t21 = 'Logo With Smoke Effect.' // https://photooxy.com/other-design/create-an-easy-smoke-type-effect-390.html
-        t22 = 'Naruto Themed Logo.' // https://photooxy.com/manga-and-anime/make-naruto-banner-online-free-378.html
+        t22 = 'Harry Potter Themed Logo.' // https://textpro.me/create-harry-potter-text-effect-online-1025.html
         t23 = 'Glow Themed Logo.' // https://photooxy.com/logo-and-text-effects/make-smoky-neon-glow-effect-343.html        
         t25 = 'Flame Themed Logo.' // https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html
         t27 = 'Fourth Neon-Themed Logo.' // https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html
+        t28 = 'Second Logo With Glitch Effect.'  //https://textpro.me/create-impressive-glitch-text-effects-online-1027.html
+        t29 = 'Third Logo With Glitch Effect.'  //https://textpro.me/create-a-glitch-text-effect-online-free-1026.html
+        t30 = 'Vintage Bulb Themed Logo.'  //https://textpro.me/create-realistic-vintage-style-light-bulb-1000.html
 
 
     }
@@ -120,26 +126,30 @@ XTroid.addCMD({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, 
         command_cmd = '🐹 Command : '
         desc_cmd = '🍀 Desc : '
     }
-    const msg = command_cmd + '```.devil``` \n' + t1 + '_\n' + usage_cmd + '*.devil Xtroid*\n\n' +
-        command_cmd + '```.bear``` \n' + desc_cmd + t2 + '_\n' + usage_cmd + '*.bear Xtroid*\n\n' +
-        command_cmd + '```.wolf``` \n' + desc_cmd + t10 + '_\n' + usage_cmd + '*.wolf Xtroid,Lasiya*\n\n' +
-        command_cmd + '```.neon```\n' + desc_cmd + t3 + '_\n' + usage_cmd + '*.neon Xtroid*\n\n' +
-        command_cmd + '```.2neon``` \n' + desc_cmd + t4 + '_\n' + usage_cmd + '*.2neon Xtroid*\n\n' +
-        command_cmd + '```.3neon``` \n' + desc_cmd + t18 + '_\n' + usage_cmd + '*.3neon Xtroid*\n\n' +
-        command_cmd + '```.light``` \n' + desc_cmd + t5 + '_\n' + usage_cmd + '*.light Xtroid*\n\n' +
-        command_cmd + '```.joker``` \n' + desc_cmd + t6 + '_\n' + usage_cmd + '*.joker Xtroid*\n\n' +
-        command_cmd + '```.ninja``` \n' + desc_cmd + t7 + '_\n' + usage_cmd + '*.ninja Xtroid,Lasiya*\n\n' +
-        command_cmd + '```.glitter``` \n' + desc_cmd + t8 + '_\n' + usage_cmd + '*.glitter Xtroid*\n\n' +
-        command_cmd + '```.bokeh``` \n' + desc_cmd + t9 + '_\n' + usage_cmd + '*.bokeh Xtroid*\n\n' +
-        command_cmd + '```.marvel``` \n' + desc_cmd + t11 + '_\n' + usage_cmd + '*.marvel Xtroid,Lasiya*\n\n' +
-        command_cmd + '```.2marvel``` \n' + desc_cmd + t12 + '_\n' + usage_cmd + '*.2marvel Xtroid,Lasiya*\n\n' +
-        command_cmd + '```.avengers``` \n' + desc_cmd + t13 + '_\n' + usage_cmd + '*.avengers Xtroid,Lasiya*\n\n' +
-        command_cmd + '```.graf``` \n' + desc_cmd + t15 + '_\n' + usage_cmd + '*.graf lasiya,Xtroid*\n\n' +
-        command_cmd + '```.2graf``` \n' + desc_cmd + t16 + '_\n' + usage_cmd + '*.2graf lasiya,Xtroid*\n\n' +       
-        command_cmd + '```.lion``` \n' + desc_cmd + t17 + '_\n' + usage_cmd + '*.lion lasiya,Xtroid*\n\n' +
-        command_cmd + '```.ice``` \n' + desc_cmd + t19 + '_\n' + usage_cmd + '*.ice Xtroid*\n\n' +
-        command_cmd + '```.space``` \n' + desc_cmd + t20 + '_\n' + usage_cmd + '*.space Xtroid,Lasiya*\n\n' +
-        command_cmd + '```.glitch``` \n' + desc_cmd + t14 + '_\n' + usage_cmd + '*.glitch Xtroid,Lasiya*\n\n'
+    const msg = command_cmd + '```.devil``` \n' + t1 + '_\n' + usage_cmd + '*.devil Text1*\n\n' +
+        command_cmd + '```.bear``` \n' + desc_cmd + t2 + '_\n' + usage_cmd + '*.bear Text1*\n\n' +
+        command_cmd + '```.wolf``` \n' + desc_cmd + t10 + '_\n' + usage_cmd + '*.wolf Text1,Text2*\n\n' +
+        command_cmd + '```.neon```\n' + desc_cmd + t3 + '_\n' + usage_cmd + '*.neon Text1*\n\n' +
+        command_cmd + '```.2neon``` \n' + desc_cmd + t4 + '_\n' + usage_cmd + '*.2neon Text1*\n\n' +
+        command_cmd + '```.3neon``` \n' + desc_cmd + t18 + '_\n' + usage_cmd + '*.3neon Text1*\n\n' +
+        command_cmd + '```.light``` \n' + desc_cmd + t5 + '_\n' + usage_cmd + '*.light Text1*\n\n' +
+        command_cmd + '```.joker``` \n' + desc_cmd + t6 + '_\n' + usage_cmd + '*.joker Text1*\n\n' +
+        command_cmd + '```.ninja``` \n' + desc_cmd + t7 + '_\n' + usage_cmd + '*.ninja Text1,Text2*\n\n' +
+        command_cmd + '```.glitter``` \n' + desc_cmd + t8 + '_\n' + usage_cmd + '*.glitter Text1*\n\n' +
+        command_cmd + '```.bokeh``` \n' + desc_cmd + t9 + '_\n' + usage_cmd + '*.bokeh Text1*\n\n' +
+        command_cmd + '```.marvel``` \n' + desc_cmd + t11 + '_\n' + usage_cmd + '*.marvel Text1,Text2*\n\n' +
+        command_cmd + '```.2marvel``` \n' + desc_cmd + t12 + '_\n' + usage_cmd + '*.2marvel Text1,Text2*\n\n' +
+        command_cmd + '```.avengers``` \n' + desc_cmd + t13 + '_\n' + usage_cmd + '*.avengers Text1,Text2*\n\n' +
+        command_cmd + '```.graf``` \n' + desc_cmd + t15 + '_\n' + usage_cmd + '*.graf Text1,Text2*\n\n' +
+        command_cmd + '```.2graf``` \n' + desc_cmd + t16 + '_\n' + usage_cmd + '*.2graf Text1,Text2*\n\n' +       
+        command_cmd + '```.lion``` \n' + desc_cmd + t17 + '_\n' + usage_cmd + '*.lion Text1,Text2*\n\n' +
+        command_cmd + '```.ice``` \n' + desc_cmd + t19 + '_\n' + usage_cmd + '*.ice Text1*\n\n' +
+        command_cmd + '```.space``` \n' + desc_cmd + t20 + '_\n' + usage_cmd + '*.space Text1,Text2*\n\n' +
+        command_cmd + '```.glitch``` \n' + desc_cmd + t14 + '_\n' + usage_cmd + '*.glitch Text1,Text2*\n\n' +
+        command_cmd + '```.2glitch``` \n' + desc_cmd + t28 + '_\n' + usage_cmd + '*.2glitch Text1*\n\n' +
+        command_cmd + '```.3glitch``` \n' + desc_cmd + t29 + '_\n' + usage_cmd + '*.3glitch Text1,Text2*\n\n' +
+        command_cmd + '```.harry``` \n' + desc_cmd + t22 + '_\n' + usage_cmd + '*.harry Text1*\n\n' +
+        command_cmd + '```.bulb``` \n' + desc_cmd + t30 + '_\n' + usage_cmd + '*.bulb Text1,Text2*\n\n' 
     await message.client.sendMessage(message.jid,msg, MessageType.text, { quoted: message.data })
 }));
 
@@ -653,4 +663,101 @@ XTroid.addCMD({pattern: 'space ?(.*)', fromMe: wk, dontAddCMDList: true}, (async
           } 
     });
 }));
+XTroid.addCMD({pattern: '2glitch ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+   if (match[1] === '') return await message.sendMessage(need);
+    lasiapi.textpro("https://textpro.me/create-impressive-glitch-text-effects-online-1027.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
 
+              await download(`${data}`, '/root/HTM/tt9.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/tt9.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+XTroid.addCMD({pattern: '3glitch ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+    if (match[1] === '') return await message.sendMessage(need);
+    var topText, bottomText; 
+    if (match[1].includes(',')) {
+        var split = match[1].split(',');
+        topText = split[0];
+        bottomText = split[1];
+    } else {
+        topText = match[1];
+        bottomText = 'ㅤ';
+    }
+    lasiapi.textpro("https://textpro.me/create-a-glitch-text-effect-online-free-1026.html",
+        [`${topText}`, `${bottomText}`]
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/HTM/tt8.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/tt8.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+XTroid.addCMD({pattern: 'harry ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+    if (match[1] === '') return await message.sendMessage(need);
+    lasiapi.textpro("https://textpro.me/create-harry-potter-text-effect-online-1025.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/HTM/hp.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/hp.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+XTroid.addCMD({pattern: 'bulb ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+    if (match[1] === '') return await message.sendMessage(need);
+    var topText, bottomText; 
+    if (match[1].includes(',')) {
+        var split = match[1].split(',');
+        topText = split[0];
+        bottomText = split[1];
+    } else {
+        topText = match[1];
+        bottomText = '';
+    }
+    lasiapi.textpro("https://textpro.me/create-realistic-vintage-style-light-bulb-1000.html",
+        [`${topText}`, `${bottomText}`]
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/HTM/bulb.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/bulb.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));

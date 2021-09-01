@@ -169,8 +169,8 @@ if (Config.WORKTYPE == 'private') {
 
 
     XTroid.addCMD({pattern: 'bot', fromMe: true, deleteCommand: false,}, (async (message, match) => {
-      var lasiyasimg = await axios.get(`https://telegra.ph/file/145ee2d4fb11363f72582.jpg`, { responseType: 'arraybuffer' })
-      await message.client.sendMessage(message.jid, Buffer.from(lasiyasimg.data), MessageType.image, {mimetype: Mimetype.png, caption: '                  *♔ 𝓧-𝓣𝓻𝓸𝓲𝓭 ♔* \n\n\n❍ 𝗛𝗼𝘀𝘁𝗲𝗱 ➤ 𝘼𝙒𝙎\n❍ 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 ➤ 𝐕'+Config.VERSION+'\n❍ 𝗕𝗿𝗮𝗻𝗰𝗵  ➤ *'+Config.BRANCH+'*\n❍ 𝗔𝗯𝗼𝘂𝘁    ➤ 𝙡𝙖𝙨𝙞𝙮𝙖.𝙢𝙡\n❍ 𝗢𝘄𝗻𝗲𝗿   ➤𝙩.𝙢𝙚/𝙡𝙖𝙨𝙞99𝙓\n❍ 𝗠𝗼𝗱𝗲𝗿𝘀 ➤┓\n                        ┣ @W4RR10R\n                        ┣ @SL_MGx03\n                        ┣ @lucy_99X\n❍ 𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽 ➤ t.me/danuma01\n\n❍ 𝐓𝐮𝐭𝐞 ➤ https://cutt.ly/hmtJU0u\n⊱ ──────    ♔    ────── ⊰\n'})
+      var lasiyasimg = await axios.get(`https://github.com/udnisap208/flopzbot/blob/main/123.jpg?raw=true`, { responseType: 'arraybuffer' })
+      await message.client.sendMessage(message.jid, Buffer.from(lasiyasimg.data), MessageType.image, {mimetype: Mimetype.png, caption: '                  _*LIZA*_ \n\n\n❍ 𝗛𝗼𝘀𝘁𝗲𝗱 ➤ 𝘼𝙒𝙎\n❍ 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 ➤ 𝐕'+Config.VERSION+'\n❍ 𝗕𝗿𝗮𝗻𝗰𝗵  ➤ *'+Config.BRANCH+'*\n         \n'})
     
    
    }));
@@ -350,32 +350,18 @@ else if (Config.WORKTYPE == 'public') {
             await message.client.sendMessage(message.jid, Lang.JID_CHAT.format(message.jid), MessageType.text);
         }
     }));
-    XTroid.addCMD({pattern: 'id ?(.*)', fromMe: true, desc: LP.JID_DESC , dontAddCMDList: true}, (async (message, match) => {    
-        if (message.reply_message !== false) {
-            await message.client.sendMessage(message.jid, LP.JID.format(message.reply_message.jid.split('@')[0], message.reply_message.jid), MessageType.text, {
-                quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
-            });
-        } else if (message.mention !== false) {
-            message.mention.map(async user => {
-                await message.client.sendMessage(message.jid, LP.JID.format(user.split('@')[0], user), MessageType.text, {
-                    contextInfo: {mentionedJid: [user.replace('c.us', 's.whatsapp.net')]}
-                });    
-            });
-        } else {
-            await message.client.sendMessage(message.jid, LP.JID_CHAT.format(message.jid), MessageType.text);
-        }
-    }));
+    
     
     XTroid.addCMD({pattern: 'bot', fromMe: false, deleteCommand: false,}, (async (message, match) => {
-var lasiyasimg = await axios.get(`https://telegra.ph/file/145ee2d4fb11363f72582.jpg`, { responseType: 'arraybuffer' })
-      await message.client.sendMessage(message.jid, Buffer.from(lasiyasimg.data), MessageType.image, {mimetype: Mimetype.png, caption: '                  *♔ 𝓧-𝓣𝓻𝓸𝓲𝓭 ♔* \n\n\n❍ 𝗛𝗼𝘀𝘁𝗲𝗱 ➤ 𝘼𝙒𝙎\n❍ 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 ➤ 𝐕'+Config.VERSION+'\n❍ 𝗕𝗿𝗮𝗻𝗰𝗵  ➤ *'+Config.BRANCH+'*\n❍ 𝗔𝗯𝗼𝘂𝘁    ➤ 𝙡𝙖𝙨𝙞𝙮𝙖.𝙢𝙡\n❍ 𝗢𝘄𝗻𝗲𝗿   ➤𝙩.𝙢𝙚/𝙡𝙖𝙨𝙞99𝙓\n❍ 𝗠𝗼𝗱𝗲𝗿𝘀 ➤┓\n                        ┣ @W4RR10R\n                        ┣ @SL_MGx03\n                        ┣ @lucy_99X\n❍ 𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽 ➤ t.me/danuma01\n\n❍ 𝐓𝐮𝐭𝐞 ➤ https://cutt.ly/hmtJU0u\n⊱ ──────    ♔    ────── ⊰\n'})
+var lasiyasimg = await axios.get(`https://github.com/udnisap208/flopzbot/blob/main/123.jpg?raw=true`, { responseType: 'arraybuffer' })
+      await message.client.sendMessage(message.jid, Buffer.from(lasiyasimg.data), MessageType.image, {mimetype: Mimetype.png, caption: '                  _*LIZA*_ \n\n\n❍ 𝗛𝗼𝘀𝘁𝗲𝗱 ➤ 𝘼𝙒𝙎\n❍ 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 ➤ 𝐕'+Config.VERSION+'\n❍ 𝗕𝗿𝗮𝗻𝗰𝗵  ➤ *'+Config.BRANCH+'*\n            \n'})
     }));
 
 
 
 
 
-    //==============================================================================================================================================================================================================
+    /*/==============================================================================================================================================================================================================
 
 
     XTroid.addCMD({pattern: 'ipack', fromMe: true, deleteCommand: false, desc: I_DESC}, (async (message, match) => {
@@ -514,9 +500,9 @@ var lasiyasimg = await axios.get(`https://telegra.ph/file/145ee2d4fb11363f72582.
     }));
 
     XTroid.addCMD({pattern: 'bot', fromMe: true, deleteCommand: false,}, (async (message, match) => {
-var lasiyasimg = await axios.get(`https://telegra.ph/file/145ee2d4fb11363f72582.jpg`, { responseType: 'arraybuffer' })
-            await message.client.sendMessage(message.jid, Buffer.from(lasiyasimg.data), MessageType.image, {mimetype: Mimetype.png, caption: '                  *♔ 𝓧-𝓣𝓻𝓸𝓲𝓭 ♔* \n\n\n❍ 𝗛𝗼𝘀𝘁𝗲𝗱 ➤ 𝘼𝙒𝙎\n❍ 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 ➤ 𝐕'+Config.VERSION+'\n❍ 𝗕𝗿𝗮𝗻𝗰𝗵  ➤ *'+Config.BRANCH+'*\n❍ 𝗔𝗯𝗼𝘂𝘁    ➤ 𝙡𝙖𝙨𝙞𝙮𝙖.𝙢𝙡\n❍ 𝗢𝘄𝗻𝗲𝗿   ➤𝙩.𝙢𝙚/𝙡𝙖𝙨𝙞99𝙓\n❍ 𝗠𝗼𝗱𝗲𝗿𝘀 ➤┓\n                        ┣ @W4RR10R\n                        ┣ @SL_MGx03\n                        ┣ @lucy_99X\n❍ 𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽 ➤ t.me/danuma01\n\n❍ 𝐓𝐮𝐭𝐞 ➤ https://cutt.ly/hmtJU0u\n⊱ ──────    ♔    ────── ⊰\n'})
+var lasiyasimg = await axios.get(`https://github.com/udnisap208/flopzbot/blob/main/123.jpg?raw=true`, { responseType: 'arraybuffer' })
+            await message.client.sendMessage(message.jid, Buffer.from(lasiyasimg.data), MessageType.image, {mimetype: Mimetype.png, caption: '                  _*LIZA*_ \n\n\n❍ 𝗛𝗼𝘀𝘁𝗲𝗱 ➤ 𝘼𝙒𝙎\n❍ 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 ➤ 𝐕'+Config.VERSION+'\n❍ 𝗕𝗿𝗮𝗻𝗰𝗵  ➤ *'+Config.BRANCH+'*\n            \n'})
     }));
 
-
+*/
 }

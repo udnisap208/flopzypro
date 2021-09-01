@@ -195,7 +195,7 @@ else if (Config.WORKTYPE == 'public') {
 
     //===========================================================================================================================================================================================================================================
 
-    XTroid.addCMD({pattern: 'mp3$', fromMe: true,}, (async (message, match) => {    
+   /* XTroid.addCMD({pattern: 'mp3$', fromMe: true,}, (async (message, match) => {    
         const mid = message.jid
         if (message.reply_message === false) return await message.client.sendMessage(mid, Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(mid,Lang.MP4TOAUDİO,MessageType.text);
@@ -258,7 +258,7 @@ else if (Config.WORKTYPE == 'public') {
         })
     }));
 
-
+*/
 
 }
     
