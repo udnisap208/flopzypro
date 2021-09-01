@@ -1,7 +1,7 @@
-##FLOPZYPRO
-
+## FLOPZYPRO
+<div>
 <img src=https://github.com/udnisap208/flopzbot/blob/main/123.jpg?raw=true>
-
+</div>
 **FLOPZ** *is a user bot created to make Whatsapp more fun to use.
 
 
@@ -10,7 +10,7 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/udnisap208/flopzypro)
 
 
-##F.A.Q
+## F.A.Q
 *Answer a few frequently asked questions;*
 
 **Can you read my messages?
