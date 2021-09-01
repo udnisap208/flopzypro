@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+##FLOPZYPRO
 
-You can use the [editor on GitHub](https://github.com/udnisap208/flopzypro/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+[![Run on Repl.it](https://repl.it/badge/github/phaticusthiccy/WhatsAsenaDuplicated)](https://replit.com/@lasindu123/XTROID)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/udnisap208/flopzypro)
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+##F.A.Q
+*Answer a few frequently asked questions;*
 
-- Bulleted
-- List
+#Can you read my messages?
+*This project is open source so all the codes are clear. Neither less nor more; you can look what you want. We absolutely do not have access to your accounts.*
 
-1. Numbered
-2. List
+#What about our security?
+*If you are concerned about security, you can install it on your own computer. If you think someone else has captured your data, simply click on Whatsapp> Three Dots> Whatsapp Web> Logout from all sessions button.*
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/udnisap208/flopzypro/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+#Is it paid?
+*Of course not. It will never happen.*
