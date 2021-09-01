@@ -2,7 +2,7 @@
 <div align-center>
 <img src=https://github.com/udnisap208/flopzbot/blob/main/123.jpg?raw=true>
 </div>
-**FLOPZ** *is a user bot created to make Whatsapp more fun to use.
+**FLOPZ** *is a user bot created to make Whatsapp more fun to use.*
 
 
 [![Run on Repl.it](https://repl.it/badge/github/phaticusthiccy/WhatsAsenaDuplicated)](https://replit.com/@lasindu123/XTROID)
