@@ -13,7 +13,9 @@
 
 <div align="center">
   
+  
 ## SETUP
+  
   
 </div>
 
@@ -23,7 +25,9 @@
   
 <div align="center">
   
+  
 ## F.A.Q
+  
   
 </div>
 
