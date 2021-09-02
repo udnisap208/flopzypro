@@ -4,7 +4,7 @@
 <img src="https://github.com/udnisap208/flopzbot/blob/main/123.jpg?raw=true">
   
 **FLOPZ** is a user bot created to make Whatsapp more fun to use.
-</div>
+
 
 ## SETUP
 
@@ -31,3 +31,4 @@ If you are concerned about security, you can install it on your own computer. If
 Due to Userbot; Your WhatsApp account may be banned.
 This is an open source project, you are responsible for everything you do. 
 ```
+</div>
