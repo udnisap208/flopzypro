@@ -289,8 +289,8 @@
 🎉 Desc: *Collects github information from the given username.*<br>
 ⌨️ Example: *.github chopzzz*
 
-🎁 Cmd: *lyric<br>
-🎉 Desc: Finds the lyrics of the song.*
+🎁 Cmd: **lyric**<br>
+🎉 Desc: *Finds the lyrics of the song.*
 
 🎁 Cmd: *ss<br>
 🎉 Desc: Takes a screenshot from the page in the given link.*
