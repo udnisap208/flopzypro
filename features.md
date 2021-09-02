@@ -1,7 +1,7 @@
 ## FEATURES
 
 
-🎁 Cmd: **xmedia**
+🎁 Cmd: **xmedia** <br>
 🎉 Desc: It is a plugin with more than 25 media tools.
 
 🎁 Cmd: *install
