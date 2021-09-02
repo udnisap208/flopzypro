@@ -1,14 +1,16 @@
-# flopzypro
+# FLOPZYPRO
+
+<div align="center">
+<img src="https://github.com/udnisap208/flopzbot/blob/main/123.jpg?raw=true">
+  
+**FLOPZ** is a user bot created to make Whatsapp more fun to use.
+</div>
+
+## SETUP
 
 [![Run on Repl.it](https://repl.it/badge/github/phaticusthiccy/WhatsAsenaDuplicated)](https://replit.com/@lasindu123/XTROID)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/udnisap208/flopzypro)
-
-
-<div align="center">
-<img src="https://github.com/udnisap208/flopzbot/blob/main/123.jpg?raw=true">
-**FLOPZ** is a user bot created to make Whatsapp more fun to use.
-</div>
 
 
 ## F.A.Q
