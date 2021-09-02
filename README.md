@@ -15,7 +15,9 @@
 [![Run on Repl.it](https://repl.it/badge/github/phaticusthiccy/WhatsAsenaDuplicated)](https://replit.com/@udnisap208/XTROID)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/udnisap208/flopzypro)
-
+  
+## <a href="chopzzz.github.io/flopzfeatures.html">FEATURES</a>  
+  
 <div align="center">
   
 ## F.A.Q
