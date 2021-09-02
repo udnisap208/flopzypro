@@ -4,389 +4,378 @@
 🎁 Cmd: **xmedia** <br>
 🎉 Desc: It is a plugin with more than 25 media tools.
 
-🎁 Cmd: *install
-
+🎁 Cmd: *install <br>
 🎉 Desc: Install external plugins.
 
-🎁 Cmd: *plugin
-
+🎁 Cmd: *plugin<br>
 🎉 Desc: Shows the plugins you have installed.
 
-🎁 Cmd: *remove
-
+🎁 Cmd: *remove<br>
 🎉 Desc: Removes the plugin.
 
-🎁 Cmd: *ban
-
+🎁 Cmd: *ban<br>
 🎉 Desc: Ban someone in the group. Reply to message or tag a person to use command.
 
-🎁 Cmd: *add
-
+🎁 Cmd: *add<br>
 🎉 Desc: Adds someone to the group.
 
-🎁 Cmd: *promote
+🎁 Cmd: *promote<br>
 🎉 Desc: Makes any person an admin.
 
-🎁 Cmd: *demote
+🎁 Cmd: *demote<br>
 🎉 Desc: Takes the authority of any admin.
 
-🎁 Cmd: *mute
+🎁 Cmd: *mute<br>
 🎉 Desc: Mute the group chat. Only the admins can send a message.
 
-🎁 Cmd: *unmute
+🎁 Cmd: *unmute<br>
 🎉 Desc: Unmute the group chat. Anyone can send a message.
 
-🎁 Cmd: *invite
+🎁 Cmd: *invite<br>
 🎉 Desc: Provides the group's invitation link.
 
-🎁 Cmd: *afk
+🎁 Cmd: *afk<br>
 🎉 Desc: It makes you AFK - Away From Keyboard.
 
-🎁 Cmd: *alive
+🎁 Cmd: *alive<br>
 
-🎁 Cmd: *anime
+🎁 Cmd: *anime<br>
 🎉 Desc: Cpack Logo
 
-🎁 Cmd: *antispm
+🎁 Cmd: *antispm<br>
 🎉 Desc: This command for any emergency situation about any kind of WhatsApp SPAM in Group
 
-🎁 Cmd: *apkmod
+🎁 Cmd: *apkmod<br>
 
-🎁 Cmd: *ttp
+🎁 Cmd: *ttp<br>
 🎉 Desc: Converts text to plain painting.
 
-🎁 Cmd: *attp
+🎁 Cmd: *attp<br>
 🎉 Desc: Adds rainbow effect to the text as a sticker.
 
-🎁 Cmd: *a2tp
+🎁 Cmd: *a2tp<br>
 🎉 Desc: Adds rainbow effect to the text as a sticker.
 
-🎁 Cmd: *aatp
+🎁 Cmd: *aatp<br>
 🎉 Desc: Adds rainbow effect to the text as a sticker.
 
-🎁 Cmd: *abtp
+🎁 Cmd: *abtp<br>
 🎉 Desc: Adds rainbow effect to the text as a sticker.
 
-🎁 Cmd: *actp
+🎁 Cmd: *actp<br>
 🎉 Desc: Adds rainbow effect to the text as a sticker.
 
-🎁 Cmd: *adtp
+🎁 Cmd: *adtp<br>
 🎉 Desc: Adds rainbow effect to the text as a sticker.
 
-🎁 Cmd: *ttp
+🎁 Cmd: *ttp<br>
 🎉 Desc: Converts text to plain painting.
 
-🎁 Cmd: *attp
+🎁 Cmd: *attp<br>
 🎉 Desc: Adds rainbow effect to the text as a sticker.
 
-🎁 Cmd: *a2tp
+🎁 Cmd: *a2tp<br>
 🎉 Desc: Adds rainbow effect to the text as a sticker.
 
-🎁 Cmd: *aatp
+🎁 Cmd: *aatp<br>
 🎉 Desc: Adds rainbow effect to the text as a sticker.
 
-🎁 Cmd: *abtp
+🎁 Cmd: *abtp<br>
 🎉 Desc: Adds rainbow effect to the text as a sticker.
 
-🎁 Cmd: *actp
+🎁 Cmd: *actp<br>
 🎉 Desc: Adds rainbow effect to the text as a sticker.
 
-🎁 Cmd: *adtp
+🎁 Cmd: *adtp<br>
 🎉 Desc: Adds rainbow effect to the text as a sticker.
 
-🎁 Cmd: *carbon
+🎁 Cmd: *carbon<br>
 🎉 Desc: Uses carbon.sh for Text-to-Image
 ⚠️ Warn: Please only type in en and tr character!
 
-🎁 Cmd: *mp3
+🎁 Cmd: *mp3<br>
 🎉 Desc: Converts video to sound.
 
-🎁 Cmd: *photo
+🎁 Cmd: *photo<br>
 🎉 Desc: Converts the sticker to a photo.
 
-🎁 Cmd: *vsticker
+🎁 Cmd: *vsticker<br>
 
-🎁 Cmd: *covid
+🎁 Cmd: *covid<br>
 🎉 Desc: Shows the daily and overall covid table of more than 15 countries.
 
-🎁 Cmd: *cpack
+🎁 Cmd: *cpack<br>
 🎉 Desc: Cpack Logolist
 
-🎁 Cmd: *cpack
+🎁 Cmd: *cpack<br>
 🎉 Desc: Cpack Logolist
 
-🎁 Cmd: *deepai
+🎁 Cmd: *deepai<br>
 🎉 Desc: Runs the most powerful artificial intelligence tools using artificial neural networks.
 
-🎁 Cmd: *del
+🎁 Cmd: *del<br>
 🎉 Desc: Delet all messages from you
 
-🎁 Cmd: *png
+🎁 Cmd: *png<br>
 🎉 Desc: You Can Png From Any Emoji
 
-🎁 Cmd: *term
+🎁 Cmd: *term<br>
 🎉 Desc: Allows to run the command on the server's shell.
 
-🎁 Cmd: *ffmpeg
+🎁 Cmd: *ffmpeg<br>
 🎉 Desc: Applies the desired ffmpeg filter to the video.
 🥳 Example: .ffmpeg fade=in:0:30
 
-🎁 Cmd: *filter
+🎁 Cmd: *filter<br>
 🎉 Desc: It adds a filter. If someone writes your filter, it send the answer. If you just write .filter, it show's your filter list.
 
-🎁 Cmd: *stop
+🎁 Cmd: *stop<br>
 🎉 Desc: Stops the filter you added previously.
 
-🎁 Cmd: *gm
+🎁 Cmd: *gm<br>
 🎉 Desc: it sends good morning message
 
-🎁 Cmd: *gn
+🎁 Cmd: *gn<br>
 🎉 Desc: it sends good night message
 
-🎁 Cmd: *welcome
+🎁 Cmd: *welcome<br>
 🎉 Desc: It sets the welcome message. If you leave it blank it shows the welcome message.
 
-🎁 Cmd: *goodbye
+🎁 Cmd: *goodbye<br>
 🎉 Desc: Sets the goodbye message. If you leave blank, it show's the goodbye message.
 
-🎁 Cmd: *grp
+🎁 Cmd: *grp<br>
 
-🎁 Cmd: *grp
-
-🎁 Cmd: *help
+🎁 Cmd: *help<br>
 🎉 Desc: Yardım menüsünden botu kullanım hakkında bilgi verir.
 
-🎁 Cmd: *degis
+🎁 Cmd: *degis<br>
 
-🎁 Cmd: *restart
+🎁 Cmd: *restart<br>
 🎉 Desc: Restart 
 
-🎁 Cmd: *shutdown
+🎁 Cmd: *shutdown<br>
 🎉 Desc: Shutdown 
 
-🎁 Cmd: *dyno
+🎁 Cmd: *dyno<br>
 🎉 Desc: Check heroku dyno usage
 
-🎁 Cmd: *setvar
+🎁 Cmd: *setvar<br>
 🎉 Desc: Set heroku config var
 
-🎁 Cmd: *delvar
+🎁 Cmd: *delvar<br>
 🎉 Desc: Delete heroku config var
 
-🎁 Cmd: *getvar
+🎁 Cmd: *getvar<br>
 🎉 Desc: Get heroku config var
 
-🎁 Cmd: *hpack
+🎁 Cmd: *hpack<br>
 🎉 Desc: HPACK Logolist
 
-🎁 Cmd: *img
+🎁 Cmd: *img<br>
 🎉 Desc: Searches for related pics on Google.
 
-🎁 Cmd: *ipack
+🎁 Cmd: *ipack<br>
 🎉 Desc: Get infomations with smart bot
 
-🎁 Cmd: *bot
+🎁 Cmd: *bot<br>
 
-🎁 Cmd: *net
+🎁 Cmd: *net<br>
 🎉 Desc: gives you the detail of your IP
 
-🎁 Cmd: *joke
+🎁 Cmd: *joke<br>
 🎉 Desc: Get a random joke.
 
-🎁 Cmd: *liza
+🎁 Cmd: *liza<br>
 🎉 Desc: Activates full functional Liza features. Turn your account into a ai chatbot!
 
 🥳 Example: .liza on / off
 
-🎁 Cmd: *locate
-🎉 Desc: It send your location.
+🎁 Cmd: *locate<br>
+🎉 Desc: It send your location.<br>
 ⚠️ Warn: Please open your location before using command!
 
-🎁 Cmd: *log
-🎉 Desc: Saves the message you reply to your private number.
+🎁 Cmd: *log<br>
+🎉 Desc: Saves the message you reply to your private number.<br>
 ⚠️ Warn: Does not support animated stickers!
 
-🎁 Cmd: *me
+🎁 Cmd: *me<br>
 🎉 Desc: bot provide member profile pics,this one is only working with public mode
 
-🎁 Cmd: *mpack
-🎉 Desc: Make memes your own
+🎁 Cmd: *mpack<br>
+🎉 Desc: Make memes your own<br>
 ඔබගේම මිම් සාදාගැනීමට 
 
-🎁 Cmd: *mpack
-🎉 Desc: Make memes your own
+🎁 Cmd: *mpack<br>
+🎉 Desc: Make memes your own<br>
 ඔබගේම මිම් සාදාගැනීමට 
 
-🎁 Cmd: *mmpack
+🎁 Cmd: *mmpack<br>
 🎉 Desc: MEME PACK 
 
-🎁 Cmd: *movie
+🎁 Cmd: *movie<br>
 🎉 Desc: Shows movie info.
 
-🎁 Cmd: *neko
+🎁 Cmd: *neko<br>
 🎉 Desc: Replied messages will be added to nekobin.com.
 
-🎁 Cmd: *news
+🎁 Cmd: *news<br>
 🎉 Desc: Get the days news, add a category after .news .
 
-🎁 Cmd: *notes
+🎁 Cmd: *notes<br>
 🎉 Desc: Shows all your existing notes.
 
-🎁 Cmd: *save
+🎁 Cmd: *save<br>
 🎉 Desc: Reply a message and type .save or just use .save <Your note> without replying
 
-🎁 Cmd: *deleteNotes
+🎁 Cmd: *deleteNotes<br>
 🎉 Desc: Deletes *all* your saved notes.
 
-🎁 Cmd: *npack
+🎁 Cmd: *npack<br>
 🎉 Desc: NLogo colection
 
-🎁 Cmd: *npack
-🎉 Desc: NLogo colection
-
-🎁 Cmd: *ocr
+🎁 Cmd: *ocr<br>
 🎉 Desc: Reads the text on the photo you have replied.
 
-🎁 Cmd: *kickme
+🎁 Cmd: *kickme<br>
 🎉 Desc: It kicks you from the group you are using it in.
 
-🎁 Cmd: *pp
+🎁 Cmd: *pp<br>
 🎉 Desc: Makes the profile photo what photo you reply.
 
-🎁 Cmd: *block
+🎁 Cmd: *block<br>
 🎉 Desc: Block user.
 
-🎁 Cmd: *unblock
+🎁 Cmd: *unblock<br>
 🎉 Desc: Unblock user.
 
-🎁 Cmd: *qr
+🎁 Cmd: *qr<br>
 🎉 Desc: Converts the given text into a qr code image.
 
-🎁 Cmd: *quote
+🎁 Cmd: *quote<br>
 🎉 Desc: It Sends Random Quote
 
-🎁 Cmd: *random
+🎁 Cmd: *random<br>
 🎉 Desc: word image
 
-🎁 Cmd: *removebg
+🎁 Cmd: *removebg<br>
 🎉 Desc: Removes the background of the photos.
 
-🎁 Cmd: *scam
+🎁 Cmd: *scam<br>
 🎉 Desc: Creates 5 minutes of fake actions.
 
-🎁 Cmd: *scan
+🎁 Cmd: *scan<br>
 
-🎁 Cmd: *tr
-🎉 Desc: It translates with Google Translate. You must reply any message.
-
+🎁 Cmd: *tr<br>
+🎉 Desc: It translates with Google Translate. You must reply any message.<br>
 🥳 Example: .trt tr it (From Turkish to Italian)
 
-🎁 Cmd: *detectlang
+🎁 Cmd: *detectlang<br>
 🎉 Desc: Guess the language of the replied message.
 
-🎁 Cmd: *currency
+🎁 Cmd: *currency<br>
 
-🎁 Cmd: *tts
+🎁 Cmd: *tts<br>
 🎉 Desc: It converts text to sound.
 
-🎁 Cmd: *song
+🎁 Cmd: *song<br>
 🎉 Desc: Uploads the song you wrote.
 
-🎁 Cmd: *mp3
+🎁 Cmd: *mp3<br>
 🎉 Desc: Uploads the song you wrote.
 
-🎁 Cmd: *video
+🎁 Cmd: *video<br>
 🎉 Desc: Downloads video from YouTube.
 
-🎁 Cmd: *yt
+🎁 Cmd: *yt<br>
 🎉 Desc: It searchs on YouTube.
 
-🎁 Cmd: *wiki
+🎁 Cmd: *wiki<br>
 🎉 Desc: Searches query on Wikipedia.
 
-🎁 Cmd: *github
-🎉 Desc: Collects github information from the given username.
+🎁 Cmd: *github<br>
+🎉 Desc: Collects github information from the given username.<br>
 ⌨️ Example: .github lasiyaWA
 
-🎁 Cmd: *lyric
+🎁 Cmd: *lyric<br>
 🎉 Desc: Finds the lyrics of the song.
 
-🎁 Cmd: *ss
+🎁 Cmd: *ss<br>
 🎉 Desc: Takes a screenshot from the page in the given link.
 
-🎁 Cmd: *insta
+🎁 Cmd: *insta<br>
 🎉 Desc: Fetches user informations from instagram
 
-🎁 Cmd: *animesay
+🎁 Cmd: *animesay<br>
 🎉 Desc: It writes the text inside the banner the anime girl is holding
 
-🎁 Cmd: *changesay
+🎁 Cmd: *changesay<br>
 🎉 Desc: Turns the text into the change my mind poster.
 
-🎁 Cmd: *trumpsay
+🎁 Cmd: *trumpsay<br>
 🎉 Desc: Converts the text to Trump's tweet.
 
-🎁 Cmd: *killspam
+🎁 Cmd: *killspam<br>
 🎉 Desc: Stops spam command.
 
-🎁 Cmd: *spam
-🎉 Desc: It spam until you stop it.
+🎁 Cmd: *spam<br>
+🎉 Desc: It spam until you stop it.<br>
 🥳 Example: .spam test
 
-🎁 Cmd: *sticker
+🎁 Cmd: *sticker<br>
 🎉 Desc: It converts your replied photo or video to sticker.
 
 🎁 Cmd: *tagadmin
 
-🎁 Cmd: *tagall
+🎁 Cmd: *tagall<br>
 🎉 Desc: Tags everyone in the group.
 
-🎁 Cmd: *tblend
+🎁 Cmd: *tblend<br>
 🎉 Desc: Applies the selected TBlend effect to videos.
 
-🎁 Cmd: *tg
+🎁 Cmd: *tg<br>
 🎉 Desc: Tags everyone in the group.
 
-🎁 Cmd: *unaudio
+🎁 Cmd: *unaudio<br>
 🎉 Desc: Converts sound recording to an audio File.
 
-🎁 Cmd: *lpack
+🎁 Cmd: *lpack<br>
 🎉 Desc: Logo colection 1
 
-🎁 Cmd: *unvoice
+🎁 Cmd: *unvoice<br>
 🎉 Desc: Converts audio to sound recording.
 
-🎁 Cmd: *a
+🎁 Cmd: *a<br>
 🎉 Desc: Converts audio to sound recording.
 
-🎁 Cmd: *up
+🎁 Cmd: *up<br>
 🎉 Desc: Checks for updates.
 
-🎁 Cmd: *up
+🎁 Cmd: *up now<br>
 🎉 Desc: It applies current updates.
 
-🎁 Cmd: *voicy
+🎁 Cmd: *voicy<br>
 🎉 Desc: It converts audio to text.
 
-🎁 Cmd: *wallpaper
+🎁 Cmd: *wallpaper<br>
 🎉 Desc: It sends high resolution wallpapers.
 
-🎁 Cmd: *wame
+🎁 Cmd: *wame<br>
 🎉 Desc: Get a link to the user chat.
 
-🎁 Cmd: *weather
+🎁 Cmd: *weather<br>
 🎉 Desc: Shows the weather.
 
-🎁 Cmd: *speedtest
+🎁 Cmd: *speedtest<br>
 🎉 Desc: Measures Download and Upload speed.
 
-🎁 Cmd: *ping
+🎁 Cmd: *ping<br>
 🎉 Desc: Measures your ping.
 
-🎁 Cmd: *short
+🎁 Cmd: *short<br>
 🎉 Desc: Shorten the long link.
 
 🎁 Cmd: *calc
 
-🎁 Cmd: *zpack
+🎁 Cmd: *zpack<br>
 🎉 Desc: To make awesome logos
