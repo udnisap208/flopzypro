@@ -7,7 +7,7 @@
 </div>
 
 
-# <a href="chopzzz.github.io/flopzfeatures.html">FEATURES</a>  
+ <a href="https://udnisap208.github.io/flopzypro/features">FEATURES</a>  
 
 
 <div align="center">
