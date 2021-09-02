@@ -6,6 +6,8 @@
 **FLOPZ** is a user bot created to make Whatsapp more fun to use.
 </div>
 
+## Features
+
 <a type="button" class="btn btn-warning" role="button" href="https://udnisap208.github.io/flopzypro/features">Click Here.</a>
  
 <div align="center">
