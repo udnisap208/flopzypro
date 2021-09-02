@@ -90,7 +90,7 @@
 🎉 Desc: *Adds rainbow effect to the text as a sticker.*
 
 🎁 Cmd: **carbon**<br>
-🎉 Desc: *Uses carbon.sh for Text-to-Image*
+🎉 Desc: *Uses carbon.sh for Text-to-Image*<br>
 ⚠️ Warn: *Please only type in en and tr character!*
 
 🎁 Cmd: **mp3**<br>
@@ -120,7 +120,7 @@
 🎉 Desc: *Allows to run the command on the server's shell.*
 
 🎁 Cmd: **ffmpeg**<br>
-🎉 Desc: *Applies the desired ffmpeg filter to the video.*
+🎉 Desc: *Applies the desired ffmpeg filter to the video.*<br>
 🥳 Example: *.ffmpeg fade=in:0:30*
 
 🎁 Cmd: **filter**<br>
@@ -258,116 +258,116 @@
 
 🎁 Cmd: **scan**<br>
 
-🎁 Cmd: *tr<br>
-🎉 Desc: It translates with Google Translate. You must reply any message.<br>
-🥳 Example: .trt tr it (From Turkish to Italian)
+🎁 Cmd: **tr**<br>
+🎉 Desc: *It translates with Google Translate. You must reply any message.*<br>
+🥳 Example: *.trt tr it (From Turkish to Italian)*
 
 🎁 Cmd: *detectlang<br>
-🎉 Desc: Guess the language of the replied message.
+🎉 Desc: *Guess the language of the replied message.*
 
-🎁 Cmd: *currency<br>
+🎁 Cmd: **currency**<br>
 
-🎁 Cmd: *tts<br>
-🎉 Desc: It converts text to sound.
+🎁 Cmd: **tts**<br>
+🎉 Desc: *It converts text to sound.*
 
-🎁 Cmd: *song<br>
-🎉 Desc: Uploads the song you wrote.
+🎁 Cmd: **song**<br>
+🎉 Desc: *Uploads the song you wrote.*
 
-🎁 Cmd: *mp3<br>
-🎉 Desc: Uploads the song you wrote.
+🎁 Cmd: **mp3**<br>
+🎉 Desc: *Uploads the song you wrote.*
 
-🎁 Cmd: *video<br>
-🎉 Desc: Downloads video from YouTube.
+🎁 Cmd: **video**<br>
+🎉 Desc: *Downloads video from YouTube.*
 
-🎁 Cmd: *yt<br>
-🎉 Desc: It searchs on YouTube.
+🎁 Cmd: **yt**<br>
+🎉 Desc: *It searchs on YouTube.*
 
-🎁 Cmd: *wiki<br>
-🎉 Desc: Searches query on Wikipedia.
+🎁 Cmd: **wiki**<br>
+🎉 Desc: *Searches query on Wikipedia.*
 
-🎁 Cmd: *github<br>
-🎉 Desc: Collects github information from the given username.<br>
-⌨️ Example: .github lasiyaWA
+🎁 Cmd: **github**<br>
+🎉 Desc: *Collects github information from the given username.*<br>
+⌨️ Example: *.github chopzzz*
 
 🎁 Cmd: *lyric<br>
-🎉 Desc: Finds the lyrics of the song.
+🎉 Desc: Finds the lyrics of the song.*
 
 🎁 Cmd: *ss<br>
-🎉 Desc: Takes a screenshot from the page in the given link.
+🎉 Desc: Takes a screenshot from the page in the given link.*
 
-🎁 Cmd: *insta<br>
-🎉 Desc: Fetches user informations from instagram
+🎁 Cmd: **insta**<br>
+🎉 Desc: *Fetches user informations from instagram.*
 
-🎁 Cmd: *animesay<br>
-🎉 Desc: It writes the text inside the banner the anime girl is holding
+🎁 Cmd: **animesay**<br>
+🎉 Desc: *It writes the text inside the banner the anime girl is holding*
 
-🎁 Cmd: *changesay<br>
-🎉 Desc: Turns the text into the change my mind poster.
+🎁 Cmd: **changesay**<br>
+🎉 Desc: *Turns the text into the change my mind poster.*
 
-🎁 Cmd: *trumpsay<br>
-🎉 Desc: Converts the text to Trump's tweet.
+🎁 Cmd: **trumpsay**<br>
+🎉 Desc: *Converts the text to Trump's tweet.*
 
-🎁 Cmd: *killspam<br>
-🎉 Desc: Stops spam command.
+🎁 Cmd: **killspam**<br>
+🎉 Desc: *Stops spam command.*
 
-🎁 Cmd: *spam<br>
-🎉 Desc: It spam until you stop it.<br>
-🥳 Example: .spam test
+🎁 Cmd: **spam**<br>
+🎉 Desc: *It spam until you stop it.*<br>
+🥳 Example: *.spam test*
 
-🎁 Cmd: *sticker<br>
-🎉 Desc: It converts your replied photo or video to sticker.
+🎁 Cmd: **sticker**<br>
+🎉 Desc: It converts your replied photo or video to sticker.*
 
-🎁 Cmd: *tagadmin
+🎁 Cmd: **tagadmin**
 
-🎁 Cmd: *tagall<br>
-🎉 Desc: Tags everyone in the group.
+🎁 Cmd: **tagall**<br>
+🎉 Desc: Tags everyone in the group.*
 
-🎁 Cmd: *tblend<br>
-🎉 Desc: Applies the selected TBlend effect to videos.
+🎁 Cmd: **tblend**<br>
+🎉 Desc: *Applies the selected TBlend effect to videos.*
 
-🎁 Cmd: *tg<br>
-🎉 Desc: Tags everyone in the group.
+🎁 Cmd: **tg**<br>
+🎉 Desc: *Tags everyone in the group.*
 
-🎁 Cmd: *unaudio<br>
-🎉 Desc: Converts sound recording to an audio File.
+🎁 Cmd: **unaudio**<br>
+🎉 Desc: *Converts sound recording to an audio File.*
 
-🎁 Cmd: *lpack<br>
-🎉 Desc: Logo colection 1
+🎁 Cmd: **lpack**<br>
+🎉 Desc: *Logo colection 1*
 
-🎁 Cmd: *unvoice<br>
-🎉 Desc: Converts audio to sound recording.
+🎁 Cmd: **unvoice**<br>
+🎉 Desc: *Converts audio to sound recording.*
 
-🎁 Cmd: *a<br>
-🎉 Desc: Converts audio to sound recording.
+🎁 Cmd: **a**<br>
+🎉 Desc: *Converts audio to sound recording.*
 
-🎁 Cmd: *up<br>
-🎉 Desc: Checks for updates.
+🎁 Cmd: **up**<br>
+🎉 Desc: *Checks for updates.*
 
-🎁 Cmd: *up now<br>
-🎉 Desc: It applies current updates.
+🎁 Cmd: *up now**<br>
+🎉 Desc: *It applies current updates.*
 
-🎁 Cmd: *voicy<br>
-🎉 Desc: It converts audio to text.
+🎁 Cmd: **voicy**<br>
+🎉 Desc: *It converts audio to text.*
 
-🎁 Cmd: *wallpaper<br>
-🎉 Desc: It sends high resolution wallpapers.
+🎁 Cmd: **wallpape**r<br>
+🎉 Desc: *It sends high resolution wallpapers.*
 
-🎁 Cmd: *wame<br>
-🎉 Desc: Get a link to the user chat.
+🎁 Cmd: **wame**<br>
+🎉 Desc: *Get a link to the user chat.*
 
-🎁 Cmd: *weather<br>
-🎉 Desc: Shows the weather.
+🎁 Cmd: **weather**<br>
+🎉 Desc: *Shows the weather.*
 
-🎁 Cmd: *speedtest<br>
-🎉 Desc: Measures Download and Upload speed.
+🎁 Cmd: **speedtest**<br>
+🎉 Desc: *Measures Download and Upload speed.*
 
-🎁 Cmd: *ping<br>
-🎉 Desc: Measures your ping.
+🎁 Cmd: **ping**<br>
+🎉 Desc: *Measures your ping.*
 
-🎁 Cmd: *short<br>
-🎉 Desc: Shorten the long link.
+🎁 Cmd: **short**<br>
+🎉 Desc: *Shorten the long link.*
 
-🎁 Cmd: *calc
+🎁 Cmd: **calc**
 
-🎁 Cmd: *zpack<br>
-🎉 Desc: To make awesome logos
+🎁 Cmd: **zpack**<br>
+🎉 Desc: *To make awesome logos.*
