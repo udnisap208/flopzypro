@@ -30,7 +30,7 @@ Answer a few frequently asked questions;
 **🎉Is it paid?**<br>
 *  *Of course not.It will never happen.*
 
-####⚠️ Warning!
+###⚠️ Warning!
 ```
 Due to Userbot; Your WhatsApp account may be banned.
 This is an open source project, you are responsible for everything you do. 
