@@ -292,8 +292,8 @@
 🎁 Cmd: **lyric**<br>
 🎉 Desc: *Finds the lyrics of the song.*
 
-🎁 Cmd: *ss<br>
-🎉 Desc: Takes a screenshot from the page in the given link.*
+🎁 Cmd: **ss**<br>
+🎉 Desc: *Takes a screenshot from the page in the given link.*
 
 🎁 Cmd: **insta**<br>
 🎉 Desc: *Fetches user informations from instagram.*
