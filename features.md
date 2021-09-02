@@ -343,7 +343,7 @@
 🎁 Cmd: **up**<br>
 🎉 Desc: *Checks for updates.*
 
-🎁 Cmd: *up now**<br>
+🎁 Cmd: **up now**<br>
 🎉 Desc: *It applies current updates.*
 
 🎁 Cmd: **voicy**<br>
