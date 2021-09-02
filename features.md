@@ -183,7 +183,7 @@
 🎁 Cmd: **joke**<br>
 🎉 Desc: *Get a random joke.*
 
-🎁 Cmd: **liza*<br>
+🎁 Cmd: **liza**<br>
 🎉 Desc: *Activates full functional Liza features. Turn your account into a ai chatbot!*<br>
 🥳 Example: *.liza on / off*
 
