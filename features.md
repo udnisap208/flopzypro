@@ -2,21 +2,27 @@
 
 
 🎁 Cmd: **xmedia**
+
 🎉 Desc: It is a plugin with more than 25 media tools.
 
 🎁 Cmd: *install
+
 🎉 Desc: Install external plugins.
 
 🎁 Cmd: *plugin
+
 🎉 Desc: Shows the plugins you have installed.
 
 🎁 Cmd: *remove
+
 🎉 Desc: Removes the plugin.
 
 🎁 Cmd: *ban
+
 🎉 Desc: Ban someone in the group. Reply to message or tag a person to use command.
 
 🎁 Cmd: *add
+
 🎉 Desc: Adds someone to the group.
 
 🎁 Cmd: *promote
