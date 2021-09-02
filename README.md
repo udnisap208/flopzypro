@@ -4,17 +4,17 @@
 <img src="https://github.com/udnisap208/flopzbot/blob/main/123.jpg?raw=true">
   
 **FLOPZ** is a user bot created to make Whatsapp more fun to use.
-
-
+</div>
+<div align="center">
 ## SETUP
-
+</div>
 [![Run on Repl.it](https://repl.it/badge/github/phaticusthiccy/WhatsAsenaDuplicated)](https://replit.com/@lasindu123/XTROID)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/udnisap208/flopzypro)
 
-
+<div align="center">
 ## F.A.Q
-
+</div>
 Answer a few frequently asked questions;
 
 ### Can you read my messages?
@@ -31,4 +31,4 @@ If you are concerned about security, you can install it on your own computer. If
 Due to Userbot; Your WhatsApp account may be banned.
 This is an open source project, you are responsible for everything you do. 
 ```
-</div>
+
