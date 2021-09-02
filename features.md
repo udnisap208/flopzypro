@@ -262,7 +262,7 @@
 🎉 Desc: *It translates with Google Translate. You must reply any message.*<br>
 🥳 Example: *.trt tr it (From Turkish to Italian)*
 
-🎁 Cmd: *detectlang<br>
+🎁 Cmd: **detectlang**<br>
 🎉 Desc: *Guess the language of the replied message.*
 
 🎁 Cmd: **currency**<br>
