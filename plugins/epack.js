@@ -1,4 +1,4 @@
-const lasiapi = require('textmaker-lasi'); // Import NPM Package
+/* const lasiapi = require('textmaker-lasi'); // Import NPM Package
 
 const XTroid = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
@@ -133,3 +133,4 @@ XTroid.addCMD({pattern: 'eblp ?(.*)', fromMe: true, dontAddCMDList: true}, (asyn
     await message.sendMessage(Buffer.from(lll.data), MessageType.image, { caption: Config.CAPTION_KEY})
 });});
 }));
+*/
