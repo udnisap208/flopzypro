@@ -4,7 +4,7 @@
 <img src="https://github.com/udnisap208/flopzbot/blob/main/123.jpg?raw=true">
 </div>  
   
-**FLOPZ** is a user bot created to make Whatsapp more fun to use.
+**FLOPZY** is a user bot created to make Whatsapp more fun to use.
 
 ## FEATURES 
 
