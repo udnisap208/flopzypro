@@ -8,7 +8,7 @@
 
 ## Features
 
-<a type="button" class="btn btn-warning" role="button" href="https://udnisap208.github.io/flopzypro/features">Click Here.</a>
+<a type="button" class="btn btn-warning" role="button" href="https://github.com/udnisap208/flopzypro/blob/master/features.md">Click Here.</a>
  
 <div align="center">
   
