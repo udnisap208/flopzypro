@@ -18,7 +18,7 @@ if (Config.LANG == 'EN') desc_msg = 'Logo colection 2'
 const need = "*type some word after command*"
 let wk = Config.WORKTYPE == 'public' ? false : true
 
-XTroid.addCMD({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
+XTroid.addCMD({pattern: 'epack$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
     var t1 = ''
     var t2 = ''
     var t3 = ''
@@ -61,7 +61,7 @@ if (Config.LANG == 'SI') {
         desc_cmd = '*🌹 Desc :* '
     }
   
-  const msg = command_cmd + '```.1bush``` \n' + t1 + '_\n' + usage_cmd + '*.1bush Text1*\n\n' +
+  const msg = command_cmd + '```.1bush``` \n' + desc_cmd + t1 + '_\n' + usage_cmd + '*.1bush Text1*\n\n' +
         command_cmd + '```.2bush``` \n' + desc_cmd + t2 + '_\n' + usage_cmd + '*.2bush Text1*\n\n' +
         command_cmd + '```.1917``` \n' + desc_cmd + t3 + '_\n' + usage_cmd + '*.1917 Text1*\n\n' +
         command_cmd + '```.2blackpink```\n' + desc_cmd + t4 + '_\n' + usage_cmd + '*.2blackpink Text1*\n\n' +
