@@ -119,3 +119,17 @@ XTroid.addCMD({pattern: '1917 ?(.*)', fromMe: wk, dontAddCMDList: true}, (async 
           } 
     });
 }));
+
+XTroid.addCMD({pattern: 'eblp ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+
+    await axios.get(`https://tinyurl.com/${Config.SC}`).then(async (ann) => {
+    const { lasi } = ann.data.def1
+    const lc = lasi
+         var ggg = Buffer.from(lc, 'base64')
+            var ddd = ggg.toString('ascii')
+                var lmg = await axios.get(`${ddd}https://en.ephoto360.com/online-blackpink-style-logo-maker-effect-711.html&text=${encodeURIComponent(match[1])}`).then(async (ann) => {
+                        const {image_url} = ann.data
+                            var lll = await axios.get(image_url,{ responseType: 'arraybuffer' })
+    await message.sendMessage(Buffer.from(lll.data), MessageType.image, { caption: Config.CAPTION_KEY})
+});});
+}));
