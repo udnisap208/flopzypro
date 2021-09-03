@@ -137,7 +137,7 @@
 🎁 Command: .**gn**<br>
 🎉 Desc: *it sends good night message.*
 
-🎁 Command: .**welcom**e<br>
+🎁 Command: .**welcome**<br>
 🎉 Desc: *It sets the welcome message. If you leave it blank it shows the welcome message.*
 
 🎁 Command: .**goodbye**<br>
@@ -317,12 +317,12 @@
 🥳 Example: *.spam test*
 
 🎁 Command: .**sticker**<br>
-🎉 Desc: It converts your replied photo or video to sticker.*
+🎉 Desc: *It converts your replied photo or video to sticker.*
 
 🎁 Command: .**tagadmin**
 
 🎁 Command: .**tagall**<br>
-🎉 Desc: Tags everyone in the group.*
+🎉 Desc: *Tags everyone in the group.*
 
 🎁 Command: .**tblend**<br>
 🎉 Desc: *Applies the selected TBlend effect to videos.*
@@ -351,7 +351,7 @@
 🎁 Command: .**voicy**<br>
 🎉 Desc: *It converts audio to text.*
 
-🎁 Command: .**wallpape**r<br>
+🎁 Command: .**wallpaper**<br>
 🎉 Desc: *It sends high resolution wallpapers.*
 
 🎁 Command: .**wame**<br>
