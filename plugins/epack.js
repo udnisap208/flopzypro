@@ -73,24 +73,9 @@ if (Config.LANG == 'SI') {
 }));
 
 XTroid.addCMD({pattern: '1bush ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
-    if (match[1] === '') return await message.sendMessage(need);
-    lasiapi.textpro("https://en.ephoto360.com/green-brush-text-effect-typography-maker-online-153.html",
-        `${match[1]}`
-        ).then(async (data) => { 
-          try { 
-              var download = async(uri, filename, callback) => {
-                  await request.head(uri, async(err, res, body) => {    
-                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-                  });
-              };
-
-              await download(`${data}`, '/root/HTM/bush1.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/bush1.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
-              })
-          } catch(err) { 
-              console.log(err)
-          } 
-    });
+    var img = await lasibase.eph(match[1], 'https://en.ephoto360.com/green-brush-text-effect-typography-maker-online-153.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image)
 }));
 
 XTroid.addCMD({pattern: '2bush ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
