@@ -37,6 +37,22 @@ if (Config.WORKTYPE == 'private') {
 	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
 }));
 
+XTroid.addCMD({ pattern: 'gsmarena ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
+        if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
+	let url = `https://docs-jojo.herokuapp.com/api/gsm_arena?q=${match[1]}`
+	const response = await got(url);
+	const lasijson = JSON.parse(response.body);
+	
+	let msg = '';
+	msg += '*Title:*\n' + '```' + lasijson.username + '```' + '\n\n';
+	msg += '*Release:*\n' + '```' + lasijson.fullname + '```' + '\n\n';
+	msg += '*OS:*\n' + '```' + lasijson.biography + '```' + '\n\n';
+	msg += '*Specs:*\n' + '```' + lasijson.follower_count + '```' + '\n\n';	
+
+	var lasiimage = await axios.get(lasijson.img, { responseType: 'arraybuffer' })
+	
+	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
+}));
 
     /*
     XTroid.addCMD({ pattern: 'tiktok ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
@@ -87,6 +103,23 @@ else if (Config.WORKTYPE == 'public') {
 	msg += '*Post Count:*\n' + '```' + lasijson.post_count + '```' + '\n\n';
 
 	var lasiimage = await axios.get(lasijson.Urlprofile, { responseType: 'arraybuffer' })
+	
+	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
+}));
+
+	XTroid.addCMD({ pattern: 'gsmarena ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
+        if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
+	let url = `https://docs-jojo.herokuapp.com/api/gsm_arena?q=${match[1]}`
+	const response = await got(url);
+	const lasijson = JSON.parse(response.body);
+	
+	let msg = '';
+	msg += '*Title:*\n' + '```' + lasijson.username + '```' + '\n\n';
+	msg += '*Release:*\n' + '```' + lasijson.fullname + '```' + '\n\n';
+	msg += '*OS:*\n' + '```' + lasijson.biography + '```' + '\n\n';
+	msg += '*Specs:*\n' + '```' + lasijson.follower_count + '```' + '\n\n';	
+
+	var lasiimage = await axios.get(lasijson.img, { responseType: 'arraybuffer' })
 	
 	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
 }));
