@@ -44,10 +44,10 @@ XTroid.addCMD({ pattern: 'gsmarena ?(.*)', fromMe: true, desc: Lang.DESC }, (asy
 	const lasijson = JSON.parse(response.body);
 	
 	let msg = '';
-	msg += '*Title:*\n' + '```' + lasijson.username + '```' + '\n\n';
-	msg += '*Release:*\n' + '```' + lasijson.fullname + '```' + '\n\n';
-	msg += '*OS:*\n' + '```' + lasijson.biography + '```' + '\n\n';
-	msg += '*Specs:*\n' + '```' + lasijson.follower_count + '```' + '\n\n';	
+	msg += '*Title:*\n' + '```' + lasijson.title + '```' + '\n\n';
+	msg += '*Release:*\n' + '```' + lasijson.released + '```' + '\n\n';
+	msg += '*OS:*\n' + '```' + lasijson.os_version + '```' + '\n\n';
+	msg += '*Specs:*\n' + '```' + lasijson.list + '```' + '\n\n';	
 
 	var lasiimage = await axios.get(lasijson.img, { responseType: 'arraybuffer' })
 	
@@ -114,10 +114,10 @@ else if (Config.WORKTYPE == 'public') {
 	const lasijson = JSON.parse(response.body);
 	
 	let msg = '';
-	msg += '*Title:*\n' + '```' + lasijson.username + '```' + '\n\n';
-	msg += '*Release:*\n' + '```' + lasijson.fullname + '```' + '\n\n';
-	msg += '*OS:*\n' + '```' + lasijson.biography + '```' + '\n\n';
-	msg += '*Specs:*\n' + '```' + lasijson.follower_count + '```' + '\n\n';	
+	msg += '*Title:*\n' + '```' + lasijson.title + '```' + '\n\n';
+	msg += '*Release:*\n' + '```' + lasijson.released + '```' + '\n\n';
+	msg += '*OS:*\n' + '```' + lasijson.os_version + '```' + '\n\n';
+	msg += '*Specs:*\n' + '```' + lasijson.list + '```' + '\n\n';	
 
 	var lasiimage = await axios.get(lasijson.img, { responseType: 'arraybuffer' })
 	
