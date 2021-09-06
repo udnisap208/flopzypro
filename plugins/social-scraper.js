@@ -47,7 +47,7 @@ XTroid.addCMD({ pattern: 'gsmarena ?(.*)', fromMe: true, desc: Lang.DESC }, (asy
 	msg += '*Title:*\n' + '```' + lasijson.title + '```' + '\n\n';
 	msg += '*Release:*\n' + '```' + lasijson.released + '```' + '\n\n';
 	msg += '*OS:*\n' + '```' + lasijson.os_version + '```' + '\n\n';
-	msg += '*Specs:*\n' + '```' + lasijson.list + '```' + '\n\n';	
+	msg += '*Specs:*\n' + '```' + lasijson.spec + '```' + '\n\n';	
 
 	var lasiimage = await axios.get(lasijson.img, { responseType: 'arraybuffer' })
 	
@@ -117,7 +117,7 @@ else if (Config.WORKTYPE == 'public') {
 	msg += '*Title:*\n' + '```' + lasijson.title + '```' + '\n\n';
 	msg += '*Release:*\n' + '```' + lasijson.released + '```' + '\n\n';
 	msg += '*OS:*\n' + '```' + lasijson.os_version + '```' + '\n\n';
-	msg += '*Specs:*\n' + '```' + lasijson.list + '```' + '\n\n';	
+	msg += '*Specs:*\n' + '```' + lasijson.spec + '```' + '\n\n';	
 
 	var lasiimage = await axios.get(lasijson.img, { responseType: 'arraybuffer' })
 	
