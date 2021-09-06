@@ -19,20 +19,20 @@ if (Config.WORKTYPE == 'private') {
 
     XTroid.addCMD({ pattern: 'insta ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
         if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
-	let url = `https://bx-hunter.herokuapp.com/api/igstalk?text=${match[1]}&apikey=Ikyy69`
+	let url = `https://hardianto-chan.herokuapp.com/api/igstalk?username=${match[1]}&apikey=hardianto`
 	const response = await got(url);
 	const lasijson = JSON.parse(response.body);
 	
 	let msg = '';
 	msg += '*Username:*\n' + '```' + lasijson.username + '```' + '\n\n';
 	msg += '*Full Name:*\n' + '```' + lasijson.fullname + '```' + '\n\n';
-	msg += '*Bio:*\n' + '```' + lasijson.biography + '```' + '\n\n';
-	msg += '*Followers:*\n' + '```' + lasijson.follower_count + '```' + '\n\n';
-	msg += '*Following:*\n' + '```' + lasijson.following_count + '```' + '\n\n';
-	msg += '*Post Count:*\n' + '```' + lasijson.post_count + '```' + '\n\n';
+	msg += '*Verified:*\n' + '```' + lasijson.verified + '```' + '\n\n';
+	msg += '*Bio:*\n' + '```' + lasijson.bio + '```' + '\n\n';
+	msg += '*Followers:*\n' + '```' + lasijson.followers + '```' + '\n\n';
+	msg += '*Following:*\n' + '```' + lasijson.follow + '```' + '\n\n';
 	
 
-	var lasiimage = await axios.get(lasijson.Urlprofile, { responseType: 'arraybuffer' })
+	var lasiimage = await axios.get(lasijson.thumbnail, { responseType: 'arraybuffer' })
 	
 	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
 }));
@@ -88,21 +88,22 @@ XTroid.addCMD({ pattern: 'gsmarena ?(.*)', fromMe: true, desc: Lang.DESC }, (asy
 else if (Config.WORKTYPE == 'public') {
 
    
-    XTroid.addCMD({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.DESC }, (async (message, match) => {
+   XTroid.addCMD({ pattern: 'insta ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
         if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
-	let url = `https://bx-hunter.herokuapp.com/api/igstalk?text=${match[1]}&apikey=Ikyy69`
+	let url = `https://hardianto-chan.herokuapp.com/api/igstalk?username=${match[1]}&apikey=hardianto`
 	const response = await got(url);
 	const lasijson = JSON.parse(response.body);
 	
 	let msg = '';
 	msg += '*Username:*\n' + '```' + lasijson.username + '```' + '\n\n';
 	msg += '*Full Name:*\n' + '```' + lasijson.fullname + '```' + '\n\n';
-	msg += '*Bio:*\n' + '```' + lasijson.biography + '```' + '\n\n';
-	msg += '*Followers:*\n' + '```' + lasijson.follower_count + '```' + '\n\n';
-	msg += '*Following*:\n' + '```' + lasijson.following_count + '```' + '\n\n';
-	msg += '*Post Count:*\n' + '```' + lasijson.post_count + '```' + '\n\n';
+	msg += '*Verified:*\n' + '```' + lasijson.verified + '```' + '\n\n';
+	msg += '*Bio:*\n' + '```' + lasijson.bio + '```' + '\n\n';
+	msg += '*Followers:*\n' + '```' + lasijson.followers + '```' + '\n\n';
+	msg += '*Following:*\n' + '```' + lasijson.follow + '```' + '\n\n';
+	
 
-	var lasiimage = await axios.get(lasijson.Urlprofile, { responseType: 'arraybuffer' })
+	var lasiimage = await axios.get(lasijson.thumbnail, { responseType: 'arraybuffer' })
 	
 	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
 }));
