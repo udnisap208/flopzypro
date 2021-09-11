@@ -134,3 +134,78 @@ XTroid.addCMD({pattern: 'eblp ?(.*)', fromMe: true, dontAddCMDList: true}, (asyn
 });});
 }));
 */
+
+const lasiapi = require('textmaker-lasi'); 
+const lasibase = require('xtroid-npm');
+const XTroid = require('../events');
+const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
+const fs = require('fs');
+const Config = require('../config')
+const axios = require('axios')
+const request = require('request');
+const os = require('os');
+const crypto = require('crypto');
+let wk = Config.WORKTYPE == 'public' ? false : true
+
+XTroid.addCMD({pattern: 'e2blp ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+    
+    await axios.get(`https://tinyurl.com/epe123`).then(async (ann) => {
+    const { lasi } = ann.data.def1
+    const lc = lasi
+         var ggg = Buffer.from(lc, 'base64')
+            var ddd = ggg.toString('ascii')
+            var htm =  'https://en.ephoto360.com/create-a-blackpink-neon-logo-text-effect-online-710.html'
+
+                var lmg = await axios.get(`${ddd}${htm}&text=${encodeURIComponent(match[1])}`).then(async (ann) => {
+                    
+                        const {success} = ann.data
+                        const {image_url} = ann.data
+
+                        var lll = await axios.get(image_url,{ responseType: 'arraybuffer' })
+                         await message.sendMessage(Buffer.from(lll.data), MessageType.image, { caption: Config.CAPTION_KEY})
+
+                        if (success !== true) return await axios.get(`${ddd}${htm}&text=${encodeURIComponent(match[1])}`).then(async (ann) => {
+                            const {success} = ann.data
+                            const {image_url} = ann.data
+
+                            var lll = await axios.get(image_url,{ responseType: 'arraybuffer' })
+                            await message.sendMessage(Buffer.from(lll.data), MessageType.image, { caption: Config.CAPTION_KEY})
+
+                            if (success !== true) return await axios.get(`${ddd}${htm}&text=${encodeURIComponent(match[1])}`).then(async (ann) => {
+                                const {success} = ann.data
+                                const {image_url} = ann.data
+    
+                                var lll = await axios.get(image_url,{ responseType: 'arraybuffer' })
+                                await message.sendMessage(Buffer.from(lll.data), MessageType.image, { caption: Config.CAPTION_KEY})
+                                if (success !== true) return await axios.get(`${ddd}${htm}&text=${encodeURIComponent(match[1])}`).then(async (ann) => {
+                                    const {success} = ann.data
+                                    const {image_url} = ann.data
+        
+                                    var lll = await axios.get(image_url,{ responseType: 'arraybuffer' })
+                                    await message.sendMessage(Buffer.from(lll.data), MessageType.image, { caption: Config.CAPTION_KEY})
+                                    if (success !== true) return await axios.get(`${ddd}${htm}&text=${encodeURIComponent(match[1])}`).then(async (ann) => {
+                                        const {success} = ann.data
+                                        const {image_url} = ann.data
+            
+                                        var lll = await axios.get(image_url,{ responseType: 'arraybuffer' })
+                                        await message.sendMessage(Buffer.from(lll.data), MessageType.image, { caption: Config.CAPTION_KEY})
+                                        if (success !== true) return await axios.get(`${ddd}${htm}&text=${encodeURIComponent(match[1])}`).then(async (ann) => {
+                                            const {success} = ann.data
+                                            const {image_url} = ann.data
+                
+                                            var lll = await axios.get(image_url,{ responseType: 'arraybuffer' })
+                                            await message.sendMessage(Buffer.from(lll.data), MessageType.image, { caption: Config.CAPTION_KEY})
+                                            if (success !== true) return await axios.get(`${ddd}${htm}&text=${encodeURIComponent(match[1])}`).then(async (ann) => {
+                                                const {success} = ann.data
+                                                const {image_url} = ann.data
+                    
+                                                var lll = await axios.get(image_url,{ responseType: 'arraybuffer' })
+                                                await message.sendMessage(Buffer.from(lll.data), MessageType.image, { caption: Config.CAPTION_KEY})
+                                                if (success !== true) return await axios.get(`${ddd}${htm}&text=${encodeURIComponent(match[1])}`).then(async (ann) => {
+                                                    const {success} = ann.data
+                                                    const {image_url} = ann.data
+                        
+                                                    var lll = await axios.get(image_url,{ responseType: 'arraybuffer' })
+                                                    await message.sendMessage(Buffer.from(lll.data), MessageType.image, { caption: Config.CAPTION_KEY})
+});});});});});});});});});
+}));
