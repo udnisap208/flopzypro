@@ -1,17 +1,8 @@
-/* const lasiapi = require('textmaker-lasi'); // Import NPM Package
-
 const XTroid = require('../events');
-const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
+const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
 const fs = require('fs');
+const axios = require('axios');
 const Config = require('../config');
-const axios = require('axios')
-const request = require('request');
-const os = require('os');
-var clh = { cd: 'L3Jvb3QvSFRNLw==', pay: '' }    
-var ggg = Buffer.from(clh.cd, 'base64')
-var ddd = ggg.toString('utf-8')
-clh.pay = ddd
-if (os.userInfo().homedir !== clh.pay) return;
 var desc_msg = ''
 if (Config.LANG == 'SI') desc_msg = 'X-Troid Logo එකතුව'
 if (Config.LANG == 'EN') desc_msg = 'Logo colection 2'
@@ -31,7 +22,7 @@ if (Config.LANG == 'SI') {
         t1 = 'Green Bush Text 1.' // https://en.ephoto360.com/green-brush-text-effect-typography-maker-online-153.html
         t2 = 'Green Bush Text 2.' // https://en.ephoto360.com/dark-green-typography-online-359.html
         t3 = '1917 Movie Style Text.' // https://en.ephoto360.com/1917-style-text-effect-523.html
-        t4 = 'BLACKPINK Logo Style 2.' // https://en.ephoto360.com/online-blackpink-style-logo-maker-effect-711.html
+        t4 = 'BLACKPINK Logo Style 2.' // https://en.ephoto360.com/online-blackpink-style-logo-maker-effect-710.html
         t5 = 'Halloween Bats Logo.' // https://en.ephoto360.com/halloween-bats-text-effects-76.html
         t6 = 'Juventus Shirt Logo.' // https://en.ephoto360.com/create-juventus-shirt-effect-536.html
         t7 = 'Barca Shirt Logo.' // https://en.ephoto360.com/create-football-shirt-messi-barca-online-268.html
@@ -41,7 +32,7 @@ if (Config.LANG == 'SI') {
         t1 = 'Green Bush Text 1.' // https://en.ephoto360.com/green-brush-text-effect-typography-maker-online-153.html
         t2 = 'Green Bush Text 2.' // https://en.ephoto360.com/dark-green-typography-online-359.html
         t3 = '1917 Movie Style Text.' // https://en.ephoto360.com/1917-style-text-effect-523.html
-        t4 = 'BLACKPINK Logo Style 2.' // https://en.ephoto360.com/online-blackpink-style-logo-maker-effect-711.html
+        t4 = 'BLACKPINK Logo Style 2.' // https://en.ephoto360.com/online-blackpink-style-logo-maker-effect-710.html
         t5 = 'Halloween Bats Logo.' // https://en.ephoto360.com/halloween-bats-text-effects-76.html
         t6 = 'Juventus Shirt Logo.' // https://en.ephoto360.com/create-juventus-shirt-effect-536.html
         t7 = 'Barca Shirt Logo.' // https://en.ephoto360.com/create-football-shirt-messi-barca-online-268.html
@@ -73,65 +64,55 @@ if (Config.LANG == 'SI') {
 }));
 
 XTroid.addCMD({pattern: '1bush ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
-    var img = await lasibase.eph(match[1], 'https://en.ephoto360.com/green-brush-text-effect-typography-maker-online-153.html')
-    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
-    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image)
+    if (match[1] === '') return await message.sendMessage(need);
+     let url =`https://api.codebazan.ir/ephoto/writeText?output=json&effect=https://en.ephoto360.com/green-brush-text-effect-typography-maker-online-153.html&text=${encodeURIComponent(match[1])}`
+     const response = await got(url);
+	var lasiimage = await axios.get(lasijson.thumbnail, { responseType: 'arraybuffer' })
+	
+	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
 }));
 
 XTroid.addCMD({pattern: '2bush ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
-    lasiapi.textpro("https://en.ephoto360.com/dark-green-typography-online-359.html",
-        `${match[1]}`
-        ).then(async (data) => { 
-          try { 
-              var download = async(uri, filename, callback) => {
-                  await request.head(uri, async(err, res, body) => {    
-                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-                  });
-              };
-
-              await download(`${data}`, '/root/HTM/bush2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/bush2.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
-              })
-          } catch(err) { 
-              console.log(err)
-          } 
-    });
+     let url =`https://api.codebazan.ir/ephoto/writeText?output=json&effect=https://en.ephoto360.com/dark-green-typography-online-359.html&text=${encodeURIComponent(match[1])}`
+     const response = await got(url);
+	var lasiimage = await axios.get(lasijson.thumbnail, { responseType: 'arraybuffer' })
+	
+	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
 }));
 
 XTroid.addCMD({pattern: '1917 ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
-    lasiapi.textpro("https://en.ephoto360.com/1917-style-text-effect-523.html",
-        `${match[1]}`
-        ).then(async (data) => { 
-          try { 
-              var download = async(uri, filename, callback) => {
-                  await request.head(uri, async(err, res, body) => {    
-                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-                  });
-              };
-
-              await download(`${data}`, '/root/HTM/1917.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/HTM/1917.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
-              })
-          } catch(err) { 
-              console.log(err)
-          } 
-    });
+     let url =`https://api.codebazan.ir/ephoto/writeText?output=json&effect=https://en.ephoto360.com/1917-style-text-effect-523.html&text=${encodeURIComponent(match[1])}`
+     const response = await got(url);
+	var lasiimage = await axios.get(lasijson.thumbnail, { responseType: 'arraybuffer' })
+	
+	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
 }));
 
-XTroid.addCMD({pattern: 'eblp ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
-
-    await axios.get(`https://tinyurl.com/${Config.SC}`).then(async (ann) => {
-    const { lasi } = ann.data.def1
-    const lc = lasi
-         var ggg = Buffer.from(lc, 'base64')
-            var ddd = ggg.toString('ascii')
-                var lmg = await axios.get(`${ddd}https://en.ephoto360.com/online-blackpink-style-logo-maker-effect-711.html&text=${encodeURIComponent(match[1])}`).then(async (ann) => {
-                        const {image_url} = ann.data
-                            var lll = await axios.get(image_url,{ responseType: 'arraybuffer' })
-    await message.sendMessage(Buffer.from(lll.data), MessageType.image, { caption: Config.CAPTION_KEY})
-});});
+XTroid.addCMD({pattern: '2bp ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+    if (match[1] === '') return await message.sendMessage(need);
+     let url =`https://api.codebazan.ir/ephoto/writeText?output=json&effect=https://en.ephoto360.com/online-blackpink-style-logo-maker-effect-710.html&text=${encodeURIComponent(match[1])}`
+     const response = await got(url);
+	var lasiimage = await axios.get(lasijson.thumbnail, { responseType: 'arraybuffer' })
+	
+	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
 }));
-*/
 
+XTroid.addCMD({pattern: 'bats ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+    if (match[1] === '') return await message.sendMessage(need);
+     let url =`https://api.codebazan.ir/ephoto/writeText?output=json&effect=https://en.ephoto360.com/halloween-bats-text-effects-76.html&text=${encodeURIComponent(match[1])}`
+     const response = await got(url);
+	var lasiimage = await axios.get(lasijson.thumbnail, { responseType: 'arraybuffer' })
+	
+	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
+}));
+
+XTroid.addCMD({pattern: 'juve ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+    if (match[1] === '') return await message.sendMessage(need);
+     let url =`https://api.codebazan.ir/ephoto/writeText?output=json&effect=https://en.ephoto360.com/dark-green-typography-online-359.html&text=${encodeURIComponent(match[1])}`
+     const response = await got(url);
+	var lasiimage = await axios.get(lasijson.thumbnail, { responseType: 'arraybuffer' })
+	
+	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
+}));
