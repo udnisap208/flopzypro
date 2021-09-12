@@ -110,7 +110,7 @@ XTroid.addCMD({pattern: 'bats ?(.*)', fromMe: wk, dontAddCMDList: true}, (async 
 
 XTroid.addCMD({pattern: 'juve ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(need);
-     let url =`https://api.codebazan.ir/ephoto/writeText?output=json&effect=https://en.ephoto360.com/dark-green-typography-online-359.html&text=${encodeURIComponent(match[1])}`
+     let url =`https://api.codebazan.ir/ephoto/writeText?output=json&effect=https://en.ephoto360.com/create-juventus-shirt-effect-536.html&text=${encodeURIComponent(match[1])}`
      const response = await got(url);
 	var lasiimage = await axios.get(lasijson.thumbnail, { responseType: 'arraybuffer' })
 	
