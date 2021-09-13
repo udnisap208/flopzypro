@@ -69,7 +69,7 @@ XTroid.addCMD({pattern: '1bush ?(.*)', fromMe: wk, dontAddCMDList: true}, (async
      const response = await got(url);
 	var lasiimage = await axios.get(lasijson.thumbnail, { responseType: 'arraybuffer' })
 	
-	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
+	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.image_url), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
 }));
 
 XTroid.addCMD({pattern: '2bush ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
@@ -78,7 +78,7 @@ XTroid.addCMD({pattern: '2bush ?(.*)', fromMe: wk, dontAddCMDList: true}, (async
      const response = await got(url);
 	var lasiimage = await axios.get(lasijson.thumbnail, { responseType: 'arraybuffer' })
 	
-	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
+	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.image_url), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
 }));
 
 XTroid.addCMD({pattern: '1917 ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
@@ -87,7 +87,7 @@ XTroid.addCMD({pattern: '1917 ?(.*)', fromMe: wk, dontAddCMDList: true}, (async 
      const response = await got(url);
 	var lasiimage = await axios.get(lasijson.thumbnail, { responseType: 'arraybuffer' })
 	
-	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
+	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.image_url), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
 }));
 
 XTroid.addCMD({pattern: '2bp ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
@@ -96,7 +96,7 @@ XTroid.addCMD({pattern: '2bp ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (
      const response = await got(url);
 	var lasiimage = await axios.get(lasijson.thumbnail, { responseType: 'arraybuffer' })
 	
-	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
+	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.image_url), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
 }));
 
 XTroid.addCMD({pattern: 'bats ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
@@ -105,7 +105,7 @@ XTroid.addCMD({pattern: 'bats ?(.*)', fromMe: wk, dontAddCMDList: true}, (async 
      const response = await got(url);
 	var lasiimage = await axios.get(lasijson.thumbnail, { responseType: 'arraybuffer' })
 	
-	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
+	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.image_url), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
 }));
 
 XTroid.addCMD({pattern: 'juve ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
@@ -114,5 +114,5 @@ XTroid.addCMD({pattern: 'juve ?(.*)', fromMe: wk, dontAddCMDList: true}, (async 
      const response = await got(url);
 	var lasiimage = await axios.get(lasijson.thumbnail, { responseType: 'arraybuffer' })
 	
-	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
+	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.image_url), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVETEXT });
 }));
