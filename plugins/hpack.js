@@ -241,7 +241,7 @@ XTroid.addCMD({pattern: 'colortext ?(.*)', fromMe: false, dontAddCMDList: true},
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
-    var webimage = await axios.get(`https://xteam.xyz/videomaker/colorful?text=${match[1]}&APIKEY=cc9e73713a1857f5`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://hardianto-chan.herokuapp.com/api/photooxy?effect=glowing&query=${match[1]}&apikey=hardianto`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.video, {mimetype: Mimetype.mp4, caption:  Config.CAPTION_KEY})
 
@@ -562,13 +562,13 @@ XTroid.addCMD({pattern: 'ptext ?(.*)', fromMe: true, dontAddCMDList: true}, (asy
 
     }));
 
-XTroid.addCMD({pattern: 'colortext ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'colortext ?(.*)', fromMe: false, dontAddCMDList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
-    var webimage = await axios.get(`https://xteam.xyz/videomaker/colorful?text=${match[1]}&APIKEY=cc9e73713a1857f5`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://hardianto-chan.herokuapp.com/api/photooxy?effect=glowing&query=${match[1]}&apikey=hardianto`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.video, {mimetype: Mimetype.mp4, caption:Config.CAPTION_KEY})
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.video, {mimetype: Mimetype.mp4, caption:  Config.CAPTION_KEY})
 
     }));
 
