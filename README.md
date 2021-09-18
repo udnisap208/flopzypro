@@ -10,7 +10,7 @@
 
 <a type="button" class="btn btn-warning" role="button" href="https://github.com/udnisap208/flopzypro/blob/master/features.md">Click Here.</a>
  
-<div align="center">
+<div>
   
 ## SETUP
   
@@ -20,7 +20,7 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/udnisap208/flopzypro)
   
-<div align="center">
+<div>
   
 ## F.A.Q
   
