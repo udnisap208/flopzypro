@@ -14,7 +14,7 @@ var ddd = ggg.toString('utf-8')
 clh.pay = ddd
 var desc_msg = 'Shows textmaker tools with unlimited access.'
 if (os.userInfo().homedir !== clh.pay) return;
-let wk = config.WORKTYPE == 'public' ? false : true
+let wk = Config.WORKTYPE == 'public' ? false : true
 
 XTroid.addCMD({pattern: 'epack ?(.*)', fromMe: wk, desc: desc_msg}, (async (message, match) => {
     var t58 = ''
@@ -41,7 +41,7 @@ XTroid.addCMD({pattern: 'epack ?(.*)', fromMe: wk, desc: desc_msg}, (async (mess
     var t79 = ''
     var t80 = ''
     
-    if (config.LANG == 'TR' || config.LANG == 'AZ') {
+    if (Config.LANG == 'SI') {
         
         t58 = '2. Bir Siyah ve Pembe Temalı Logo Yapar.' // https://en.ephoto360.com/create-a-blackpink-neon-logo-text-effect-online-710.html
         t59 = 'PUBG Temalı Video Logo Yapar.' // https://en.ephoto360.com/create-pubg-style-glitch-video-avatar-554.html
@@ -96,7 +96,7 @@ XTroid.addCMD({pattern: 'epack ?(.*)', fromMe: wk, desc: desc_msg}, (async (mess
     var usage_cmd = ''
     var command_cmd = ''
     var desc_cmd = ''
-    if (config.LANG == 'TR' || config.LANG == 'AZ') {
+    if (Config.LANG == 'SI') {
         usage_cmd = '🌹 *Örnek:* _'
         command_cmd = '🔥 *Komut:* '
         desc_cmd = '🎵 *Açıklama:* _'
