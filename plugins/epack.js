@@ -12,18 +12,9 @@ var clh = { cd: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQv', pay: '' }
 var ggg = Buffer.from(clh.cd, 'base64')
 var ddd = ggg.toString('utf-8')
 clh.pay = ddd
-var desc_msg = ''
-if (Config.LANG == 'TR') desc_msg = 'Sınırsız erişime sahip textmaker araçlarını gösterir.'
-if (Config.LANG == 'EN') desc_msg = 'Shows textmaker tools with unlimited access.'
-if (Config.LANG == 'RU') desc_msg = 'Показывает инструменты для создания текстов с неограниченным доступом.'
-if (Config.LANG == 'AZ') desc_msg = 'Sınırsız girişi olan textmaker alətləri göstərir.'
-if (Config.LANG == 'PT') desc_msg = 'Mostra ferramentas textmaker com acesso ilimitado.'
-if (Config.LANG == 'ID') desc_msg = 'Menampilkan alat pembuat teks dengan akses tak terbatas.'
-if (Config.LANG == 'ML') desc_msg = 'പരിധിയില്ലാത്ത ആക്സസ് ഉള്ള ടെക്സ്റ്റ് മേക്കർ ഉപകരണങ്ങൾ കാണിക്കുന്നു.'
-if (Config.LANG == 'HI') desc_msg = 'असीमित एक्सेस के साथ टेक्स्टमेकर टूल दिखाता है।'
-if (Config.LANG == 'ES') desc_msg = 'Muestra herramientas de creación de textos con acceso ilimitado.'
+var desc_msg = 'Shows textmaker tools with unlimited access.'
 if (os.userInfo().homedir !== clh.pay) return;
-let wk = Config.WORKTYPE == 'public' ? false : true
+let wk = config.WORKTYPE == 'public' ? false : true
 
 XTroid.addCMD({pattern: 'epack ?(.*)', fromMe: wk, desc: desc_msg}, (async (message, match) => {
     var t58 = ''
@@ -50,7 +41,7 @@ XTroid.addCMD({pattern: 'epack ?(.*)', fromMe: wk, desc: desc_msg}, (async (mess
     var t79 = ''
     var t80 = ''
     
-    if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
+    if (config.LANG == 'TR' || config.LANG == 'AZ') {
         
         t58 = '2. Bir Siyah ve Pembe Temalı Logo Yapar.' // https://en.ephoto360.com/create-a-blackpink-neon-logo-text-effect-online-710.html
         t59 = 'PUBG Temalı Video Logo Yapar.' // https://en.ephoto360.com/create-pubg-style-glitch-video-avatar-554.html
@@ -105,7 +96,7 @@ XTroid.addCMD({pattern: 'epack ?(.*)', fromMe: wk, desc: desc_msg}, (async (mess
     var usage_cmd = ''
     var command_cmd = ''
     var desc_cmd = ''
-    if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
+    if (config.LANG == 'TR' || config.LANG == 'AZ') {
         usage_cmd = '🌹 *Örnek:* _'
         command_cmd = '🔥 *Komut:* '
         desc_cmd = '🎵 *Açıklama:* _'
