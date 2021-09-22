@@ -1,4 +1,4 @@
-const thiccysapi = require('emaker-thiccy'); // Import NPM Package
+const thiccysapi = require('textmaker-thiccy'); // Import NPM Package
 
 const XTroid = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
