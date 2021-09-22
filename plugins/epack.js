@@ -1,4 +1,4 @@
-const thiccysapi = require('emaker-thiccy'); // Import NPM Package
+/* const thiccysapi = require('emaker-thiccy'); // Import NPM Package
 
 const XTroid = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
@@ -262,3 +262,4 @@ XTroid.addCMD({pattern: 'e2pubg ?(.*)', fromMe: wk, dontaddCMDList: true}, (asyn
     var buffer_data = await axios.get(vid.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.video, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena', mimetype: Mimetype.mp4 })
 }));
+*/
