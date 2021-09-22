@@ -106,13 +106,13 @@ XTroid.addCMD({pattern: 'epack ?(.*)', fromMe: wk, desc: desc_msg}, (async (mess
     var command_cmd = ''
     var desc_cmd = ''
     if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
-        usage_cmd = '⌨️ *Örnek:* _'
-        command_cmd = '💻 *Komut:* '
-        desc_cmd = 'ℹ️ *Açıklama:* _'
+        usage_cmd = '🌹 *Örnek:* _'
+        command_cmd = '🔥 *Komut:* '
+        desc_cmd = '🎵 *Açıklama:* _'
     } else { 
-        usage_cmd = '*⌨️ Example:* _'
-        command_cmd = '💻 *Command:* '
-        desc_cmd = 'ℹ️ *Description:* _'
+        usage_cmd = '*🌹 Example:* _'
+        command_cmd = '🔥 *Command:* '
+        desc_cmd = '🎵 *Description:* _'
     }
     const msg = 
         command_cmd + '```.e6neon``` \n' + desc_cmd + t77 + '_\n' + usage_cmd + '.e6neon Phaticusthiccy_\n\n' +
