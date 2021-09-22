@@ -142,124 +142,123 @@ XTroid.addCMD({pattern: 'epack ?(.*)', fromMe: wk, desc: desc_msg}, (async (mess
     await message.client.sendMessage(message.jid,msg, MessageType.e, { quoted: message.data })
 }));
 
-XTroid.addCMD({pattern: 'eleaf ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'eleaf ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/dark-green-typography-online-359.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena' })
 }));
-XTroid.addCMD({pattern: 'ematrix ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'ematrix ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/matrix-text-effect-154.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image)
 }));
-XTroid.addCMD({pattern: 'e2gradient ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'e2gradient ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-3d-gradient-text-effect-online-600.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image)
 }));
-XTroid.addCMD({pattern: 'eballoon ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'eballoon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/writing-your-name-on-hot-air-balloon-506.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image)
 }));
-XTroid.addCMD({pattern: 'esnow ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'esnow ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/snow-on-text-online-107.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image)
 }));
-XTroid.addCMD({pattern: 'e2gold ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'e2gold ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/gold-text-effect-pro-271.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image)
 }));
-XTroid.addCMD({pattern: 'e5graf ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'e5graf ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
   var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/graffiti-color-199.html')
   var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
   await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image)
 }));
-XTroid.addCMD({pattern: 'e3fire ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'e3fire ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/dragon-fire-text-effect-111.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena' })
 }));
-XTroid.addCMD({pattern: 'e2space ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'e2space ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-galaxy-style-free-name-logo-438.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena'})
 }));
-XTroid.addCMD({pattern: 'e3space ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'e3space ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/galaxy-text-effect-116.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena' })
 }));
-XTroid.addCMD({pattern: 'egold ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'egold ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/modern-gold-3-212.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena' })
 }));
-XTroid.addCMD({pattern: 'e3space ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'e3space ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/galaxy-text-effect-116.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena' })
 }));
-XTroid.addCMD({pattern: 'eangel ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'eangel ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/wings-galaxy-206.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena' })
 }));
-XTroid.addCMD({pattern: 'e2pink ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'e2pink ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-a-blackpink-neon-logo-text-effect-online-710.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena' })
 }));
-XTroid.addCMD({pattern: 'eabear ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'eabear ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-funny-animations-of-a-traveling-bear-701.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.video, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena', mimetype: Mimetype.gif })
 }));
-XTroid.addCMD({pattern: 'e6neon ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'e6neon ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-light-effects-green-neon-online-429.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image)
 }));
-XTroid.addCMD({pattern: 'eheart ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'eheart ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/write-name-on-heart-with-wings-gifs-430.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.video, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena', mimetype: Mimetype.gif })
 }));
-XTroid.addCMD({pattern: 'e4graf ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'e4graf ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/text-graffiti-3d-208.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena' })
 }));
-XTroid.addCMD({pattern: 'epuppy ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'epuppy ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-puppy-cute-animated-online-478.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.video, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena', mimetype: Mimetype.gif })
 }));
-XTroid.addCMD({pattern: 'eroad ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'eroad ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-glowing-text-effects-online-706.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena' })
 }));
-XTroid.addCMD({pattern: 'esad ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'esad ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/write-text-on-wet-glass-online-589.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena' })
 }));
-XTroid.addCMD({pattern: 'e3pubg ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'e3pubg ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-the-cover-game-playerunknown-s-battlegrounds-401.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena' })
 }));
-XTroid.addCMD({pattern: 'epubg ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'epubg ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var vid = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-pubg-style-glitch-video-avatar-554.html')
     var buffer_data = await axios.get(vid.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.video, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena', mimetype: Mimetype.mp4 })
 }));
-XTroid.addCMD({pattern: 'e2pubg ?(.*)', fromMe: wk, dontaddCMDList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'e2pubg ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
     var vid = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/lightning-pubg-video-logo-maker-online-615.html')
     var buffer_data = await axios.get(vid.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.video, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena', mimetype: Mimetype.mp4 })
 }));
-
