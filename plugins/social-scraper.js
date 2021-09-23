@@ -44,8 +44,8 @@ XTroid.addCMD({ pattern: 'gsmarena ?(.*)', fromMe: true, desc: Lang.DESC }, (asy
 	const lasijson = JSON.parse(response.body);
 	
 	let msg = '';
-	msg += '*Title:*\n' + '```' + lasijson.data.title + '```' + '\n\n';
-	msg += '*Description:*\n' + '```' + lasijson.data.few_desc + '```' + '\n\n';
+	msg += '*Title:*\n' + '```' + lasijson.title + '```' + '\n\n';
+	msg += '*Description:*\n' + '```' + lasijson.few_desc + '```' + '\n\n';
 		
 
 	var lasiimage = await axios.get(lasijson.thumb, { responseType: 'arraybuffer' })
@@ -113,8 +113,8 @@ XTroid.addCMD({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.DESC }, (async
 	const lasijson = JSON.parse(response.body);
 	
 	let msg = '';
-	msg += '*Title:*\n' + '```' + lasijson.data.title + '```' + '\n\n';
-	msg += '*Description:*\n' + '```' + lasijson.data.few_desc + '```' + '\n\n';
+	msg += '*Title:*\n' + '```' + lasijson.title + '```' + '\n\n';
+	msg += '*Description:*\n' + '```' + lasijson.few_desc + '```' + '\n\n';
 		
 
 	var lasiimage = await axios.get(lasijson.thumb, { responseType: 'arraybuffer' })
@@ -129,8 +129,8 @@ XTroid.addCMD({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.DESC }, (async
 	const lasijson = JSON.parse(response.body);
 	
 	let msg = '';
-	msg += '*Title:*\n' + '```' + lasijson.data.title + '```' + '\n\n';
-	msg += '*Description:*\n' + '```' + lasijson.data.few_desc + '```' + '\n\n';
+	msg += '*Title:*\n' + '```' + lasijson.title + '```' + '\n\n';
+	msg += '*Description:*\n' + '```' + lasijson.few_desc + '```' + '\n\n';
 		
 
 	var lasiimage = await axios.get(lasijson.thumb, { responseType: 'arraybuffer' })
