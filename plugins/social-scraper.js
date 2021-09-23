@@ -39,17 +39,16 @@ if (Config.WORKTYPE == 'private') {
 
 XTroid.addCMD({ pattern: 'gsmarena ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
         if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
-	let url = `https://docs-jojo.herokuapp.com/api/gsm_arena?q=${match[1]}`
+	let url = `https://api.zeks.me/api/gsmArena?apikey=1hroZ3ju94h0PBjCNKsfhYaSuLs&q=${match[1]}`
 	const response = await got(url);
 	const lasijson = JSON.parse(response.body);
 	
 	let msg = '';
-	msg += '*Title:*\n' + '```' + lasijson.title + '```' + '\n\n';
-	msg += '*Release:*\n' + '```' + lasijson.released + '```' + '\n\n';
-	msg += '*OS:*\n' + '```' + lasijson.os_version + '```' + '\n\n';
-	msg += '*Specs:*\n' + '```' + lasijson.spec.list + '```' + '\n\n';	
+	msg += '*Title:*\n' + '```' + lasijson.data.title + '```' + '\n\n';
+	msg += '*Description:*\n' + '```' + lasijson.data.few_desc + '```' + '\n\n';
+		
 
-	var lasiimage = await axios.get(lasijson.img, { responseType: 'arraybuffer' })
+	var lasiimage = await axios.get(lasijson.thumb, { responseType: 'arraybuffer' })
 	
 	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
 }));
@@ -107,23 +106,38 @@ XTroid.addCMD({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.DESC }, (async
 	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
 }));	
 	
-	XTroid.addCMD({ pattern: 'gsmarena ?(.*)', fromMe: false, desc: Lang.DESC }, (async (message, match) => {
+	XTroid.addCMD({ pattern: 'gsmarena ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
         if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
-	let url = `https://docs-jojo.herokuapp.com/api/gsm_arena?q=${match[1]}`
+	let url = `https://api.zeks.me/api/gsmArena?apikey=1hroZ3ju94h0PBjCNKsfhYaSuLs&q=${match[1]}`
 	const response = await got(url);
 	const lasijson = JSON.parse(response.body);
 	
 	let msg = '';
-	msg += '*Title:*\n' + '```' + lasijson.title + '```' + '\n\n';
-	msg += '*Release:*\n' + '```' + lasijson.released + '```' + '\n\n';
-	msg += '*OS:*\n' + '```' + lasijson.os_version + '```' + '\n\n';
-	msg += '*Specs:*\n' + '```' + lasijson.list + '```' + '\n\n';	
+	msg += '*Title:*\n' + '```' + lasijson.data.title + '```' + '\n\n';
+	msg += '*Description:*\n' + '```' + lasijson.data.few_desc + '```' + '\n\n';
+		
 
-	var lasiimage = await axios.get(lasijson.img, { responseType: 'arraybuffer' })
+	var lasiimage = await axios.get(lasijson.thumb, { responseType: 'arraybuffer' })
 	
 	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
 }));
 
+	XTroid.addCMD({ pattern: 'gsmarena ?(.*)', fromMe: false, desc: Lang.DESC }, (async (message, match) => {
+        if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
+	let url = `https://api.zeks.me/api/gsmArena?apikey=1hroZ3ju94h0PBjCNKsfhYaSuLs&q=${match[1]}`
+	const response = await got(url);
+	const lasijson = JSON.parse(response.body);
+	
+	let msg = '';
+	msg += '*Title:*\n' + '```' + lasijson.data.title + '```' + '\n\n';
+	msg += '*Description:*\n' + '```' + lasijson.data.few_desc + '```' + '\n\n';
+		
+
+	var lasiimage = await axios.get(lasijson.thumb, { responseType: 'arraybuffer' })
+	
+	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
+}));
+	
 	XTroid.addCMD({ pattern: 'insta ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
         if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
 	let url = `https://hardianto-chan.herokuapp.com/api/igstalk?username=${match[1]}&apikey=hardianto`
