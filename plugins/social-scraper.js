@@ -70,19 +70,18 @@ if (Config.WORKTYPE == "private") {
         { quoted: message.data }
       );
       let msg = "```";
-      msg += `NAME          :${result.judul}\n\n`;
-      msg += `DATE          :${result.rilis}\n\n`;
-      msg += `WEIGHT        :${result.ukuran}\n\n`;
-      msg += `VERSION       :${result.type}\n\n`;
-      msg += `ROM           :${result.storage}\n\n`;
-      msg += `DISPLAY       :${result.display}\n\n`;
-      msg += `RAM           :${result.ram}\n\n`;
-      msg += `BATTERY        :${result.batrai}\n\n`;
-      msg += `CPU            :${result.chipset}\n\n`;
-      msg += `INCH           :${result.inchi}\n\n`;
-      msg += `VIDEO MP       :${result.videoPixel}\n\n`;
-      msg += `PIC            :${result.thumb}\n\n`;
-      msg += `BATTERY BRAND  :${result.pixel}\n\n`;
+      msg += `NAME :${result.judul}\n\n`;
+      msg += `DATE :${result.rilis}\n\n`;
+      msg += `CPU :${result.chipset}\n\n`;
+      msg += `VERSION :${result.type}\n\n`;
+      msg += `RAM :${result.ram}\n\n`;
+      msg += `ROM :${result.storage}\n\n`;
+      msg += `DISPLAY :${result.display}\n\n`;
+      msg += `CAMERA MP :${result.pixel}\n\n`;
+      msg += `BATTERY :${result.batrai}\n\n`;
+      msg += `INCH :${result.inchi}\n\n`;
+      msg += `VIDEO MP :${result.videoPixel}\n\n`;
+      msg += `WEIGHT :${result.ukuran}\n\n`;
       msg += "```";
       
       var lasiimage = await axios.get(`${result.thumb}`, { responseType: 'arraybuffer' })
@@ -172,19 +171,18 @@ if (Config.WORKTYPE == "private") {
         { quoted: message.data }
       );
       let msg = "```";
-      msg += `NAME          :${result.judul}\n\n`;
-      msg += `DATE          :${result.rilis}\n\n`;
-      msg += `WEIGHT        :${result.ukuran}\n\n`;
-      msg += `VERSION       :${result.type}\n\n`;
-      msg += `ROM           :${result.storage}\n\n`;
-      msg += `DISPLAY       :${result.display}\n\n`;
-      msg += `RAM           :${result.ram}\n\n`;
-      msg += `BATTERY        :${result.batrai}\n\n`;
-      msg += `CPU            :${result.chipset}\n\n`;
-      msg += `INCH           :${result.inchi}\n\n`;
-      msg += `VIDEO MP       :${result.videoPixel}\n\n`;
-      msg += `PIC            :${result.thumb}\n\n`;
-      msg += `BATTERY BRAND  :${result.pixel}\n\n`;
+      msg += `NAME :${result.judul}\n\n`;
+      msg += `DATE :${result.rilis}\n\n`;
+      msg += `CPU :${result.chipset}\n\n`;
+      msg += `VERSION :${result.type}\n\n`;
+      msg += `RAM :${result.ram}\n\n`;
+      msg += `ROM :${result.storage}\n\n`;
+      msg += `DISPLAY :${result.display}\n\n`;
+      msg += `CAMERA MP :${result.pixel}\n\n`;
+      msg += `BATTERY :${result.batrai}\n\n`;
+      msg += `INCH :${result.inchi}\n\n`;
+      msg += `VIDEO MP :${result.videoPixel}\n\n`;
+      msg += `WEIGHT :${result.ukuran}\n\n`;
       msg += "```";
       
       var lasiimage = await axios.get(`${result.thumb}`, { responseType: 'arraybuffer' })
@@ -207,20 +205,22 @@ if (Config.WORKTYPE == "private") {
         { quoted: message.data }
       );
       let msg = "```";
-      msg += `NAME          :${result.judul}\n\n`;
-      msg += `DATE          :${result.rilis}\n\n`;
-      msg += `WEIGHT        :${result.ukuran}\n\n`;
-      msg += `VERSION       :${result.type}\n\n`;
-      msg += `ROM           :${result.storage}\n\n`;
-      msg += `DISPLAY       :${result.display}\n\n`;
-      msg += `RAM           :${result.ram}\n\n`;
-      msg += `BATTERY        :${result.batrai}\n\n`;
-      msg += `CPU            :${result.chipset}\n\n`;
-      msg += `INCH           :${result.inchi}\n\n`;
-      msg += `VIDEO MP       :${result.videoPixel}\n\n`;
-      msg += `PIC            :${result.thumb}\n\n`;
-      msg += `BATTERY BRAND  :${result.pixel}\n\n`;
+      msg += `NAME :${result.judul}\n\n`;
+      msg += `DATE :${result.rilis}\n\n`;
+      msg += `CPU :${result.chipset}\n\n`;
+      msg += `VERSION :${result.type}\n\n`;
+      msg += `RAM :${result.ram}\n\n`;
+      msg += `ROM :${result.storage}\n\n`;
+      msg += `DISPLAY :${result.display}\n\n`;
+      msg += `CAMERA MP :${result.pixel}\n\n`;
+      msg += `BATTERY :${result.batrai}\n\n`;
+      msg += `INCH :${result.inchi}\n\n`;
+      msg += `VIDEO MP :${result.videoPixel}\n\n`;
+      msg += `WEIGHT :${result.ukuran}\n\n`;
       msg += "```";
+      
+      
+      
       
       var lasiimage = await axios.get(`${result.thumb}`, { responseType: 'arraybuffer' })
 
