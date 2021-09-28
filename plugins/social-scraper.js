@@ -84,12 +84,10 @@ if (Config.WORKTYPE == "private") {
       msg += `PIC            :${result.thumb}\n\n`;
       msg += `BATTERY BRAND  :${result.pixel}\n\n`;
       msg += "```";
-      return await message.client.sendMessage(
-        message.jid,
-        msg,
-        MessageType.text,
-        { quoted: message.data }
-      );
+      
+      var lasiimage = await axios.get(`${result.thumb}`, { responseType: 'arraybuffer' })
+
+      await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
     }
   );
 
@@ -188,15 +186,12 @@ if (Config.WORKTYPE == "private") {
       msg += `PIC            :${result.thumb}\n\n`;
       msg += `BATTERY BRAND  :${result.pixel}\n\n`;
       msg += "```";
-      return await message.client.sendMessage(
-        message.jid,
-        msg,
-        MessageType.text,
-        { quoted: message.data }
-      );
+      
+      var lasiimage = await axios.get(`${result.thumb}`, { responseType: 'arraybuffer' })
+
+      await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
     }
   );
-
   XTroid.addCMD(
     { pattern: "device ?(.*)", fromMe: false, desc: Lang.DESC },
     async (message, match) => {
@@ -226,12 +221,10 @@ if (Config.WORKTYPE == "private") {
       msg += `PIC            :${result.thumb}\n\n`;
       msg += `BATTERY BRAND  :${result.pixel}\n\n`;
       msg += "```";
-      return await message.client.sendMessage(
-        message.jid,
-        msg,
-        MessageType.text,
-        { quoted: message.data }
-      );
+      
+      var lasiimage = await axios.get(`${result.thumb}`, { responseType: 'arraybuffer' })
+
+      await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
     }
   );
 
