@@ -462,7 +462,7 @@ XTroid.addCMD({pattern: '3dtext ?(.*)', fromMe: true, dontAddCMDList: true}, (as
 
    }));
 
-Asena.addCommand({pattern: 'nfire ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'nfire ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
