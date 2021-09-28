@@ -37,21 +37,19 @@ if (Config.WORKTYPE == 'private') {
 	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
 }));
 
-XTroid.addCMD({ pattern: 'gsmarena ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
-        if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
-	let url = `https://api.zeks.me/api/gsmArena?apikey=1hroZ3ju94h0PBjCNKsfhYaSuLs&q=${match[1]}`
-	const response = await got(url);
-	const lasijson = JSON.parse(response.body);
-	
-	let msg = '';
-	msg += '*Title:*\n' + '```' + lasijson.title + '```' + '\n\n';
-	msg += '*Description:*\n' + '```' + lasijson.few_desc + '```' + '\n\n';
-		
-
-	var lasiimage = await axios.get(lasijson.thumb, { responseType: 'arraybuffer' })
-	
-	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
+XTroid.addCMD({ pattern: 'device ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
+  const url = `https://docs-jojo.herokuapp.com/api/gsm_arena?q=${match[1]}`;
+	try {
+		const response = await got(url);
+    
+		const json = JSON.parse(response.body);
+    
+		if (response.statusCode === 200) return await message.client.sendMessage(message.jid,  'NAME      : *' + json.title + '* \n' + 'DATE      :'+ json.released + 'WEIGHT    :' + json.weight + '\n' + 'VERSION   :'+ json.os_version + '\n' + 'ROM       :' + json.storage + '\n' + 'DISPLAY   :'+ json.display_size  + '\n' + 'RAM       :' + json.ram + '\n' + 'BATTERY   :'+ json.battery + '\n' + 'MP        :' + json.camera_pixel + '\n' + 'VIDEO MP  :'+ json.video_pixel , MessageType.text);
+	} catch {
+		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDMD, MessageType.text);
+	}
 }));
+
 
     /*
     XTroid.addCMD({ pattern: 'tiktok ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
@@ -106,36 +104,30 @@ XTroid.addCMD({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.DESC }, (async
 	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
 }));	
 	
-	XTroid.addCMD({ pattern: 'gsmarena ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
-        if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
-	let url = `https://api.zeks.me/api/gsmArena?apikey=1hroZ3ju94h0PBjCNKsfhYaSuLs&q=${match[1]}`
-	const response = await got(url);
-	const lasijson = JSON.parse(response.body);
-	
-	let msg = '';
-	msg += '*Title:*\n' + '```' + lasijson.title + '```' + '\n\n';
-	msg += '*Description:*\n' + '```' + lasijson.few_desc + '```' + '\n\n';
-		
-
-	var lasiimage = await axios.get(lasijson.thumb, { responseType: 'arraybuffer' })
-	
-	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
+XTroid.addCMD({ pattern: 'device ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
+  const url = `https://docs-jojo.herokuapp.com/api/gsm_arena?q=${match[1]}`;
+	try {
+		const response = await got(url);
+    
+		const json = JSON.parse(response.body);
+    
+		if (response.statusCode === 200) return await message.client.sendMessage(message.jid,  'NAME      : *' + json.title + '* \n' + 'DATE      :'+ json.released + 'WEIGHT    :' + json.weight + '\n' + 'VERSION   :'+ json.os_version + '\n' + 'ROM       :' + json.storage + '\n' + 'DISPLAY   :'+ json.display_size  + '\n' + 'RAM       :' + json.ram + '\n' + 'BATTERY   :'+ json.battery + '\n' + 'MP        :' + json.camera_pixel + '\n' + 'VIDEO MP  :'+ json.video_pixel , MessageType.text);
+	} catch {
+		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDMD, MessageType.text);
+	}
 }));
 
-	XTroid.addCMD({ pattern: 'gsmarena ?(.*)', fromMe: false, desc: Lang.DESC }, (async (message, match) => {
-        if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
-	let url = `https://api.zeks.me/api/gsmArena?apikey=1hroZ3ju94h0PBjCNKsfhYaSuLs&q=${match[1]}`
-	const response = await got(url);
-	const lasijson = JSON.parse(response.body);
-	
-	let msg = '';
-	msg += '*Title:*\n' + '```' + lasijson.title + '```' + '\n\n';
-	msg += '*Description:*\n' + '```' + lasijson.few_desc + '```' + '\n\n';
-		
-
-	var lasiimage = await axios.get(lasijson.thumb, { responseType: 'arraybuffer' })
-	
-	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
+XTroid.addCMD({ pattern: 'device ?(.*)', fromMe: false, desc: Lang.DESC }, (async (message, match) => {
+  const url = `https://docs-jojo.herokuapp.com/api/gsm_arena?q=${match[1]}`;
+	try {
+		const response = await got(url);
+    
+		const json = JSON.parse(response.body);
+    
+		if (response.statusCode === 200) return await message.client.sendMessage(message.jid,  'NAME      : *' + json.title + '* \n' + 'DATE      :'+ json.released + 'WEIGHT    :' + json.weight + '\n' + 'VERSION   :'+ json.os_version + '\n' + 'ROM       :' + json.storage + '\n' + 'DISPLAY   :'+ json.display_size  + '\n' + 'RAM       :' + json.ram + '\n' + 'BATTERY   :'+ json.battery + '\n' + 'MP        :' + json.camera_pixel + '\n' + 'VIDEO MP  :'+ json.video_pixel , MessageType.text);
+	} catch {
+		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDMD, MessageType.text);
+	}
 }));
 	
 	XTroid.addCMD({ pattern: 'insta ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
