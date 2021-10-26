@@ -1,13 +1,9 @@
-/* 
-*/
-
 const fs = require("fs");
 const os = require("os");
 const path = require("path");
 const events = require("./events");
 const chalk = require('chalk');
 const config = require('./config');
-const execx = require('child_process').exec;
 const axios = require('axios');
 const Heroku = require('heroku-client');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
@@ -15,7 +11,6 @@ const {Message, StringSession, Image, Video} = require('./Xproject/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
-const WhatsAsenaStack = require('whatsasena-npm');
 const simpleGit = require('simple-git');
 const git = simpleGit();
 const crypto = require('crypto');
@@ -270,7 +265,6 @@ async function LasiXtroid () {
     conn.on('connecting', async () => {
         console.log(`${chalk.green.bold('X-')}${chalk.blue.bold('Troid')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
-
 ${chalk.blue.italic('🚀 Connecting to your xtroid... Please Wait.')}`);
     });
     conn.on('credentials-updated', async () => {
