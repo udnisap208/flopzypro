@@ -25,7 +25,7 @@ module.exports = {
     GANSTYLE: process.env.GAN_IMAGE === undefined ? 'https://telegra.ph/file/b11ff90ad6a02293fefaf.jpg' : process.env.GAN_IMAGE,
     BGMFILTER: process.env.BGM_FILTER === undefined ? false : convertToBool(process.env.BGM_FILTER),
     LANG: process.env.LANGUAGE === undefined ? 'TR' : process.env.LANGUAGE.toUpperCase(),
-    ALIVEIMG: process.env.ALIVEIMG === undefined ? 'https://github.com/udnisap208/flopzbot/blob/main/Image20210226064536.jpg?raw=true' : process.env.ALIVEIMG,
+    ALIVEIMG: process.env.ALIVEIMG === undefined ? 'https://github.com/udnisap208/flopzbot/blob/main/123.jpg?raw=true' : process.env.ALIVEIMG,
     KICKMEMSG: process.env.KICKME_MESSAGE === undefined ? 'default' : process.env.KICKME_MESSAGE,
     BLOCKCHAT: process.env.BLOCK_CHAT === undefined ? false : process.env.BLOCK_CHAT,
     ADDMSG: process.env.ADD_MESSAGE === undefined ? 'default' : process.env.ADD_MESSAGE,
