@@ -32,7 +32,7 @@ XTroid.addCMD({ pattern: 'movie ?(.*)', fromMe: true, desc: "Shows movie info." 
 	msg += '*🧚🏻‍♀️imdbRating*\n' + '```' + lasijson.imdbRating + '```' + '\n\n';
 	msg += '*👌🏻imdbVotes*\n' + '```' + lasijson.imdbVotes + '```' + '\n';
 
-	var lasiimage = await axios.get(`https://telegra.ph/file/ea34e463b6d09d967c063.jpg`, { responseType: 'arraybuffer' })
+	var lasiimage = await axios.get(lasijson.Poster, { responseType: 'arraybuffer' })
 	
 	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
 }));
@@ -65,7 +65,7 @@ XTroid.addCMD({ pattern: 'movie ?(.*)', fromMe: false, desc: "Shows movie info."
 	msg += '*🧚🏻‍♀️imdbRating*\n' + '```' + lasijson.imdbRating + '```' + '\n\n';
 	msg += '*👌🏻imdbVotes*\n' + '```' + lasijson.imdbVotes + '```' + '\n';
 
-	var lasiimage = await axios.get(`https://telegra.ph/file/ea34e463b6d09d967c063.jpg`, { responseType: 'arraybuffer' })
+	var lasiimage = await axios.get(lasijson.Poster, { responseType: 'arraybuffer' })
 	
 	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
 }));
@@ -98,7 +98,7 @@ XTroid.addCMD({ pattern: 'movie ?(.*)', fromMe: true, dontAddCMDList: true }, (a
 	msg += '*🧚🏻‍♀️imdbRating*\n' + '```' + lasijson.imdbRating + '```' + '\n\n';
 	msg += '*👌🏻imdbVotes*\n' + '```' + lasijson.imdbVotes + '```' + '\n';
 
-	var lasiimage = await axios.get(`https://telegra.ph/file/ea34e463b6d09d967c063.jpg`, { responseType: 'arraybuffer' })
+	var lasiimage = await axios.get(lasijson.Poster, { responseType: 'arraybuffer' })
 	
 	await message.client.sendMessage(message.jid, Buffer.from(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
 }));
